@@ -1,0 +1,123 @@
+{
+    "title": "Daggerfall Unity Mod Manifest File",
+    "description": "Manifest file, tipically with .dfmod.json extension, for a mod.",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+        "ModTitle": {
+            "type": "string",
+            "description": "A readable title for the mod."
+        },
+        "ModVersion": {
+            "type": "string",
+            "description": "Version number for the mod.",
+            "default": "0.1.0"
+        },
+        "ModAuthor": {
+            "type": "string",
+            "description": "Name of the author of the mod."
+        },
+        "ContactInfo": {
+            "type": "string",
+            "description": "Contact informations, like an email address or the url of a page on Nexus Mods or other websites.",
+            "anyOf": [
+                {
+                    "format": "uri"
+                },
+                {
+                    "format": "email"
+                }
+            ]
+        },
+        "DFUnity_Version": {
+            "type": "string",
+            "description": "The minimum supported version of the game, compared automatically with local game version.",
+            "pattern": "^[0-9]+(\\.[0-9]+(\\.[0-9]+)?)?$"
+        },
+        "ModDescription": {
+            "type": "string",
+            "description": "A short description of the mod. Line endings are supported."
+        },
+        "GUID": {
+            "type": "string",
+            "description": "A GUID associated to the mod that shouldn't be altered manually.",
+            "pattern": "[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}"
+        },
+        "Files": {
+            "type": "array",
+            "description": "Assets associated to this mod. They are included with assetbundle during mod creation.",
+            "items": {
+                "type": "string",
+                "description": "Relative path from project root of an asset.",
+                "pattern": "^Assets/"
+            }
+        },
+        "Contributes": {
+            "type": "object",
+            "description": "Contributes provided by a mod to be injected in game.",
+            "properties": {
+                "BooksMapping": {
+                    "type": "array",
+                    "description": "Look-up maps that announce additional books to be imported. See https://www.dfworkshop.net/projects/daggerfall-unity/modding/books/ for details.",
+                    "items": {
+                        "type": "string",
+                        "description": "The name of a book mapping file without extension."
+                    },
+                    "uniqueItems": true
+                },
+                "SpellIcons": {
+                    "type": "array",
+                    "description": "Names of spell icon packs. See https://www.dfworkshop.net/projects/daggerfall-unity/modding/additional-resources/#spell-icons for details.",
+                    "items": {
+                        "type": "string",
+                        "description": "The name of a Texture2D asset and a TextAsset with `.json` extension."
+                    },
+                    "uniqueItems": true
+                }
+            },
+            "additionalProperties": false
+        },
+        "Dependencies": {
+            "type": "array",
+            "description": "A list of mods that this mod depends on or is otherwise compatible with only if certain conditions are met.",
+            "items": {
+                "type": "object",
+                "description": "A set of rules that defines the limits within which a mod is required or otherwise compatible with another one.",
+                "properties": {
+                    "Name": {
+                        "type": "string",
+                        "description": "FileName of target mod (without .dfmod extension)."
+                    },
+                    "IsOptional": {
+                        "type": "boolean",
+                        "description": "If true, target mod doesn't need to be available, but must validate these criteria if it is.",
+                        "default": false
+                    },
+                    "IsPeer": {
+                        "type": "boolean",
+                        "description": "If true, target mod can be positioned anywhere in the load order, otherwise must be positioned above.",
+                        "default": false
+                    },
+                    "Version": {
+                        "type": "string",
+                        "description": "If not omitted this string is the minimum accepted version with format X.Y.Z. (without pre-release identifiers)."
+                    }
+                },
+                "required": [
+                    "Name"
+                ],
+                "additionalProperties": false
+            }
+        }
+    },
+    "required": [
+        "ModTitle",
+        "ModVersion",
+        "ModAuthor",
+        "ContactInfo",
+        "DFUnity_Version",
+        "ModDescription",
+        "GUID"
+    ],
+    "additionalProperties": false
+}

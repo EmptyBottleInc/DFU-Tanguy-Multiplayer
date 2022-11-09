@@ -1,0 +1,136 @@
+[
+    {
+        "CareerIndex": 0,
+        "CareerName": "Mage",
+        "SpellsList": [
+            {
+                "SpellID": 1,
+                "SpellName": "Fenrik's Door Jam"
+            },
+            {
+                "SpellID": 37,
+                "SpellName": "Slowfalling"
+            },
+            {
+                "SpellID": 2,
+                "SpellName": "Buoyancy"
+            },
+            {
+                "SpellID": 97,
+                "SpellName": "Balyna's Balm"
+            },
+            {
+                "SpellID": 8,
+                "SpellName": "Shock"
+            }
+        ]
+    },
+    {
+        "CareerIndex": 1,
+        "CareerName": "Spellsword",
+        "SpellsList": [
+            {
+                "SpellID": 8,
+                "SpellName": "Shock"
+            },
+            {
+                "SpellID": 44,
+                "SpellName": "Chameleon"
+            },
+            {
+                "SpellID": 37,
+                "SpellName": "Slowfalling"
+            }
+        ]
+    },
+    {
+        "CareerIndex": 2,
+        "CareerName": "Battlemage",
+        "SpellsList": [
+            {
+                "SpellID": 8,
+                "SpellName": "Shock"
+            },
+            {
+                "SpellID": 2,
+                "SpellName": "Buoyancy"
+            },
+            {
+                "SpellID": 37,
+                "SpellName": "Slowfalling"
+            }
+        ]
+    },
+    {
+        "CareerIndex": 3,
+        "CareerName": "Sorcerer",
+        "SpellsList": [
+            {
+                "SpellID": 1,
+                "SpellName": "Fenrik's Door Jam"
+            },
+            {
+                "SpellID": 37,
+                "SpellName": "Slowfalling"
+            },
+            {
+                "SpellID": 2,
+                "SpellName": "Buoyancy"
+            },
+            {
+                "SpellID": 97,
+                "SpellName": "Balyna's Balm"
+            },
+            {
+                "SpellID": 8,
+                "SpellName": "Shock"
+            }
+        ]
+    },
+    {
+        "CareerIndex": 4,
+        "CareerName": "Healer",
+        "SpellsList": [
+            {
+                "SpellID": 97,
+                "SpellName": "Balyna's Balm"
+            },
+            {
+                "SpellID": 2,
+                "SpellName": "Buoyancy"
+            },
+            {
+                "SpellID": 1,
+                "SpellName": "Fenrik's Door Jam"
+            },
+            {
+                "SpellID": 37,
+                "SpellName": "Slowfalling"
+            }
+        ]
+    },
+    {
+        "CareerIndex": 5,
+        "CareerName": "Nightblade",
+        "SpellsList": [
+            {
+                "SpellID": 44,
+                "SpellName": "Chameleon"
+            },
+            {
+                "SpellID": 2,
+                "SpellName": "Buoyancy"
+            }
+        ]
+    },
+    {
+        "CareerIndex": 6,
+        "CareerName": "Bard",
+        "SpellsList": [
+            {
+                "SpellID": 37,
+                "SpellName": "Slowfalling"
+            }
+        ]
+    }
+]

@@ -1,0 +1,256 @@
+ManifestFileVersion: 0
+CRC: 1160250881
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 492958112ca6862d9a1c988e3a0bc579
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 22007c6911bd7c7e6df6aa341b72e701
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 49
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: c7424c1070fad4ba2a7a96b02fbeb4bb, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 6442dc8070ceb41f094e44de0bf87274, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 8aab4c8111b7c411b9b92cf3dbc5bd4e, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: c6159083ca71e004ab83dc2dfa229cc0, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: b4f22badf877eae4e9b6128aa607a2c6, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 2f74aedd71d9a4f55b3ce499326d45fb, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 55b2d81fa3107204881c9de694150a51, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 6b0fecffa3f624585964b0d0eb21b18e, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 212
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/isteaminventory.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/PreprocessorDefine.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/isteammusic.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/NetworkStartPosition.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/SteamLeaderboard_t.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/servernetadr_t.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/LogFilter.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/InputAnalogActionHandle_t.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/isteamhttp.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/ManifestId_t.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/UGCHandle_t.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/NetworkClient.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/isteamgameserverutils.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/ClientScene.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/SteamLobby.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/SyncVarTest.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/isteamnetworking.cs.txt
+- Assets/Game/Mods/TanguyMultiplayer/Scripts/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/README.md
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/SyncDictionaryTest.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/NetworkBehaviour.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/isteamvideo.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/SyncDictionary.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/SyncSet.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/SteamAPIWarningMessageHook_t.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/SteamNetworkingPOPID.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/CGameID.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/isteamnetworkingsockets.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/NetworkReader.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/NetworkConnection.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/isteamunifiedmessages.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/SiteId_t.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/SNetListenSocket_t.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/Steam.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/CustomAttributes.cs.txt
+- Assets/Game/Mods/TanguyMultiplayer/Textures/DoomGuy.png
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/isteamapps.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/CustomRWTest.cs.txt
+- Assets/Game/Mods/TanguyMultiplayer/Scripts/Mirror/Runtime/Transport/FizzySteamworks/Dependencies/LICENSE.md
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/MultiplexTransport.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/isteamremoteplay.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/isteamgameserverapps.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/BasicAuthenticator.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/NetworkLobbyPlayer.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/ISteamMatchmakingResponses.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/UGCQueryHandle_t.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/MessagePacker.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/NetworkAuthenticator.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/SyncObject.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/HServerListRequest.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/HTTPCookieContainerHandle.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/isteamnetworkingutils.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/EntityCatcher.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/Transport.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/AccountID_t.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/NetworkProximityChecker.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/RTime32.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/isteamremotestorage.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/InputActionSetHandle_t.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/LLAPITransport.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/ArrayWriterTest.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/isteammusicremote.cs.txt
+- Assets/Game/Mods/TanguyMultiplayer/Shaders/BillboardDiffuse.shader
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/ModInitiator.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/isteamutils.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/NetworkIdentityTests.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/SyncList.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/FSteamNetworkingSocketsDebugOutput.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/ClientUnifiedMessageHandle.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/CSteamID.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/Version.cs.txt
+- Assets/Game/Mods/TanguyMultiplayer/Materials/DoomSprite.mat
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/PlayerMultiplayer.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/SteamManager.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/NetworkLobbyManager.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/NetworkDiagnostics.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/NetworkManager.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/SteamAPI_PostAPIResultInProcess_t.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/RemotePlaySessionID_t.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/UNetwork.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/isteamuser.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/isteamfriends.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/Client.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/NetworkRoomManager.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/CallbackDispatcher.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/NetworkConnectionToClient.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/FallbackTransport.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/PublishedFileId_t.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/SteamItemDef_t.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/SteamNetworkingMicroseconds.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/MessageInheritanceTest.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/LocalConnections.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/isteamclient.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/SteamAPI_CheckCallbackRegistered_t.cs.txt
+- Assets/Game/Mods/TanguyMultiplayer/tanguysmultiplayer.dfmod.json
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/SteamDatagramHostedAddress.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/BidirectionalDictionary.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/isteamugc.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/TelepathyTransport.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/AssemblyInfo.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/AppId_t.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/Packsize.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/ExponentialMovingAverageTest.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/isteamgameserverugc.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/ScreenshotHandle.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/isteaminput.cs.txt
+- Assets/Game/Mods/TanguyMultiplayer/Textures/Test.png
+- Assets/Game/Mods/TanguyMultiplayer/Prefabs/NetworkManager.prefab
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/UGCUpdateHandle_t.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/DepotId_t.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/StringHash.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/NetworkConnectionToServer.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/NetworkServer.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/isteamgameserverinventory.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/SteamCallbacks.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/NetworkWriterTest.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/isteamhtmlsurface.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/NetworkTransformBase.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/NetworkWriter.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/SNetSocket_t.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/HAuthTicket.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/MessagePackerTest.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/Messages.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/NetworkWriterPool.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/HServerQuery.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/HHTMLBrowser.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/SteamIPAddress_t.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/Sprite8dir.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/SteamStructs.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/NativeMethods.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/SteamNetworkingIdentity.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/ArraySegmentWriterTest.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/HSteamPipe.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/isteamscreenshots.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/SteamNetworkingConfigValue_t.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/WeaverAssembler.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/gameserveritem_t.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/isteamgameserver.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/SteamEnums.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/FloatBytePackerTest.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/ISteamNetworkingConnectionSignaling.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/SteamNetworkingMessage_t.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/SyncListTest.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/LocalConnectionTest.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/SyncSetTest.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/HTTPRequestHandle.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/HSteamListenSocket.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/InputHandle_t.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/NetworkTransform.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/SteamItemInstanceID_t.cs.txt
+- Assets/Game/Mods/TanguyMultiplayer/Scripts/Mirror/Runtime/Transport/FizzySteamworks/README.md
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/CallbackIdentity.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/Server.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/isteamgameservernetworkingutils.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/HSteamNetConnection.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/NetworkManagerHUD.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/isteamparentalsettings.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/SteamConstants.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/MultiplexTest.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/LocalClient.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/isteamuserstats.cs.txt
+- Assets/Game/Mods/TanguyMultiplayer/Shaders/DoomSprite.shader
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/SteamNetworkingIPAddr.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/PublishedFileUpdateHandle_t.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/SteamLeaderboardEntries_t.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/PartyBeaconID_t.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/SteamNetworkingErrMsg.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/ISteamNetworkingSignalingRecvContext.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/NetworkTransformChild.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/NetworkRoomPlayer.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/HSteamUser.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/isteamgameserverclient.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/isteammatchmaking.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/FriendsGroupID_t.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/isteamgameserverstats.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/ExponentialMovingAverage.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/isteamgameservernetworkingsockets.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/isteamgameservernetworking.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/InteropHelp.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/SteamInventoryResult_t.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/FloatBytePacker.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/SteamInventoryUpdateHandle_t.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/UGCFileWriteStreamHandle_t.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/NetworkIdentity.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/isteamgameserverhttp.cs.txt
+- Assets/Game/Mods/TanguyMultiplayer/Prefabs/PlayerMultiplayer.prefab
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/TimeoutAuthenticator.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/SteamAPICall_t.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/NetworkAnimator.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/NetworkMessage.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/isteamapplist.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/FizzySteamyMirror.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/Common.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/NetworkTime.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/InputDigitalActionHandle_t.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/MessageBaseTests.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/DotNetCompatibility.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/SteamDatagramRelayAuthTicket.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/WeaverTest.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/HSteamNetPollGroup.cs.txt
+- Assets/Untracked/ModBuilder/Tanguy's multiplayer/isteamnetworkingmessages.cs.txt
+Dependencies: []
