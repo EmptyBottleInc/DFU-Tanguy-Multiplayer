@@ -1,2 +1,9 @@
 # DFU-Tanguy-Multiplayer
-A Custom build of Daggerfall Unity including multiplayer
+
+### Daggerfall Unity
+
+The original code is not from me, I copied the 0.14.5 code from [Daggerfall Unity](https://github.com/Interkarma/daggerfall-unity).
+
+You can be informed of the newest versions [here](https://www.dfworkshop.net/).
+
+I hope making this project a mod for the original version, but for now this is a "Custom Build".
