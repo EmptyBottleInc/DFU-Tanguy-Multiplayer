@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 5853619215530021629}
   - component: {fileID: 2506004478732984678}
   - component: {fileID: 4249174628952518039}
+  - component: {fileID: 924523179212583444}
   m_Layer: 0
   m_Name: PlayerMultiplayer
   m_TagString: Untagged
@@ -1148,6 +1149,21 @@ MonoBehaviour:
   playerAssets: {fileID: 2506004478732984678}
   character: TEXTURE.485 (Normal Mage)
   search: 0
+--- !u!114 &924523179212583444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4012101602302766543}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83fa838f600805b47bb99b198a33287d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  locations: []
 --- !u!1 &7697279908096337577
 GameObject:
   m_ObjectHideFlags: 0
