@@ -1,0 +1,1439 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4012101600637348421
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4012101600637348420}
+  - component: {fileID: 4012101600637348422}
+  - component: {fileID: 4012101600637348423}
+  m_Layer: 0
+  m_Name: Cube
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &4012101600637348420
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4012101600637348421}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4012101602302766542}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &4012101600637348422
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4012101600637348421}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &4012101600637348423
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4012101600637348421}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!1 &4012101602302766543
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4012101602302766542}
+  - component: {fileID: 4012101602302766529}
+  - component: {fileID: 4003312997922073087}
+  - component: {fileID: 2519029818811409709}
+  - component: {fileID: 5853619215530021629}
+  - component: {fileID: 2506004478732984678}
+  - component: {fileID: 4249174628952518039}
+  m_Layer: 0
+  m_Name: PlayerMultiplayer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4012101602302766542
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4012101602302766543}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4012101600637348420}
+  - {fileID: 6557586759631906260}
+  - {fileID: 3307395283909108071}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4012101602302766529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4012101602302766543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4f22badf877eae4e9b6128aa607a2c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  toEnable:
+  - {fileID: 7697279908096337577}
+  - {fileID: 9174025710127394214}
+  toDisable:
+  - {fileID: 4003312997922073087}
+  sprite8dir: {fileID: 8299120720605468109}
+  playerTransform: {fileID: 0}
+--- !u!114 &4003312997922073087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4012101602302766543}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55b2d81fa3107204881c9de694150a51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  radius: 500
+  layer:
+    serializedVersion: 2
+    m_Bits: 2048
+--- !u!114 &2519029818811409709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4012101602302766543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 0
+  serverOnly: 0
+  visible: 0
+  m_AssetId: 48bdadde2b9d153419eaea43cd7a1e64
+  hasSpawned: 0
+--- !u!114 &5853619215530021629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4012101602302766543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f74aedd71d9a4f55b3ce499326d45fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  clientAuthority: 1
+  sendInterval: 0.05
+  syncPosition: 1
+  syncRotation: 1
+  syncScale: 0
+  interpolatePosition: 1
+  interpolateRotation: 1
+  interpolateScale: 0
+  bufferTimeMultiplier: 1
+  bufferSizeLimit: 64
+  catchupThreshold: 4
+  catchupMultiplier: 0.1
+  onlySyncOnChange: 1
+  bufferResetMultiplier: 5
+  positionSensitivity: 0.01
+  rotationSensitivity: 0.01
+  scaleSensitivity: 0.01
+  showGizmos: 0
+  showOverlay: 0
+  overlayColor: {r: 0, g: 0, b: 0, a: 0.5}
+--- !u!114 &2506004478732984678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4012101602302766543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5790990483e230543acf3f314b018a3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  assets:
+  - Name: Thief male
+    Jobs:
+    - Thief
+    Gender: 0
+    idleSprites:
+    - {fileID: 21300000, guid: 8b88f121bd9c51f47b37dd69a2896c96, type: 3}
+    - {fileID: 21300000, guid: dc70266bbcaf43a4c9b8fe32593de653, type: 3}
+    - {fileID: 21300000, guid: 6e502c282e0049b479a82494f17b5027, type: 3}
+    - {fileID: 21300000, guid: 255c07ab161229f4ab76ea8ac9fccb70, type: 3}
+    - {fileID: 21300000, guid: 8d317710df9635c4f8e6289dd1541234, type: 3}
+    walkCount: 4
+    walkSprites:
+    - {fileID: 21300000, guid: c4e4b921c087c494b80c13d4d53df961, type: 3}
+    - {fileID: 21300000, guid: 4ac7914ac3d512e479439d88ee86071a, type: 3}
+    - {fileID: 21300000, guid: 71c376717a898c14bb8f203bd62b4fcc, type: 3}
+    - {fileID: 21300000, guid: dc4ae231366d8fe4cb0dca4adcc46b5a, type: 3}
+    - {fileID: 21300000, guid: 9c1d7b8a29353c746a46aa1ff57230cf, type: 3}
+    - {fileID: 21300000, guid: 40277d73f58c5d343bd05fedfb34b643, type: 3}
+    - {fileID: 21300000, guid: 1a5bb84ff072ba14eadec7996a3b99d5, type: 3}
+    - {fileID: 21300000, guid: 0b1d2dc02cdfb154b973c75b07e162e5, type: 3}
+    - {fileID: 21300000, guid: 2094031b24f22db43b52534e36cd0aca, type: 3}
+    - {fileID: 21300000, guid: e241140c852749b419c8aa5ff6359cda, type: 3}
+    - {fileID: 21300000, guid: a803669750c1dd448b69667bc0887d38, type: 3}
+    - {fileID: 21300000, guid: 6cd418727a77660478f37cbd46fd0e75, type: 3}
+    - {fileID: 21300000, guid: 569cd632df4dd404e923883b611af867, type: 3}
+    - {fileID: 21300000, guid: 15202efd511b7f541b4806debc0efa53, type: 3}
+    - {fileID: 21300000, guid: c4b5d92114edfa44f9b9b53767acc84c, type: 3}
+    - {fileID: 21300000, guid: d02f7fe264708d14eb0ce7af7c90de86, type: 3}
+    - {fileID: 21300000, guid: fd0715a40c35ea241b26e934c1381a42, type: 3}
+    - {fileID: 21300000, guid: 95a4107b76be93c499b9c1a10628abbe, type: 3}
+    - {fileID: 21300000, guid: 727c97a195827974b9032b83481cd274, type: 3}
+    - {fileID: 21300000, guid: 8f818d96bc8fc9c44b557a07825b1a35, type: 3}
+    attackCount: 6
+    attackSprites:
+    - {fileID: 21300000, guid: c4e7caf12f434e142a441c5308affc39, type: 3}
+    - {fileID: 21300000, guid: 80afbe581f335f044a7c5a667e7301e5, type: 3}
+    - {fileID: 21300000, guid: ace7025e8e7cb85419b15c67c063e03a, type: 3}
+    - {fileID: 21300000, guid: be08311a9bea3fb43aa67306bc832924, type: 3}
+    - {fileID: 21300000, guid: 5a16d2b8b64e4a14a87d8e7d501f0287, type: 3}
+    - {fileID: 21300000, guid: fd94ce6edfca64d42bfabdf8bda372ef, type: 3}
+    - {fileID: 21300000, guid: dd7c94ea8429ac748aed09ef0cf75e2b, type: 3}
+    - {fileID: 21300000, guid: c1f03dec4f9d25d408d66f170e46827e, type: 3}
+    - {fileID: 21300000, guid: c3bc526450580a24b8a0f93875873e0c, type: 3}
+    - {fileID: 21300000, guid: e47b725a8f236114c99dec353fc27597, type: 3}
+    - {fileID: 21300000, guid: de7dddbe6673c8c4a82dbbf815478181, type: 3}
+    - {fileID: 21300000, guid: cd1c139d606b6944dbd5a9d39669d5e2, type: 3}
+    - {fileID: 21300000, guid: 1e39d0e9317c1f347aec3f79c6c19fc0, type: 3}
+    - {fileID: 21300000, guid: 2fd9c7b03c537744a98bd5742589b327, type: 3}
+    - {fileID: 21300000, guid: a7d76bc9aa227c84d8a48e67cf684bc6, type: 3}
+    - {fileID: 21300000, guid: c612fe9225844fb458f684ca8d61fcf9, type: 3}
+    - {fileID: 21300000, guid: 759dc40ccd6676b4f9d70003676d292c, type: 3}
+    - {fileID: 21300000, guid: 518a16568b6a38c4988bf6ef6cce24dc, type: 3}
+    - {fileID: 21300000, guid: a9c50c93bfafbfd46a40dd0f8aa58386, type: 3}
+    - {fileID: 21300000, guid: 8c87673fce48e5a499b7cd182f4cf5ba, type: 3}
+    - {fileID: 21300000, guid: 78f946154f056864694718ee3efb05f3, type: 3}
+    - {fileID: 21300000, guid: eeef0a5f1ac2d564e8128e29edbc9365, type: 3}
+    - {fileID: 21300000, guid: 7a1b5953a315fe54b8785db0bd924c32, type: 3}
+    - {fileID: 21300000, guid: b68683af5749cb846932fc0f126d6505, type: 3}
+    - {fileID: 21300000, guid: 4d17abfc103576d4588e099c252a7d44, type: 3}
+    - {fileID: 21300000, guid: ffb94a08df6f7c04aa87bb9eb64c3a79, type: 3}
+    - {fileID: 21300000, guid: 464d6881e07c807428e1d7e4a8f7912c, type: 3}
+    - {fileID: 21300000, guid: b6122a9f40985c44e89f2d04ff1c4a93, type: 3}
+    - {fileID: 21300000, guid: 604cbeda79df6c84c924b8553139eabd, type: 3}
+    - {fileID: 21300000, guid: 484b122483f579e4f95f21273c194ebe, type: 3}
+  - Name: Thief female
+    Jobs:
+    - Thief
+    Gender: 1
+    idleSprites:
+    - {fileID: 21300000, guid: d678445effee7334d854694a1222399f, type: 3}
+    - {fileID: 21300000, guid: d9eb23bb0b302054f91f7409b167f6ee, type: 3}
+    - {fileID: 21300000, guid: c1146283189db57419275b36ba904b90, type: 3}
+    - {fileID: 21300000, guid: 230b773714d4d484a907dc55e8e3310f, type: 3}
+    - {fileID: 21300000, guid: f9d2b99be83f1584fa6d5a20e661241c, type: 3}
+    walkCount: 4
+    walkSprites:
+    - {fileID: 21300000, guid: 0b2ddcbaee168ac4fa583afdbf3fb432, type: 3}
+    - {fileID: 21300000, guid: e02db2295bdd59f4b841cdabec4fadcd, type: 3}
+    - {fileID: 21300000, guid: 045421f052833214e938af1910da0012, type: 3}
+    - {fileID: 21300000, guid: 2d789ccca6bfcc2489aca4e81ab3a1ba, type: 3}
+    - {fileID: 21300000, guid: d9eb23bb0b302054f91f7409b167f6ee, type: 3}
+    - {fileID: 21300000, guid: af4c0e5f648e99d4584bcea8f06e79e8, type: 3}
+    - {fileID: 21300000, guid: 882964e14951e144aa8383b067420bff, type: 3}
+    - {fileID: 21300000, guid: 8f610babf75875548998fb210df05dce, type: 3}
+    - {fileID: 21300000, guid: 2439623dd55955e4aa5714f80a8b0dbc, type: 3}
+    - {fileID: 21300000, guid: 970162ee543537440b0f91654c3d951b, type: 3}
+    - {fileID: 21300000, guid: 8ebf6c4f06cc94b468339cc79a6c5910, type: 3}
+    - {fileID: 21300000, guid: b6b0d737fbbc6bd4384961e6bb7f6c29, type: 3}
+    - {fileID: 21300000, guid: 62dbff8cdf47d8a409b0e6141fdfb3af, type: 3}
+    - {fileID: 21300000, guid: 18aaf266b62963f4ea8f76cef19fcec2, type: 3}
+    - {fileID: 21300000, guid: 5bf25ebffa4cb1148a60e8774bc7136c, type: 3}
+    - {fileID: 21300000, guid: ffe8701a53efd9d4d84fcdeec39af4d0, type: 3}
+    - {fileID: 21300000, guid: 92d4b05309821814db7335ae59545627, type: 3}
+    - {fileID: 21300000, guid: aa39160b4097ec043a83c7a7d62706a3, type: 3}
+    - {fileID: 21300000, guid: f45c4f395448cd64aa711743b7206bea, type: 3}
+    - {fileID: 21300000, guid: 2995a9c7e16420b4cbcd8c19e5dc8b1c, type: 3}
+    attackCount: 6
+    attackSprites:
+    - {fileID: 21300000, guid: 7d71ccceb2d8220408900809f36d6790, type: 3}
+    - {fileID: 21300000, guid: f67b5bc9151cb554c939665d87d89d22, type: 3}
+    - {fileID: 21300000, guid: cf5febc15d2e14d4aac97b131c67818c, type: 3}
+    - {fileID: 21300000, guid: 2ccf4a0aa5f4f374daff93d9b7d30e12, type: 3}
+    - {fileID: 21300000, guid: 86e5d2a4f6950034f8f1bb53a169da93, type: 3}
+    - {fileID: 21300000, guid: 27988373363dbb846baad6c757bf0750, type: 3}
+    - {fileID: 21300000, guid: ff241ddc79ecbd240b1add0ac68390a5, type: 3}
+    - {fileID: 21300000, guid: a7c55e2018749ca44af8636b889cf6be, type: 3}
+    - {fileID: 21300000, guid: 5319563e50a39f94b99d9c0850bed163, type: 3}
+    - {fileID: 21300000, guid: 05cea7eb0d634f140a06647e3010f997, type: 3}
+    - {fileID: 21300000, guid: fd667119eea0c3d4a8e225fe870a5029, type: 3}
+    - {fileID: 21300000, guid: cf50bac3ac559394a8512fdeb21f0c2f, type: 3}
+    - {fileID: 21300000, guid: 07da31f22b1c57746b52d5aa0ab2610a, type: 3}
+    - {fileID: 21300000, guid: 0c5db5f15d610ad468bcc8c0c5f48904, type: 3}
+    - {fileID: 21300000, guid: 65dce3d79b5d7464ebdedd5e8bdd7701, type: 3}
+    - {fileID: 21300000, guid: 256999ae309bad344a2c7d6d5713ad41, type: 3}
+    - {fileID: 21300000, guid: 1e1c21ea16e8ba6439701e357b56ed71, type: 3}
+    - {fileID: 21300000, guid: 92e43dc9cb8f6fb45bf9d9a0f3f688be, type: 3}
+    - {fileID: 21300000, guid: bffab89d904e4994aa28c9cfc7f627c7, type: 3}
+    - {fileID: 21300000, guid: 3b4b3646afb31904fa6294fa14c2884e, type: 3}
+    - {fileID: 21300000, guid: 2c27e60c3f92ba542b5816cdc8aedc40, type: 3}
+    - {fileID: 21300000, guid: 98dff249549bb8147924257df0859afa, type: 3}
+    - {fileID: 21300000, guid: f4a019215d7e2644280e38fdc6b04893, type: 3}
+    - {fileID: 21300000, guid: afe2fae4386e95441a8731d9580a04f9, type: 3}
+    - {fileID: 21300000, guid: 73cac09ff2cb2fb49af09e3d13cdfbad, type: 3}
+    - {fileID: 21300000, guid: 563efbd865aa4a04aaf8033bbc90b012, type: 3}
+    - {fileID: 21300000, guid: 1f9f3ffb1dccf794696a1d8e27d97815, type: 3}
+    - {fileID: 21300000, guid: 5ea2341cc982922419766266fd6dedec, type: 3}
+    - {fileID: 21300000, guid: c30d2ead295e90b40bfa74b35a5f0da2, type: 3}
+    - {fileID: 21300000, guid: 2c6940b4ec060094086242686dbab864, type: 3}
+  - Name: Fighter Mage male
+    Jobs:
+    - Battlemage
+    - Nightblade
+    Gender: 0
+    idleSprites:
+    - {fileID: 21300000, guid: ce9cc483f364a464c92f94f4f81fe6fc, type: 3}
+    - {fileID: 21300000, guid: 7e7930c529c1a414a802a7b1c86f0396, type: 3}
+    - {fileID: 21300000, guid: cadd6f85d9460aa4797587074663d2f3, type: 3}
+    - {fileID: 21300000, guid: 6149084b6d60983458cc2ec5bab1d294, type: 3}
+    - {fileID: 21300000, guid: e0d529910f6b5454a8d49b11be1d0919, type: 3}
+    walkCount: 4
+    walkSprites:
+    - {fileID: 21300000, guid: 26a05dfea26ab354898b07dcc04f0287, type: 3}
+    - {fileID: 21300000, guid: 38480b72c7fb230409a3fcccce81d1e5, type: 3}
+    - {fileID: 21300000, guid: b0c4f594450090545a78fe9e82479ade, type: 3}
+    - {fileID: 21300000, guid: f6c9835650b2d75489e4ae5467fd8abe, type: 3}
+    - {fileID: 21300000, guid: 9fd4d600b1daff84ca45115d3b22d536, type: 3}
+    - {fileID: 21300000, guid: e7cd6a2c0c0c50d49850f96097e247dd, type: 3}
+    - {fileID: 21300000, guid: 50c6e6ce15060304985668313b19ec8e, type: 3}
+    - {fileID: 21300000, guid: 7342df0536ca33446815867be2046915, type: 3}
+    - {fileID: 21300000, guid: f009e5cb4a4092f4ab2b1195977a9587, type: 3}
+    - {fileID: 21300000, guid: 8be4b453bb0a0e54e94b5fbc18f204a3, type: 3}
+    - {fileID: 21300000, guid: 852dbb596fc01d9419dff4267d508572, type: 3}
+    - {fileID: 21300000, guid: cf97ac0356b48dd4ebc24a3e46ff6562, type: 3}
+    - {fileID: 21300000, guid: 2e147235b6cc0f24eab2466354b28abe, type: 3}
+    - {fileID: 21300000, guid: c9d5cea2d223a22428fd4a4feaf689e4, type: 3}
+    - {fileID: 21300000, guid: 7e11e66df4f28824b91bf87a8ce3a9d5, type: 3}
+    - {fileID: 21300000, guid: cc67b32dcab20a64bba94eb7083f191b, type: 3}
+    - {fileID: 21300000, guid: 93165f1e33d59f345be1d89c25619c10, type: 3}
+    - {fileID: 21300000, guid: 0b1e475207bb9f64aa6ba4b5ce565a25, type: 3}
+    - {fileID: 21300000, guid: 4f8eedb9808984241835c63cc5a8f6a0, type: 3}
+    - {fileID: 21300000, guid: 7c4ba6efe222e95488f077ac88d4f750, type: 3}
+    attackCount: 6
+    attackSprites:
+    - {fileID: 21300000, guid: 51155796c9d386d459e9a6673588176a, type: 3}
+    - {fileID: 21300000, guid: 98ed064f687e8494a8a9016fadf3715e, type: 3}
+    - {fileID: 21300000, guid: a263d57299f9d1347b3d11adf72f8071, type: 3}
+    - {fileID: 21300000, guid: 6de5f3a5394260048bd757c2dafddd55, type: 3}
+    - {fileID: 21300000, guid: 1dee4c5c1f4faab4bb00efe13eb0d3ef, type: 3}
+    - {fileID: 21300000, guid: 83104f6bfbad67d45a6a007a8b76ab98, type: 3}
+    - {fileID: 21300000, guid: e5c4472eebc68cb47b78de05d0dc0c19, type: 3}
+    - {fileID: 21300000, guid: 9eca24c798deb81498f0fbda46afad12, type: 3}
+    - {fileID: 21300000, guid: 9869e2a42a93a8e469f6ba3b7b6ca2f0, type: 3}
+    - {fileID: 21300000, guid: 262615bbac1377c45bbc55e01c9255fa, type: 3}
+    - {fileID: 21300000, guid: 539f06e185a40684cb48dd562e13efd2, type: 3}
+    - {fileID: 21300000, guid: eb0f1f20a19d567489c4494807626df3, type: 3}
+    - {fileID: 21300000, guid: 97671084135779340a02a49d9c5fb927, type: 3}
+    - {fileID: 21300000, guid: c1b10e745b1e647408af94db8f91cec2, type: 3}
+    - {fileID: 21300000, guid: 245016a4f8ae0a34c99558cf0e2e9c1a, type: 3}
+    - {fileID: 21300000, guid: e0311a37704084a4bbf53bf76a7d1e09, type: 3}
+    - {fileID: 21300000, guid: 12e8cc2b4e985424cb004f2ca8f74e75, type: 3}
+    - {fileID: 21300000, guid: 71739fff7add1e3428e7e9c2b778784e, type: 3}
+    - {fileID: 21300000, guid: be1b81818a4013d44bf9e1f64c99b1ae, type: 3}
+    - {fileID: 21300000, guid: 7fa0d1b69b90fe64795ac8a5c8c417ae, type: 3}
+    - {fileID: 21300000, guid: 12c4665b6976fc442aa65adb9579da46, type: 3}
+    - {fileID: 21300000, guid: e65b4db137fc83e40a2d043ca88cddcc, type: 3}
+    - {fileID: 21300000, guid: 7a21794cd1a2ccc48b5d53bbae8d73e2, type: 3}
+    - {fileID: 21300000, guid: 15808bb77ce23cd43b3a72f122df6b69, type: 3}
+    - {fileID: 21300000, guid: efb5e9fdb5aaf9645bda85461a21d8f5, type: 3}
+    - {fileID: 21300000, guid: 9ea9f8b7573d23e4abdf76284a701a93, type: 3}
+    - {fileID: 21300000, guid: d5746fc0574cafe45bb746fc851f0e4d, type: 3}
+    - {fileID: 21300000, guid: 69a99e12b7a6d2142a6dc94575f611d4, type: 3}
+    - {fileID: 21300000, guid: bf19fc35360ec0144965cc62f7926a74, type: 3}
+    - {fileID: 21300000, guid: 95243f04717d1dd499b39cc7edba7769, type: 3}
+  - Name: Fighter Mage female
+    Jobs:
+    - Battlemage
+    - Nightblade
+    Gender: 1
+    idleSprites:
+    - {fileID: 21300000, guid: f5c5d747c0f6a0b4195a65e6d0c18eb8, type: 3}
+    - {fileID: 21300000, guid: ce8487aa7d9d1f24a9983d049b1f5d34, type: 3}
+    - {fileID: 21300000, guid: db8dd41c3f818cb468f4d843a8fbe4da, type: 3}
+    - {fileID: 21300000, guid: 4337c14aa55cebb408feefa35734cafa, type: 3}
+    - {fileID: 21300000, guid: 0b03327dd07d4344c88d39fdc770a430, type: 3}
+    walkCount: 4
+    walkSprites:
+    - {fileID: 21300000, guid: a7f5588349b1f9945a9764be435ea629, type: 3}
+    - {fileID: 21300000, guid: 31146c31a04859a40b09a4f1bd1c8336, type: 3}
+    - {fileID: 21300000, guid: 5389b72742d064c44bba40e8a6603cbd, type: 3}
+    - {fileID: 21300000, guid: cb421eecc8fc8cd4788fb8e060ea18f0, type: 3}
+    - {fileID: 21300000, guid: 1a5331ce6e3455f449272b0672a65fe2, type: 3}
+    - {fileID: 21300000, guid: 469829a9cfcf025418a89111401b54dd, type: 3}
+    - {fileID: 21300000, guid: 971330322d883464bab298eac7d230dc, type: 3}
+    - {fileID: 21300000, guid: d4961c1934bb5d147a5078d328d27e74, type: 3}
+    - {fileID: 21300000, guid: f64a67cc3c707964c8b439724d43b50e, type: 3}
+    - {fileID: 21300000, guid: 1d1dac8e27f925f4ba68516c9b527121, type: 3}
+    - {fileID: 21300000, guid: 9da9dd3559cf60a49870243886dc35ab, type: 3}
+    - {fileID: 21300000, guid: 5cb6a8f538c30584aa062481ed681703, type: 3}
+    - {fileID: 21300000, guid: 621ee3bbf3ca2c84a990591add03eee2, type: 3}
+    - {fileID: 21300000, guid: 42bf9fdaaff941e46b531a46def9dfaf, type: 3}
+    - {fileID: 21300000, guid: bacc4b00e00e1954cbe8195e89b38efc, type: 3}
+    - {fileID: 21300000, guid: 9f1459e522cc84e4cae765566f17a206, type: 3}
+    - {fileID: 21300000, guid: a4321ed897a1fe743a39f19155b9dbc5, type: 3}
+    - {fileID: 21300000, guid: c6abb3a61b29a474bba26c2fb7207f74, type: 3}
+    - {fileID: 21300000, guid: 5f1d613f8f3001040bc841feb7acc6e4, type: 3}
+    - {fileID: 21300000, guid: 083fc987edec59344bfc4750997ac3df, type: 3}
+    attackCount: 6
+    attackSprites:
+    - {fileID: 21300000, guid: 7af908bb79c75f544a7bead3142a499c, type: 3}
+    - {fileID: 21300000, guid: 9df22f998d5c9e04788364d941dfd71c, type: 3}
+    - {fileID: 21300000, guid: b5b8c7c343394ab41b56c8941a4add50, type: 3}
+    - {fileID: 21300000, guid: b7436b01ea961a24486d8a065ec4e594, type: 3}
+    - {fileID: 21300000, guid: 50884f23c19a2a54681e216ab815c60e, type: 3}
+    - {fileID: 21300000, guid: a13dbed87ef93364ab34b263ed1241b9, type: 3}
+    - {fileID: 21300000, guid: 02dcd908fc9386b48922fb09145b7817, type: 3}
+    - {fileID: 21300000, guid: d12216972ae253f47b2a9477a54663cd, type: 3}
+    - {fileID: 21300000, guid: ebf4d99e6a70bf2409ed9e9ff85d5f38, type: 3}
+    - {fileID: 21300000, guid: 779aa305b672a2246b38de1b5e0394f4, type: 3}
+    - {fileID: 21300000, guid: 71a3251e0813d5b408ac7ebec75005bb, type: 3}
+    - {fileID: 21300000, guid: ccbeec186cf14f44cb1c475dcea341f2, type: 3}
+    - {fileID: 21300000, guid: 94c874ce9379b6045b440b90fe867b77, type: 3}
+    - {fileID: 21300000, guid: e6031cb3abf7a4e499413f8ca540dd9a, type: 3}
+    - {fileID: 21300000, guid: 5f1c655721567614294d7dbc363c0ced, type: 3}
+    - {fileID: 21300000, guid: 96fb501dd0333d949a89908f3edc6e77, type: 3}
+    - {fileID: 21300000, guid: e45d1339b21b74844a1d3a31b50a999e, type: 3}
+    - {fileID: 21300000, guid: ec0b7cabeb9190c47a7cdca2a0ee0f78, type: 3}
+    - {fileID: 21300000, guid: a70090ea39c689842bff00445112ac40, type: 3}
+    - {fileID: 21300000, guid: 63061481eb375864c8e2097c35071ecd, type: 3}
+    - {fileID: 21300000, guid: 32b2fe7c624ead64cb88f15af85842b9, type: 3}
+    - {fileID: 21300000, guid: 94710310838a23d408548e8b653d9654, type: 3}
+    - {fileID: 21300000, guid: dc1c4baac92251046bada1f8c960bb0a, type: 3}
+    - {fileID: 21300000, guid: 7ca33e50ced4fd748891e374db5b9e90, type: 3}
+    - {fileID: 21300000, guid: 0d2754377a8abe64cb6e68c3ca568c2e, type: 3}
+    - {fileID: 21300000, guid: 41dcaf4696112844d88ec6b928b9c8bb, type: 3}
+    - {fileID: 21300000, guid: ce74b07980628994ba02dc31a667fa22, type: 3}
+    - {fileID: 21300000, guid: 27b218d5fad51fa42ae558b78dd68820, type: 3}
+    - {fileID: 21300000, guid: f6ee2c7f9308bac48860db67d26af424, type: 3}
+    - {fileID: 21300000, guid: 0fd21ef8abbeb3842942b6f0b132e777, type: 3}
+  - Name: Mage Warrior male
+    Jobs:
+    - Spellsword
+    Gender: 0
+    idleSprites:
+    - {fileID: 21300000, guid: 2d89fc8fed6f0c547b1c6ef99794cbec, type: 3}
+    - {fileID: 21300000, guid: 120edffd94e775244848625abeb230c0, type: 3}
+    - {fileID: 21300000, guid: 3421b698faea1d3449caa66bd6e479e7, type: 3}
+    - {fileID: 21300000, guid: 873ece05f9dcf214189a8d4e7986f2bc, type: 3}
+    - {fileID: 21300000, guid: 4f63c72edac508941b761e4cea3cd5c3, type: 3}
+    walkCount: 4
+    walkSprites:
+    - {fileID: 21300000, guid: 59b5b7d1ae9756847bed8f40a7f208b5, type: 3}
+    - {fileID: 21300000, guid: 4651d1bd14e9d654ab2ef01c2f43094b, type: 3}
+    - {fileID: 21300000, guid: 0d31b689d6ff617429eb215cbbb2eefd, type: 3}
+    - {fileID: 21300000, guid: bf7cc624b1486f540a122ecbec09419b, type: 3}
+    - {fileID: 21300000, guid: afe936ddf4804e240a612096412b4e92, type: 3}
+    - {fileID: 21300000, guid: 72b9df4d44f7d1543b26873f48c7ddaa, type: 3}
+    - {fileID: 21300000, guid: 761452d27f4892b4a9dcda84cd50c929, type: 3}
+    - {fileID: 21300000, guid: 02087d3698f2d154e8a40708d02a4686, type: 3}
+    - {fileID: 21300000, guid: 96a3418ccedfeca45b493bd8730b4a11, type: 3}
+    - {fileID: 21300000, guid: c1635db5d7d46234996223c359a5829f, type: 3}
+    - {fileID: 21300000, guid: 364dea327f866df4ca753006272e9937, type: 3}
+    - {fileID: 21300000, guid: 2a9e4c417c234cf47a1d731d1c200a5d, type: 3}
+    - {fileID: 21300000, guid: 83f4ca18c7675b947b83b885acc87ade, type: 3}
+    - {fileID: 21300000, guid: 596a7607cdfdde743ad0cf4be0d14e2a, type: 3}
+    - {fileID: 21300000, guid: a5a440648582f3d41a6f0efa5d191111, type: 3}
+    - {fileID: 21300000, guid: 3af5bae2ee4eb71498c807b55e1a0fbd, type: 3}
+    - {fileID: 21300000, guid: f7d2d16f1dba71540beafd113d294c27, type: 3}
+    - {fileID: 21300000, guid: 024e2a21f1cdc1d48aade5adff748d72, type: 3}
+    - {fileID: 21300000, guid: 9cb445118fb282741bf57e1c3d4198e7, type: 3}
+    - {fileID: 21300000, guid: 37445e89499ac7841909d5718315beed, type: 3}
+    attackCount: 6
+    attackSprites:
+    - {fileID: 21300000, guid: dbc5adff265e3b347b9ed68d0e9ca389, type: 3}
+    - {fileID: 21300000, guid: db7c93962073ed64286d70a980f60f26, type: 3}
+    - {fileID: 21300000, guid: 7b017757e5aae724981fddd0e50a36ef, type: 3}
+    - {fileID: 21300000, guid: 6b1e4ac4b91987648b236f3773bbcf5e, type: 3}
+    - {fileID: 21300000, guid: b7999227ba80b024087cc8454034d5be, type: 3}
+    - {fileID: 21300000, guid: f273c464f14a25047a7b48a148b789ca, type: 3}
+    - {fileID: 21300000, guid: 6de42b476e9c86541b6fd1c18dc3232d, type: 3}
+    - {fileID: 21300000, guid: 80632b5543b418846ba0776a86e7dabf, type: 3}
+    - {fileID: 21300000, guid: f8dc12b045e5c30408cc56757789a991, type: 3}
+    - {fileID: 21300000, guid: 2f992a835d16de740921dbdd25815673, type: 3}
+    - {fileID: 21300000, guid: b61d64a57f305fd4f9ef5b30dbf0d140, type: 3}
+    - {fileID: 21300000, guid: 9c43ba05aed90284dbbf8c76cf0b81b0, type: 3}
+    - {fileID: 21300000, guid: 61e5f83e1f4e663459125feef1898a74, type: 3}
+    - {fileID: 21300000, guid: 400b46382587bed45b2bf108e7345512, type: 3}
+    - {fileID: 21300000, guid: 4ca4373061bf0cb4caed1478a8fb9f14, type: 3}
+    - {fileID: 21300000, guid: 95a0e9721a0b2604b8e84fcc5ad6f133, type: 3}
+    - {fileID: 21300000, guid: 40f945c26d9825d41846eeca1668c096, type: 3}
+    - {fileID: 21300000, guid: 1f80dfe20b0bf6a459e356d8f80d859e, type: 3}
+    - {fileID: 21300000, guid: 0a8d2fff853541640a57a2db17750eae, type: 3}
+    - {fileID: 21300000, guid: 2af2789df1940a447bef160b0bde7af9, type: 3}
+    - {fileID: 21300000, guid: 164787782ac95cb4885f45d0d2cf9f89, type: 3}
+    - {fileID: 21300000, guid: ef8921e0406b50248987db35c76e4570, type: 3}
+    - {fileID: 21300000, guid: f316fc43597f2a048b5d80b123a135ca, type: 3}
+    - {fileID: 21300000, guid: 0b6acecc39017944d8fd419eb0c4ae6d, type: 3}
+    - {fileID: 21300000, guid: f00ffa73963b53746980147a2a0f00eb, type: 3}
+    - {fileID: 21300000, guid: 40644bf60a86ec94ab3cc7809a07ee40, type: 3}
+    - {fileID: 21300000, guid: a1360bfe44a3a244a9e7a0b562a163d8, type: 3}
+    - {fileID: 21300000, guid: 2defedd3f69721047b490c7376156c27, type: 3}
+    - {fileID: 21300000, guid: f73f651282144ef4cbc17d59bd057d3b, type: 3}
+    - {fileID: 21300000, guid: 3f8a6f802843d2442ba6ec16c0fb91d9, type: 3}
+  - Name: Mage Warrior female
+    Jobs:
+    - Spellsword
+    Gender: 1
+    idleSprites:
+    - {fileID: 21300000, guid: 20b92301f0ebc804982c90655ae001d0, type: 3}
+    - {fileID: 21300000, guid: 0518cb347f706b44193cc5d94e415296, type: 3}
+    - {fileID: 21300000, guid: 99b06a743cdb2ce47a8ba215e057960d, type: 3}
+    - {fileID: 21300000, guid: 01050533492a4cb42a4813a1c8b8b43e, type: 3}
+    - {fileID: 21300000, guid: 9cbddd224d52c9849a80d107ff442aa1, type: 3}
+    walkCount: 4
+    walkSprites:
+    - {fileID: 21300000, guid: 6fd734ada07d97d4199cda73a647cc78, type: 3}
+    - {fileID: 21300000, guid: 912d3c4a552e92c46b54fa38a44273e6, type: 3}
+    - {fileID: 21300000, guid: b4187d501c92db84da42bde8df04662e, type: 3}
+    - {fileID: 21300000, guid: 8736b60c80fe04d48be33e9ef734ca0b, type: 3}
+    - {fileID: 21300000, guid: ed7848293fb4ae84f8ce349a39ed7c68, type: 3}
+    - {fileID: 21300000, guid: 8443fc8cc969fd847a13fc74991507a3, type: 3}
+    - {fileID: 21300000, guid: a519df3ccfe1b804186b7b215d887656, type: 3}
+    - {fileID: 21300000, guid: b2c4e9affb7a6e74db8850204fae7c50, type: 3}
+    - {fileID: 21300000, guid: 1399601f4192f344bbc564d641e7210b, type: 3}
+    - {fileID: 21300000, guid: cac86d0cc75857e419d9da40fd846ccc, type: 3}
+    - {fileID: 21300000, guid: 1c2213775d55235428a0cf4c639efbe0, type: 3}
+    - {fileID: 21300000, guid: db95683ac643deb4b962a023e5f4b321, type: 3}
+    - {fileID: 21300000, guid: 07d933208491e7146a5dcbf1614c764c, type: 3}
+    - {fileID: 21300000, guid: a6a9287a3e7c3a248a09068a2e088128, type: 3}
+    - {fileID: 21300000, guid: 80670acfbe781714191251aa7e664433, type: 3}
+    - {fileID: 21300000, guid: ca50237942f57af4cb16bcb2bd754174, type: 3}
+    - {fileID: 21300000, guid: 26dce9f6ffdb51e48ba4ea4dbbeb2327, type: 3}
+    - {fileID: 21300000, guid: 81757573dd93a84429716512c578be76, type: 3}
+    - {fileID: 21300000, guid: 36e806b8776f03248b3636d3199a93d6, type: 3}
+    - {fileID: 21300000, guid: ad87067c711bc874d84447e18d893c78, type: 3}
+    attackCount: 6
+    attackSprites:
+    - {fileID: 21300000, guid: 9e3c0614297d2db43b251492e16c1b9a, type: 3}
+    - {fileID: 21300000, guid: af43fa2bab782094095b0862dd1198ff, type: 3}
+    - {fileID: 21300000, guid: 92aee826d753ba443b81d719e8436f01, type: 3}
+    - {fileID: 21300000, guid: 0c79b0c9a31bd444485d1b47efb7addf, type: 3}
+    - {fileID: 21300000, guid: c534882d08441434eba4327585ce1214, type: 3}
+    - {fileID: 21300000, guid: 7d35e4dfcf96ce24bae1a7633ca016ea, type: 3}
+    - {fileID: 21300000, guid: 448c4ed28f1d53649aaf7c0a2bb7d9e3, type: 3}
+    - {fileID: 21300000, guid: 72ffb6bcf2ad898439bc7854c8c95406, type: 3}
+    - {fileID: 21300000, guid: 8fa86ac2e4155d445b343f0f98cf5709, type: 3}
+    - {fileID: 21300000, guid: c52ef984568322443bc5e07af174dcbb, type: 3}
+    - {fileID: 21300000, guid: 8d90ea9c7ea1bde45beac587a0dbaa61, type: 3}
+    - {fileID: 21300000, guid: 3211137eb33522e4aa30175d2c3ab1ab, type: 3}
+    - {fileID: 21300000, guid: b678442dc0542b24eb216275a00dec2f, type: 3}
+    - {fileID: 21300000, guid: e8da6b1d3b694e847ac9036e2472cad8, type: 3}
+    - {fileID: 21300000, guid: e1f1a80e0c2b82f4c9c82cc88659a0b8, type: 3}
+    - {fileID: 21300000, guid: ae5d10ef04b6273489c013e3f8d74ad1, type: 3}
+    - {fileID: 21300000, guid: 745b5b82d44110948bf0a068c6e61f9e, type: 3}
+    - {fileID: 21300000, guid: ec902b8434f4e004da81c37e5d74b35e, type: 3}
+    - {fileID: 21300000, guid: 366c6103520e7a646b18474c1e49abfb, type: 3}
+    - {fileID: 21300000, guid: 5bda5553d39433149b9f00484ad35085, type: 3}
+    - {fileID: 21300000, guid: 2b5f1e0e9e30c8f4b9c2fd7213c3ceb3, type: 3}
+    - {fileID: 21300000, guid: bdc4d18c4259d774a8ef899f80212336, type: 3}
+    - {fileID: 21300000, guid: bae41483e6b1c2a45ba2a86de1426070, type: 3}
+    - {fileID: 21300000, guid: 990b306a9ebb4de469094758ac0084e2, type: 3}
+    - {fileID: 21300000, guid: d48d874c8b3ea3642b942b0118745189, type: 3}
+    - {fileID: 21300000, guid: 461a3a171160db848bb289a68bb70dee, type: 3}
+    - {fileID: 21300000, guid: e42a2df4b1e3c74499ef1ca4efc48ce5, type: 3}
+    - {fileID: 21300000, guid: 366114a65dd9fc3448c96958b7695ef2, type: 3}
+    - {fileID: 21300000, guid: f069a8128ace79741b27045697f2b9f9, type: 3}
+    - {fileID: 21300000, guid: 47fe113858ad3a846babf3a1b5045e3f, type: 3}
+  - Name: Ranger male
+    Jobs:
+    - Ranger
+    - Archer
+    Gender: 0
+    idleSprites:
+    - {fileID: 21300000, guid: 9d8f8d36728be85498504ee68633742a, type: 3}
+    - {fileID: 21300000, guid: 2303daf7677a62746b3bd4345947180b, type: 3}
+    - {fileID: 21300000, guid: 04457b764be502540a53abedbdb1d832, type: 3}
+    - {fileID: 21300000, guid: d941527eee188b343ab9242ffc412b2b, type: 3}
+    - {fileID: 21300000, guid: 54cb86e6ce898944a96c06ea09d87286, type: 3}
+    walkCount: 4
+    walkSprites:
+    - {fileID: 21300000, guid: 7be6b96f370bdcf42aaf204ca1ea8403, type: 3}
+    - {fileID: 21300000, guid: 0a1be4c0381b7684180f7524a032b6bb, type: 3}
+    - {fileID: 21300000, guid: 42b871630a7b89e4692a7d7fe76deed1, type: 3}
+    - {fileID: 21300000, guid: 687d612ffef43b546ac3bfa3c137705e, type: 3}
+    - {fileID: 21300000, guid: 01f75b5af69ab1944b9e1e1324c02e99, type: 3}
+    - {fileID: 21300000, guid: 4e363d7d350f52f4eb8804f45907bdbb, type: 3}
+    - {fileID: 21300000, guid: 437cb62b353c6eb4ea74147154037f11, type: 3}
+    - {fileID: 21300000, guid: 606d3b7f57b16074b851a8c4c9eb26e6, type: 3}
+    - {fileID: 21300000, guid: 1703f6bce9df75e4f9b7c64e6f67ea13, type: 3}
+    - {fileID: 21300000, guid: ac69eb82332c2c048b5ccb385989bec7, type: 3}
+    - {fileID: 21300000, guid: 6da1dc69fc9834f4788028b36726586c, type: 3}
+    - {fileID: 21300000, guid: 37a7e4f55f0a75e47b90ea134a59e341, type: 3}
+    - {fileID: 21300000, guid: 6c29c8d54deff0a4caef7ec8c5d08abf, type: 3}
+    - {fileID: 21300000, guid: 5725ac316d1a92f4089664a7be09aa91, type: 3}
+    - {fileID: 21300000, guid: 6efecb45ba5a2ae42b4766775ef9d54b, type: 3}
+    - {fileID: 21300000, guid: bf9275a179b5e42459c2ea08647fd760, type: 3}
+    - {fileID: 21300000, guid: 8ce7faddd8eb4c741973134cde6f857e, type: 3}
+    - {fileID: 21300000, guid: 03e60f41a517e8243b03b74b6533e6ca, type: 3}
+    - {fileID: 21300000, guid: 5db3edfa5920f3246bae1477e846361a, type: 3}
+    - {fileID: 21300000, guid: 5155495b5c1dc3749a4ea2db9b2eb48f, type: 3}
+    attackCount: 6
+    attackSprites:
+    - {fileID: 21300000, guid: d7b4be1e7a0873545967c5cda55e7490, type: 3}
+    - {fileID: 21300000, guid: cc1172fb11cb1b34c81a5bf3de019468, type: 3}
+    - {fileID: 21300000, guid: 722c55643472789438d65b5148dfc3a9, type: 3}
+    - {fileID: 21300000, guid: ab7fc0fa40039e44aacf329dd5108362, type: 3}
+    - {fileID: 21300000, guid: b10a0f6d75182b240a60341042d208d7, type: 3}
+    - {fileID: 21300000, guid: efb69914211fb0f41a1626e70b450af0, type: 3}
+    - {fileID: 21300000, guid: b8842d05650f2534789f31e853fe71e1, type: 3}
+    - {fileID: 21300000, guid: 9588f6d2f70cd6c47a44479641772f15, type: 3}
+    - {fileID: 21300000, guid: 6a061995f43718147938ee975eb05f3f, type: 3}
+    - {fileID: 21300000, guid: 83ed0ac94e093304b95cddaeb236d599, type: 3}
+    - {fileID: 21300000, guid: 147608ae04317c94088d1ca59c91e8ce, type: 3}
+    - {fileID: 21300000, guid: d700bd4ac394a2c4e8620748608ff6f6, type: 3}
+    - {fileID: 21300000, guid: 7b5e49ece60eb24488ad9d1b3bf23837, type: 3}
+    - {fileID: 21300000, guid: a1fa69ad46421ff4b9b8dca756af8e2d, type: 3}
+    - {fileID: 21300000, guid: b7e9401f0b7b1ab42b3237a9f9592856, type: 3}
+    - {fileID: 21300000, guid: 54be090b70f7159489c02a95dea517df, type: 3}
+    - {fileID: 21300000, guid: d39c11b65aa761e4387bfa40bc528078, type: 3}
+    - {fileID: 21300000, guid: 230cb5ba1d1aad6499be1b4ea2040d8c, type: 3}
+    - {fileID: 21300000, guid: 2d7d369c9537c6545b6261508c538d86, type: 3}
+    - {fileID: 21300000, guid: cb48330da4b85d841925928abb3203af, type: 3}
+    - {fileID: 21300000, guid: 291535dcdcbfe644ca6aa31f49e27a5c, type: 3}
+    - {fileID: 21300000, guid: 43f77b3c42c6ef24ebba73b1bc5aede4, type: 3}
+    - {fileID: 21300000, guid: 5319c7c79cc587f468784c44644ad0fa, type: 3}
+    - {fileID: 21300000, guid: 22245d74d73cdca4f994dafbca2d708e, type: 3}
+    - {fileID: 21300000, guid: d57e20d434aa5a84baf0d8b3a7f3e0ff, type: 3}
+    - {fileID: 21300000, guid: 9ffe786bb2bb67642b0ae31fdc4f48d9, type: 3}
+    - {fileID: 21300000, guid: 0e1cdbe2add0def44bd8cac1e70b1564, type: 3}
+    - {fileID: 21300000, guid: 1ad6f2e21b535ce48ac4c9670a45b0e4, type: 3}
+    - {fileID: 21300000, guid: 647fca6072275d04a9424db07f972372, type: 3}
+    - {fileID: 21300000, guid: 1b5bf48fc8bc6374fbeb90336d6caa6c, type: 3}
+  - Name: Ranger female
+    Jobs:
+    - Ranger
+    - Archer
+    Gender: 1
+    idleSprites:
+    - {fileID: 21300000, guid: f374ee9ff81cb95418fdd3adc319e3e7, type: 3}
+    - {fileID: 21300000, guid: 34c7d503d806c7943b762b45435f9ce6, type: 3}
+    - {fileID: 21300000, guid: 6a563629b9f127a41923ce25c8b00819, type: 3}
+    - {fileID: 21300000, guid: 4b8e6a66b42eb3249a86160f59f97739, type: 3}
+    - {fileID: 21300000, guid: e63e47fc3f22ecf48a54d033de0f09bd, type: 3}
+    walkCount: 4
+    walkSprites:
+    - {fileID: 21300000, guid: 6a4e9e2a12828d84b990988d26d48832, type: 3}
+    - {fileID: 21300000, guid: 2281eaef76768fa4d80037ada79cc71b, type: 3}
+    - {fileID: 21300000, guid: 623d5eb842e645d4e829dcb1e20f7951, type: 3}
+    - {fileID: 21300000, guid: 67189211ebfc5324d8ee5ed60d4d02ae, type: 3}
+    - {fileID: 21300000, guid: 621873168183dd24ebd43cadb04f142c, type: 3}
+    - {fileID: 21300000, guid: 246c6f8a673d7a94e9cfecca0dd4c5a2, type: 3}
+    - {fileID: 21300000, guid: 287496fba3a73f24da7e188b96d59d0c, type: 3}
+    - {fileID: 21300000, guid: c8c885c382d13ea4a8b5251bcdbb5f52, type: 3}
+    - {fileID: 21300000, guid: 3ba6801de9b5e234bb6d6e46b716661c, type: 3}
+    - {fileID: 21300000, guid: a98bb329252859d4b94cf0785ab9174f, type: 3}
+    - {fileID: 21300000, guid: d848c719a6a4aeb45843e6674197cd2a, type: 3}
+    - {fileID: 21300000, guid: 72322c0be41dab04fabfa5234a94a2d9, type: 3}
+    - {fileID: 21300000, guid: 3bbeb8242a9dc944ea5f49b4d549c0f0, type: 3}
+    - {fileID: 21300000, guid: 3813bf5f17ebf6c4084c5a9cbc7834f4, type: 3}
+    - {fileID: 21300000, guid: 9e1a79937ab617e4785db12c81da1522, type: 3}
+    - {fileID: 21300000, guid: 0a27b84ffd1838546a23dbbb263d7db6, type: 3}
+    - {fileID: 21300000, guid: ea33f6e87574f904d9aa0a26a0c8c468, type: 3}
+    - {fileID: 21300000, guid: ef04e4135477afe4e8b1f6a7949041f8, type: 3}
+    - {fileID: 21300000, guid: 4459f4a4e6cc0a444a9472a1be94b982, type: 3}
+    - {fileID: 21300000, guid: 3696879a5c7c30641a4dd8529caf33a5, type: 3}
+    attackCount: 6
+    attackSprites:
+    - {fileID: 21300000, guid: 2e8a256c3d4b841479086e80e2f19385, type: 3}
+    - {fileID: 21300000, guid: 2ed7a6cb722577144bbba93459c58c9c, type: 3}
+    - {fileID: 21300000, guid: d5aa58b79de203340915b3eac5e7f72c, type: 3}
+    - {fileID: 21300000, guid: cec026d3b2715cd4e907e4e70eb2bb93, type: 3}
+    - {fileID: 21300000, guid: 2045b81b519ceac42996c6d66815cb2a, type: 3}
+    - {fileID: 21300000, guid: 615a875a018f2d0409dec928fd31551e, type: 3}
+    - {fileID: 21300000, guid: 2d577439e1e012a4f9baf34ad21d19c8, type: 3}
+    - {fileID: 21300000, guid: 6914de83bf985f448a6d30c296a4b2ed, type: 3}
+    - {fileID: 21300000, guid: a25d80e4781718d439fc6b453274eee5, type: 3}
+    - {fileID: 21300000, guid: 21185204c91fe044687cee4a30a40c2f, type: 3}
+    - {fileID: 21300000, guid: 9963e987683e2d34ca2e374b2442751e, type: 3}
+    - {fileID: 21300000, guid: 79287691f8bf9f246b782eb82d28a0d1, type: 3}
+    - {fileID: 21300000, guid: cf95d0b617966e04f9ecf5f76e8f08e7, type: 3}
+    - {fileID: 21300000, guid: 247bd0a75025ff24b864d82c0b76a46d, type: 3}
+    - {fileID: 21300000, guid: 90a54092026afd44eb4816bc48f0f51b, type: 3}
+    - {fileID: 21300000, guid: f1d99ef4bed785a44950f3a1b25f6dbb, type: 3}
+    - {fileID: 21300000, guid: 49e8d4d36a5e33a4cb4ee569d2eac49a, type: 3}
+    - {fileID: 21300000, guid: 07ba5367d2848f54381cacf60489e1a2, type: 3}
+    - {fileID: 21300000, guid: d4c40884a69671d499ce418897840c95, type: 3}
+    - {fileID: 21300000, guid: 50eea36775a4cfb49bcd4a909a981a34, type: 3}
+    - {fileID: 21300000, guid: 48d0754b48a44304e91c138958712691, type: 3}
+    - {fileID: 21300000, guid: ca176f5d9898d92429128b810312f189, type: 3}
+    - {fileID: 21300000, guid: 8dd1bdf275dfe8843bc6d1bb6c2d1710, type: 3}
+    - {fileID: 21300000, guid: 5f19144bb50200f41a2f1502f15f3db2, type: 3}
+    - {fileID: 21300000, guid: 0708aa38e30715044bb5dc3a6d939896, type: 3}
+    - {fileID: 21300000, guid: 7ecf0260f74e88c4ab44f7d9f47c33aa, type: 3}
+    - {fileID: 21300000, guid: ed6971948fe1c854fa9482cbfcca86c9, type: 3}
+    - {fileID: 21300000, guid: d53fc31e538c8a5439eca1f1222bf7d3, type: 3}
+    - {fileID: 21300000, guid: 1866424e278933d4e87325cbeb81b38f, type: 3}
+    - {fileID: 21300000, guid: 1719e4c4a4e17e5438748d2393d47044, type: 3}
+  - Name: Barbarian male
+    Jobs:
+    - Barbarian
+    Gender: 0
+    idleSprites:
+    - {fileID: 21300000, guid: cf86420d1992acb4c9cb289f1d6cf373, type: 3}
+    - {fileID: 21300000, guid: 4b7a17f9d1b14e64cb8c0ff3ca753d4a, type: 3}
+    - {fileID: 21300000, guid: 23dcbe74e075f1049a3eff181fd73c3b, type: 3}
+    - {fileID: 21300000, guid: 37f16472ba78c9745ae9bebe9365925b, type: 3}
+    - {fileID: 21300000, guid: cd89b6e0faa1d374bb02f7e8d927f54b, type: 3}
+    walkCount: 4
+    walkSprites:
+    - {fileID: 21300000, guid: 6bb25252c1b4d2142a1c9d9483ea1996, type: 3}
+    - {fileID: 21300000, guid: ddaaa2b1cba3b74439ae266615819c6c, type: 3}
+    - {fileID: 21300000, guid: 045adbde5b6fec247819fb90dc7ff77f, type: 3}
+    - {fileID: 21300000, guid: 6eeba8af26e3c5244acfac351c0f2e95, type: 3}
+    - {fileID: 21300000, guid: ee3bb5fd22fba8c439f2dc1fd9d3ea30, type: 3}
+    - {fileID: 21300000, guid: 7ec51914fe4b4704bbe72c2879b6ce2a, type: 3}
+    - {fileID: 21300000, guid: 5c8f98dcc9e7ea045a08da1b545af925, type: 3}
+    - {fileID: 21300000, guid: 084de257d1d9e77499eaffae24463a1e, type: 3}
+    - {fileID: 21300000, guid: 716cc6e42ca181a49b041f03cbd1d551, type: 3}
+    - {fileID: 21300000, guid: edba8593e8cf5e9408430c4e29769bf5, type: 3}
+    - {fileID: 21300000, guid: cb41f261fc817944fa3c8e512ef14c77, type: 3}
+    - {fileID: 21300000, guid: 08693a9ba1b013c4c857e3bb55e04085, type: 3}
+    - {fileID: 21300000, guid: eafe36affc1a57f4abcfd250fd59bae4, type: 3}
+    - {fileID: 21300000, guid: 5ed0003558187b246a35b890a9a1eb9d, type: 3}
+    - {fileID: 21300000, guid: c1e627e679538504dba6850f683bce6f, type: 3}
+    - {fileID: 21300000, guid: 5c5646dd23d5acc4dbbdcd418cceecea, type: 3}
+    - {fileID: 21300000, guid: 24b57db9d564bf44d91ee8f15a77d478, type: 3}
+    - {fileID: 21300000, guid: cf633f75301bbf0458a1a63d1cb1dc93, type: 3}
+    - {fileID: 21300000, guid: 98d6e0e20e73d7247a9f06bd763d249f, type: 3}
+    - {fileID: 21300000, guid: 6d6bc06739fe71449a3eda11a240e0a8, type: 3}
+    attackCount: 6
+    attackSprites:
+    - {fileID: 21300000, guid: 6e9e50fb557042944998282ecc23631a, type: 3}
+    - {fileID: 21300000, guid: fdcd2cb2b34860f4baeb93121263bf2c, type: 3}
+    - {fileID: 21300000, guid: e2e52c3891d23f34d8ab06ac2c6f0171, type: 3}
+    - {fileID: 21300000, guid: fee6c60130641034da3d4610e7920ba1, type: 3}
+    - {fileID: 21300000, guid: e50b564a2dff8b242b162e8b15f08222, type: 3}
+    - {fileID: 21300000, guid: ff1dc08818d0835489eb542936f309f0, type: 3}
+    - {fileID: 21300000, guid: 4e646e3a0c4234e468f93d91d60db89a, type: 3}
+    - {fileID: 21300000, guid: fcd23e030c6a1944c8ab74d2a62ba69c, type: 3}
+    - {fileID: 21300000, guid: 1b79f11dff537a543b92e16d00654d9c, type: 3}
+    - {fileID: 21300000, guid: b8d64702fc199a348a38dd7ac5e6158b, type: 3}
+    - {fileID: 21300000, guid: 4fdab8893fe25a2429c77f975f422f39, type: 3}
+    - {fileID: 21300000, guid: c0b28559476e96849ba666f34f3a30e2, type: 3}
+    - {fileID: 21300000, guid: e0973f24cbc87c243b4526676de0bfe1, type: 3}
+    - {fileID: 21300000, guid: 44427a81fc39f3944a7af2ed3feda7c1, type: 3}
+    - {fileID: 21300000, guid: 99b78544da24cb9409701214899add7e, type: 3}
+    - {fileID: 21300000, guid: 84a1426745361c94398298264a0baebc, type: 3}
+    - {fileID: 21300000, guid: 82039df57fad6e142a09b648f245014a, type: 3}
+    - {fileID: 21300000, guid: 218a518b6deeb3b45a611ae7309776d8, type: 3}
+    - {fileID: 21300000, guid: c0a4ad93f12d39c4599737f0a9367038, type: 3}
+    - {fileID: 21300000, guid: df69eaca55f30604faa6b03cc894dc5b, type: 3}
+    - {fileID: 21300000, guid: e69951c478a1a5e418e7765d21a210b3, type: 3}
+    - {fileID: 21300000, guid: a00c02b630cf27847b35edd166a170fe, type: 3}
+    - {fileID: 21300000, guid: 0ed5ee6c0d69dfb4bb692fc1409f9cdd, type: 3}
+    - {fileID: 21300000, guid: addb5bd784f9c6442a4829218fe2594a, type: 3}
+    - {fileID: 21300000, guid: 56ea0be6559b8fb4799cd264ea45bc43, type: 3}
+    - {fileID: 21300000, guid: 28ef3c804ee350d42a87c9a9e097f164, type: 3}
+    - {fileID: 21300000, guid: 60a07c334aa99e8408245a1d8782c8c1, type: 3}
+    - {fileID: 21300000, guid: d04f6213048a074418c1559cc09a4788, type: 3}
+    - {fileID: 21300000, guid: 426170850347b5143811c19ead71a4f4, type: 3}
+    - {fileID: 21300000, guid: 2c8f56a85f9253f408f91cad1deb14ee, type: 3}
+  - Name: Barbarian female
+    Jobs:
+    - Barbarian
+    Gender: 1
+    idleSprites:
+    - {fileID: 21300000, guid: 1c1f542582bdfd049947e7427c4d185f, type: 3}
+    - {fileID: 21300000, guid: fb4defa43e8c35b43a739218638736d0, type: 3}
+    - {fileID: 21300000, guid: 5ce9c7e6ce6c55a4eb064924f2911225, type: 3}
+    - {fileID: 21300000, guid: 2ff0ec46adfedfe4ca60efd227588d27, type: 3}
+    - {fileID: 21300000, guid: abc4790f74c2c1b4e9b545e5a4f4e94f, type: 3}
+    walkCount: 4
+    walkSprites:
+    - {fileID: 21300000, guid: 3d3efdfd69c3fdb4690d05eae438b152, type: 3}
+    - {fileID: 21300000, guid: fcd92e2c85e884b4dba1da0f9011706a, type: 3}
+    - {fileID: 21300000, guid: 113b6f55b2ef2494b96c8395c978c410, type: 3}
+    - {fileID: 21300000, guid: 6f5b93de9aebcc84eb4abb9ab073f0da, type: 3}
+    - {fileID: 21300000, guid: 1fda9ba9fcdbcd84081aa8e34eda74ec, type: 3}
+    - {fileID: 21300000, guid: da4b4498fe1588b438fac3e6010ca050, type: 3}
+    - {fileID: 21300000, guid: 6730a2e47931cb741b32cea38afd3945, type: 3}
+    - {fileID: 21300000, guid: c8cd41d9d83a5d845bfa969d939f6ed1, type: 3}
+    - {fileID: 21300000, guid: 412aa69c14a3ac049a75b7b86e7937f3, type: 3}
+    - {fileID: 21300000, guid: 913e9c7bd6497b84d8aae17c92457ec0, type: 3}
+    - {fileID: 21300000, guid: 95bfcab7deed955408b3d0996edcfde9, type: 3}
+    - {fileID: 21300000, guid: 0e6ddea0f2167ed4799bdb5f9e201a9d, type: 3}
+    - {fileID: 21300000, guid: d0af69440de950c4e9a221b62e1bdf06, type: 3}
+    - {fileID: 21300000, guid: 5642949f473a4c548a19173292c19046, type: 3}
+    - {fileID: 21300000, guid: 66503b79f6a6a2045a5694d6b6fd4e7a, type: 3}
+    - {fileID: 21300000, guid: 504011e2b5ce35a46b278f0738d9264d, type: 3}
+    - {fileID: 21300000, guid: c58b61adb33d74c44b10b2fa8c054401, type: 3}
+    - {fileID: 21300000, guid: 989b006b787ea2e4d807a535f0b4f2fb, type: 3}
+    - {fileID: 21300000, guid: 79c14d01b4b0ebc47bcfe8017bb4cab1, type: 3}
+    - {fileID: 21300000, guid: 32bf00060c268db45bbf5a3e875820e2, type: 3}
+    attackCount: 6
+    attackSprites:
+    - {fileID: 21300000, guid: e8b7b665c0764b845a2ec8fc117fb874, type: 3}
+    - {fileID: 21300000, guid: bee33381243abcb4c884737ae3db2e70, type: 3}
+    - {fileID: 21300000, guid: 49c00e670ca70514ab5447f32a22179c, type: 3}
+    - {fileID: 21300000, guid: d1c88541d841690498fccee7be3e859c, type: 3}
+    - {fileID: 21300000, guid: e6aa8aec780f94144a10e206835c314f, type: 3}
+    - {fileID: 21300000, guid: 5b0a4580f5a0d9e4eab8c369b75c94b8, type: 3}
+    - {fileID: 21300000, guid: 9ae658b63497a3247b82754d0a0c38a2, type: 3}
+    - {fileID: 21300000, guid: 09e284a61c0797045b166a1fc97d4db0, type: 3}
+    - {fileID: 21300000, guid: cdfbcc2dad204934ca85991f94eacd9e, type: 3}
+    - {fileID: 21300000, guid: 3f74860953b63f1459773e55265bbe87, type: 3}
+    - {fileID: 21300000, guid: a524b2152bff74e4c84fa316989b3358, type: 3}
+    - {fileID: 21300000, guid: b51f96fc2f7a7a74d8a021308e4b18f1, type: 3}
+    - {fileID: 21300000, guid: 6874bff65979bc546bc7f3d73ec03cc9, type: 3}
+    - {fileID: 21300000, guid: 4ed2228c013495d4a94fddb39117c9a4, type: 3}
+    - {fileID: 21300000, guid: b396de131752fad4da812b5c9e40e265, type: 3}
+    - {fileID: 21300000, guid: 156b97d5209dcd3428b6ad83f6617a09, type: 3}
+    - {fileID: 21300000, guid: b1e644b4f2387a84ea4bbaee4e74f2ab, type: 3}
+    - {fileID: 21300000, guid: 18133b97a83777948bd3f281e54140e5, type: 3}
+    - {fileID: 21300000, guid: b430de2b1ec0cc547a621fd47622e2d3, type: 3}
+    - {fileID: 21300000, guid: 6d8dd3942a80a2b40980dda5a2fa950f, type: 3}
+    - {fileID: 21300000, guid: 3e85dc846a015774984311f9346cfaca, type: 3}
+    - {fileID: 21300000, guid: a2c5e16398fbb3d4d92ca48b96731e7a, type: 3}
+    - {fileID: 21300000, guid: 10807273cf328a3468aa77d0e382ad29, type: 3}
+    - {fileID: 21300000, guid: 8243e339797f2584aaa675d10de613f2, type: 3}
+    - {fileID: 21300000, guid: adc8dc941160d2a4eb1e6dc2ea4186c0, type: 3}
+    - {fileID: 21300000, guid: 6d076df3ad7c32c4aac02eb578ff372e, type: 3}
+    - {fileID: 21300000, guid: e55a62f90c0cbe44dbc9e41321b3409b, type: 3}
+    - {fileID: 21300000, guid: a56793810cdcdc948b25bc1c97343643, type: 3}
+    - {fileID: 21300000, guid: 50164e34c92953445bb2057c91f7852e, type: 3}
+    - {fileID: 21300000, guid: af39114df00aa854e9cd30907e10812e, type: 3}
+  - Name: Fighter male
+    Jobs:
+    - Knight
+    - Warrior
+    Gender: 0
+    idleSprites:
+    - {fileID: 21300000, guid: 5d43fef7317a25b45a357358846759bd, type: 3}
+    - {fileID: 21300000, guid: 64c5760342cac8344aba97871b373a20, type: 3}
+    - {fileID: 21300000, guid: 1d7d3fd776f6d4749b3649a8e2ed8678, type: 3}
+    - {fileID: 21300000, guid: b110f5cff0a960b4c9579c8d7e6f047c, type: 3}
+    - {fileID: 21300000, guid: ee86dbc7d36576d478d5fba0b122fa1c, type: 3}
+    walkCount: 4
+    walkSprites:
+    - {fileID: 21300000, guid: 94085543a540cc441aabd7c839da9f37, type: 3}
+    - {fileID: 21300000, guid: 1407b05612c3d644c81d490b3f8b006f, type: 3}
+    - {fileID: 21300000, guid: 1b25b99fa0596a2439227a202aca74ce, type: 3}
+    - {fileID: 21300000, guid: a6c3ff42974b7ab4282671047dc3c27c, type: 3}
+    - {fileID: 21300000, guid: e3b4492927b749946b807e3a97c88666, type: 3}
+    - {fileID: 21300000, guid: 36275a0c80ca0c34aa8c36b768d875e5, type: 3}
+    - {fileID: 21300000, guid: 031e2d61287411f459af011e5beabae1, type: 3}
+    - {fileID: 21300000, guid: f0277def14fd30e4281c5e4cfd3adfcf, type: 3}
+    - {fileID: 21300000, guid: d93c189c1067cde478d05486bb7e2cfc, type: 3}
+    - {fileID: 21300000, guid: fc3e125575b1d6d4aaf3653eb6db58c2, type: 3}
+    - {fileID: 21300000, guid: 8d02aadd4beee5843a591ce08685d2e7, type: 3}
+    - {fileID: 21300000, guid: 3292e1846afd3b14dadd179c1a144257, type: 3}
+    - {fileID: 21300000, guid: c24b40a3a2a3b9348b3e16ca3d89a5db, type: 3}
+    - {fileID: 21300000, guid: c33b01ea127f21640a471c9cb3a5dd3b, type: 3}
+    - {fileID: 21300000, guid: 535a9a971a0ecc84db9df71e3f0d6db7, type: 3}
+    - {fileID: 21300000, guid: c2288b02cc100a74c9baca73249db3ec, type: 3}
+    - {fileID: 21300000, guid: 819a64ff97d0e8c4ebf35cce19f9f899, type: 3}
+    - {fileID: 21300000, guid: 3e1c40e1927594c4f932e44889c4f8e1, type: 3}
+    - {fileID: 21300000, guid: ec8ab2efea12422488d05403da34789b, type: 3}
+    - {fileID: 21300000, guid: 1f23b0c6490f6b3429fe17f9070ec105, type: 3}
+    attackCount: 6
+    attackSprites:
+    - {fileID: 21300000, guid: 811f61a9a98d3ee4fbb75d8cde3eac04, type: 3}
+    - {fileID: 21300000, guid: 056c9f69cd314d249b2780725eee35e9, type: 3}
+    - {fileID: 21300000, guid: be895844e45f43a4097bcf2e5d63ee3d, type: 3}
+    - {fileID: 21300000, guid: b277f45598e1b54468c915a5ccec0db4, type: 3}
+    - {fileID: 21300000, guid: 691f5621a907fe24e804ae4b72d536f4, type: 3}
+    - {fileID: 21300000, guid: dcf494ae49221b6459218ed98f49b14d, type: 3}
+    - {fileID: 21300000, guid: 9ec87ac2f9c556e4e868b349f29c01b4, type: 3}
+    - {fileID: 21300000, guid: f59cfdaa6fff6e1439d321cd65283270, type: 3}
+    - {fileID: 21300000, guid: 88d2e14d66fe1b640bf904c5103f509b, type: 3}
+    - {fileID: 21300000, guid: 39f68500c49955b4cbc8b24627fae0fb, type: 3}
+    - {fileID: 21300000, guid: 27749ff36f3a9a34997d8d3bbb7032df, type: 3}
+    - {fileID: 21300000, guid: 5c303cc3cc5260141afaefe46655ae01, type: 3}
+    - {fileID: 21300000, guid: cf7bdf9f6392d0947afd0b347da36e68, type: 3}
+    - {fileID: 21300000, guid: 510eff5d9373b4140ab22e6ff4dbdcb4, type: 3}
+    - {fileID: 21300000, guid: 6ea45bdc5708ce6408bc0636b1c6196f, type: 3}
+    - {fileID: 21300000, guid: 2d7925a108c6f004bb0ff31bf67d7def, type: 3}
+    - {fileID: 21300000, guid: fdf8ab9c3d17c5748bd84e70c17edcdb, type: 3}
+    - {fileID: 21300000, guid: 09d252ad933537e44bbc72d358159a98, type: 3}
+    - {fileID: 21300000, guid: 45bbe51ce0b242144911beae914246c1, type: 3}
+    - {fileID: 21300000, guid: 60a9c946522b3ef4b87e5bf9be4d31f8, type: 3}
+    - {fileID: 21300000, guid: d32ec957073395148b6ed167dd7b4625, type: 3}
+    - {fileID: 21300000, guid: de89f0df3d6990e4a80a6b11214fd3b1, type: 3}
+    - {fileID: 21300000, guid: c28c83beb0b9a594f978b01cab495b69, type: 3}
+    - {fileID: 21300000, guid: 11a354b82d8352f428f538e54ac60e41, type: 3}
+    - {fileID: 21300000, guid: 28f592bb303883641a66836ff5e3aa7c, type: 3}
+    - {fileID: 21300000, guid: 404e977ed6ebefb40b4c1881b323468b, type: 3}
+    - {fileID: 21300000, guid: 1887e7c5544918f47a5accf3c64a0ef9, type: 3}
+    - {fileID: 21300000, guid: 8f9929a694510374cb6d2007f93f3ff5, type: 3}
+    - {fileID: 21300000, guid: e9fa3b92af196684ab5bc36fedfc17d3, type: 3}
+    - {fileID: 21300000, guid: 05ba9278b96849a4ea8192e352b920a6, type: 3}
+  - Name: Fighter female
+    Jobs:
+    - Knight
+    - Warrior
+    Gender: 1
+    idleSprites:
+    - {fileID: 21300000, guid: 6dec9ded1af1bbe479a293fde17a00a6, type: 3}
+    - {fileID: 21300000, guid: 190cf4702692ff6459f0200624980502, type: 3}
+    - {fileID: 21300000, guid: 432bbc36efd512945aa2111421224228, type: 3}
+    - {fileID: 21300000, guid: 3cafb5db18b1914438fc37ccc1b4833b, type: 3}
+    - {fileID: 21300000, guid: 5badf2344a5d9f64694c956ef347a7ef, type: 3}
+    walkCount: 4
+    walkSprites:
+    - {fileID: 21300000, guid: 7da4d4cf6140e0b4fb08fac1a0895fd6, type: 3}
+    - {fileID: 21300000, guid: 2a81fbf8cb3d88c4fa16f5908a97e9ef, type: 3}
+    - {fileID: 21300000, guid: 9c3ab087d225bc94285d0322893f95d7, type: 3}
+    - {fileID: 21300000, guid: 6f43d8cf0ae926b4baf4e766c03704f8, type: 3}
+    - {fileID: 21300000, guid: dd779cecbc2351c47806979cb3116f86, type: 3}
+    - {fileID: 21300000, guid: a062be61cc1ee9b47844e50dca13dbad, type: 3}
+    - {fileID: 21300000, guid: cb7f56ed0a71bb047afc5b0ca18e2a95, type: 3}
+    - {fileID: 21300000, guid: 63aed51955459154d9a280077b583d89, type: 3}
+    - {fileID: 21300000, guid: d21f305419b0fb44e8f4b4788389cf06, type: 3}
+    - {fileID: 21300000, guid: 6f17d8f367943a7439b44f20f7f49e2c, type: 3}
+    - {fileID: 21300000, guid: 1632a8e7ae382e4469a77f3e42f4ddb0, type: 3}
+    - {fileID: 21300000, guid: 84e1a6b8a2d626a48a3201fdcb535cdd, type: 3}
+    - {fileID: 21300000, guid: d5483f00b29ad7144ae8c5038dacc144, type: 3}
+    - {fileID: 21300000, guid: c339b354388b51d4ab2098dedae602d7, type: 3}
+    - {fileID: 21300000, guid: 433824417a887284f87e738c9ff5af10, type: 3}
+    - {fileID: 21300000, guid: ebfc10a40a8414547bb88d82ed834dd0, type: 3}
+    - {fileID: 21300000, guid: 0c168b28e01b242438ea5cccb5512763, type: 3}
+    - {fileID: 21300000, guid: 5da691adeee1ae64e9e84444658e89aa, type: 3}
+    - {fileID: 21300000, guid: 3e38bebedefad4a4a9f3a8ae1fb80ce2, type: 3}
+    - {fileID: 21300000, guid: 324348264f62ff247893ea2450e20b45, type: 3}
+    attackCount: 6
+    attackSprites:
+    - {fileID: 21300000, guid: 9518c3c2c43f81143ac04734243f772d, type: 3}
+    - {fileID: 21300000, guid: da8af05a004e59e4d89673466463af24, type: 3}
+    - {fileID: 21300000, guid: 42a4c9189552cbe4db9c356813034b5b, type: 3}
+    - {fileID: 21300000, guid: 32640193f9fa8134aa41dad57805265b, type: 3}
+    - {fileID: 21300000, guid: 953f99dd0f7fba24a930435631dbbb0a, type: 3}
+    - {fileID: 21300000, guid: 2d562a39cb506504c911aa68a9ce86f7, type: 3}
+    - {fileID: 21300000, guid: c28eac4813c0e814c926333311d874bf, type: 3}
+    - {fileID: 21300000, guid: df027ff4fc716b548a913bef7f8a77a8, type: 3}
+    - {fileID: 21300000, guid: 77de7ecbd1dd0ce47ac2b0a39480ac1e, type: 3}
+    - {fileID: 21300000, guid: bfd83311275c41b48aa7a50e7f93d0eb, type: 3}
+    - {fileID: 21300000, guid: 48d589e66d94c884c90362ddf1a4da85, type: 3}
+    - {fileID: 21300000, guid: 0354a3207dc563f4097075b05c41a046, type: 3}
+    - {fileID: 21300000, guid: 184fa2cdf083eaf4598cd3fec397e4f0, type: 3}
+    - {fileID: 21300000, guid: 5f480c63fc5ab3646b5a92eaa4b38ddb, type: 3}
+    - {fileID: 21300000, guid: c4f37081dc82a8c4584d0361e12ab444, type: 3}
+    - {fileID: 21300000, guid: 63723cd10d37acb49b5b66572292d5c7, type: 3}
+    - {fileID: 21300000, guid: 38ea1cc1b85d5134abce715c982f0def, type: 3}
+    - {fileID: 21300000, guid: 3f445488628bff843a4fb7f19ce1e0a0, type: 3}
+    - {fileID: 21300000, guid: a7b72c161ce31524f9a2ce9939d6b7ca, type: 3}
+    - {fileID: 21300000, guid: 26ebd74575768c84aa95929b0cb59a42, type: 3}
+    - {fileID: 21300000, guid: 447c4913669e2e341a9174075e19a70c, type: 3}
+    - {fileID: 21300000, guid: 34bd641624a2a8e4692025eacd5fae24, type: 3}
+    - {fileID: 21300000, guid: 664e330b1a3545a478f77afbfd1e8890, type: 3}
+    - {fileID: 21300000, guid: 933814f0007b8ac499fbd9f27e51693b, type: 3}
+    - {fileID: 21300000, guid: 20e6bd8133dab8846b814173e4c7375a, type: 3}
+    - {fileID: 21300000, guid: 86cd9634948a2d844b455e20787a1655, type: 3}
+    - {fileID: 21300000, guid: 2e919cc7baa191c4fa51807aa21af9bc, type: 3}
+    - {fileID: 21300000, guid: 87d465b689af4c74d8b9291835c13bc3, type: 3}
+    - {fileID: 21300000, guid: 0f5246e925a2bec40907fed26383b3c6, type: 3}
+    - {fileID: 21300000, guid: 387ae704cc6edc44f8ae7e715d799d6d, type: 3}
+  - Name: Mage male
+    Jobs:
+    - Mage
+    - Sorcerer
+    - Healer
+    Gender: 0
+    idleSprites:
+    - {fileID: 21300000, guid: 1e9027a316becfe4f87f9a605003f6a9, type: 3}
+    - {fileID: 21300000, guid: 3eb32843c962ad241840b9c10632f1a3, type: 3}
+    - {fileID: 21300000, guid: 6c2acb42f077b2847b69916d866e18bd, type: 3}
+    - {fileID: 21300000, guid: daf0ff1597128fc48b2f7d2127f32669, type: 3}
+    - {fileID: 21300000, guid: d671d6ce67141284abc7f7d13614ab1a, type: 3}
+    walkCount: 4
+    walkSprites:
+    - {fileID: 21300000, guid: 63556ec3394bb1d49a4e5e378d822be9, type: 3}
+    - {fileID: 21300000, guid: c84ff3b5f71165942a01b03061cb4ccb, type: 3}
+    - {fileID: 21300000, guid: 36bc9afa49b1c034c8646afa2b7d3f20, type: 3}
+    - {fileID: 21300000, guid: fe77358cf74ce86459d69018e00bacf3, type: 3}
+    - {fileID: 21300000, guid: 33357051619975841ae8385a2fac12ad, type: 3}
+    - {fileID: 21300000, guid: f247301a99615c549afa9e617288a563, type: 3}
+    - {fileID: 21300000, guid: 4b8efcad7784b1144a13ba0e45428afe, type: 3}
+    - {fileID: 21300000, guid: f7d46856f8056624aacc7fbda8d0bf1d, type: 3}
+    - {fileID: 21300000, guid: a334d7a88a6ec7648942551f5b6eaaa2, type: 3}
+    - {fileID: 21300000, guid: 47411e876ca78f543b09867f8d5e05d7, type: 3}
+    - {fileID: 21300000, guid: 886697574e72b594bafcba37666fade2, type: 3}
+    - {fileID: 21300000, guid: 0c4aca75909cf364ea8198b2638ef68e, type: 3}
+    - {fileID: 21300000, guid: a573ce8878b4c1d40b4bf7e64a28b66b, type: 3}
+    - {fileID: 21300000, guid: 9bc54b6cbf92a604d9656183ae450d13, type: 3}
+    - {fileID: 21300000, guid: a5a648481f57d634c9805b46411e908a, type: 3}
+    - {fileID: 21300000, guid: e5144020d1bd761478c4e418ea5f78cf, type: 3}
+    - {fileID: 21300000, guid: f8210f26707e44e4ea0bd673bc0ad437, type: 3}
+    - {fileID: 21300000, guid: da441c030940aeb4581428873e9eb69a, type: 3}
+    - {fileID: 21300000, guid: 25d2e8c72773af44289db9d70eb60517, type: 3}
+    - {fileID: 21300000, guid: 8a7858c10978e5c4c96abc0ef91989d1, type: 3}
+    attackCount: 6
+    attackSprites:
+    - {fileID: 21300000, guid: 31d5c71cb756b2b40a914d74d76c5f28, type: 3}
+    - {fileID: 21300000, guid: 9b02f718a55c0bb4c80ed4a43557f7fb, type: 3}
+    - {fileID: 21300000, guid: d2ea8f250bfcf3846bda6a5b68687a89, type: 3}
+    - {fileID: 21300000, guid: e96564b57cfc81c4c86d7338f2812953, type: 3}
+    - {fileID: 21300000, guid: 3e0c19eea058e734da7db17be2977456, type: 3}
+    - {fileID: 21300000, guid: 99b190ded2e16b147a5ba70ad3be0bb1, type: 3}
+    - {fileID: 21300000, guid: 6fde69c7db4c2b84fa15dab8f8358da3, type: 3}
+    - {fileID: 21300000, guid: 0e72a2cb29c6e554bbc0cb67843493d7, type: 3}
+    - {fileID: 21300000, guid: 6efc13b1cb4ce7243bbd7f8218e343bb, type: 3}
+    - {fileID: 21300000, guid: e1733963eb9f6854fa65bd4dcdb6d5cb, type: 3}
+    - {fileID: 21300000, guid: e4319f49c8c25e746aae2dd128eb154e, type: 3}
+    - {fileID: 21300000, guid: 03ea37744bb01354a80652a4105e23e4, type: 3}
+    - {fileID: 21300000, guid: 9f186e912ffb2b0489ff0be0690df7fc, type: 3}
+    - {fileID: 21300000, guid: 2ddd84303a8985046890521bfc2ae2d7, type: 3}
+    - {fileID: 21300000, guid: 31b1260cb3c704e49b9210f036c0098b, type: 3}
+    - {fileID: 21300000, guid: bd4f81bcdbc69084f99b8f20c961eada, type: 3}
+    - {fileID: 21300000, guid: fad78a06718eb634a9c9be1d0ba8c1d1, type: 3}
+    - {fileID: 21300000, guid: acdbcc23d91a06f4e835c54335d6edf4, type: 3}
+    - {fileID: 21300000, guid: 2f65bacf6a5240148aa60be803f0bcf8, type: 3}
+    - {fileID: 21300000, guid: fc36d9842799ec449819be01b36238ab, type: 3}
+    - {fileID: 21300000, guid: 0ed59a7172e362d43895fc18837af373, type: 3}
+    - {fileID: 21300000, guid: cbb25e068bc60c7428f5424f1c689956, type: 3}
+    - {fileID: 21300000, guid: e47bf4f94dc4fbb46bd28096f4cd25ee, type: 3}
+    - {fileID: 21300000, guid: 926a9ad64b5dda14f83f4cf96efcdaac, type: 3}
+    - {fileID: 21300000, guid: d4d95dc4a5808c54c83bb94ff7d0eeea, type: 3}
+    - {fileID: 21300000, guid: ba36758117f11bf408a933515621a798, type: 3}
+    - {fileID: 21300000, guid: d0832cc4a4a8ee74f9819507db930486, type: 3}
+    - {fileID: 21300000, guid: 96842896028c57248b89974720ff9edc, type: 3}
+    - {fileID: 21300000, guid: 6d9d180fab5d8b447b3db5534339b483, type: 3}
+    - {fileID: 21300000, guid: fc8c371bfd1af5b419870f14441bf530, type: 3}
+  - Name: Mage female
+    Jobs:
+    - Mage
+    - Sorcerer
+    - Healer
+    Gender: 1
+    idleSprites:
+    - {fileID: 21300000, guid: 1c2f472a729c01a4f8adbf0c2fb44f94, type: 3}
+    - {fileID: 21300000, guid: 8690a4a4df2fdd445a2412305dda2015, type: 3}
+    - {fileID: 21300000, guid: 0f9d5fb11526fcd478e97481982a7a38, type: 3}
+    - {fileID: 21300000, guid: 517d3c7095ab1484fa4a69a942b4c52f, type: 3}
+    - {fileID: 21300000, guid: 894f031038cc1f041b2c0b9a79f217c5, type: 3}
+    walkCount: 4
+    walkSprites:
+    - {fileID: 21300000, guid: f09fff7f5579c0a4a9feff237a445fb6, type: 3}
+    - {fileID: 21300000, guid: ebb19b9ca18f3004f8c86b59a76722f3, type: 3}
+    - {fileID: 21300000, guid: 6968e881035520c4e9f62a78512c85f2, type: 3}
+    - {fileID: 21300000, guid: f466235115f8dad46b24b6d188fd01da, type: 3}
+    - {fileID: 21300000, guid: 9727641aa4745454c8901ed7a09bd81b, type: 3}
+    - {fileID: 21300000, guid: 3ab37e835c946394ca05637034c288ab, type: 3}
+    - {fileID: 21300000, guid: caddd9a600bbe1945863ba79fa190ecb, type: 3}
+    - {fileID: 21300000, guid: ad36b179cc32f114d89f5a82ee40e86c, type: 3}
+    - {fileID: 21300000, guid: 907ea2c3d6e4c384db2b5ad1ae513570, type: 3}
+    - {fileID: 21300000, guid: a035f585267ab7644a6c9e8e5eee8080, type: 3}
+    - {fileID: 21300000, guid: 84750762831213443a896c13a9a0c139, type: 3}
+    - {fileID: 21300000, guid: c300fc4f28e8b784a938241e01d458ec, type: 3}
+    - {fileID: 21300000, guid: 2863fdd6a19720442855119eaf515d15, type: 3}
+    - {fileID: 21300000, guid: c27659e5e3d31144cb16ccc33f564334, type: 3}
+    - {fileID: 21300000, guid: c65d19900e096ef4bb362322ae7f4294, type: 3}
+    - {fileID: 21300000, guid: 492d4cd3c56eaef4ebf71b498c3c92e2, type: 3}
+    - {fileID: 21300000, guid: 2867f23562d62a240953e7688b1b3d96, type: 3}
+    - {fileID: 21300000, guid: 39b56e5382af7f44f86e9b7ee10d1ff9, type: 3}
+    - {fileID: 21300000, guid: 22d5c3779d3931f4aa9c5b42ae4a8bea, type: 3}
+    - {fileID: 21300000, guid: d7c646d93a1c2db438dabc13c7120fb7, type: 3}
+    attackCount: 6
+    attackSprites:
+    - {fileID: 21300000, guid: 228be87f8adfadc4881607da68e748c4, type: 3}
+    - {fileID: 21300000, guid: bf06f9d41179b1a428ba18ea27ff5261, type: 3}
+    - {fileID: 21300000, guid: 5f2e4bcc5b340424dad9ae1d6b53be5d, type: 3}
+    - {fileID: 21300000, guid: 3c9571be1ca7f0f4a81c5937784cceb7, type: 3}
+    - {fileID: 21300000, guid: 4bab849b2e782434198e0850ba4a77ed, type: 3}
+    - {fileID: 21300000, guid: b8cef662f6da7c74da16a5c989e54e4c, type: 3}
+    - {fileID: 21300000, guid: 1ee2ff6f6f50e744c8802d605f0228e6, type: 3}
+    - {fileID: 21300000, guid: a24912299121d8348aa38c1e338e3c6b, type: 3}
+    - {fileID: 21300000, guid: e0168d679b3d374429a2b8216f7e1ba6, type: 3}
+    - {fileID: 21300000, guid: 9b7307919a43da34cb89d8a41743b176, type: 3}
+    - {fileID: 21300000, guid: ab9c930d25cf06c4fb4e576c23b3150b, type: 3}
+    - {fileID: 21300000, guid: 26e40bbd54f8e1e47bd9a514c9547540, type: 3}
+    - {fileID: 21300000, guid: e3f0bfe38402cfe4a846c0195e676930, type: 3}
+    - {fileID: 21300000, guid: f07a52f745f0ed340a95d660ed970a6c, type: 3}
+    - {fileID: 21300000, guid: aa2f30a4287445e40ad211a9faba1855, type: 3}
+    - {fileID: 21300000, guid: 6ecdec0d25cdd944f9684a1807d9f5b6, type: 3}
+    - {fileID: 21300000, guid: 17244a03623e0894294794ffd31933cb, type: 3}
+    - {fileID: 21300000, guid: 4b4879e6c542d77439c1a2aa17e3e055, type: 3}
+    - {fileID: 21300000, guid: 52a666167deedb042aa504a831008228, type: 3}
+    - {fileID: 21300000, guid: c43cbdd1702dcf44188836fa18fa393f, type: 3}
+    - {fileID: 21300000, guid: 5f010b2d7140e8741a99deed0244f140, type: 3}
+    - {fileID: 21300000, guid: a278a731825e7f4428e35b65da589ad5, type: 3}
+    - {fileID: 21300000, guid: c70626bbe72be6d419bce1369a12e1ff, type: 3}
+    - {fileID: 21300000, guid: 92a653aa92dec704fb4749a11d0a2b1f, type: 3}
+    - {fileID: 21300000, guid: 867a94f5550fe2546a983e925d1b2ef0, type: 3}
+    - {fileID: 21300000, guid: 1f24fdc5f0d3edc47a7e61a37ada64c7, type: 3}
+    - {fileID: 21300000, guid: b1e1a893aaa121543a23882d954a05ba, type: 3}
+    - {fileID: 21300000, guid: 0bfe9581d83160d45ab4726a00426a11, type: 3}
+    - {fileID: 21300000, guid: ab6a6f9f0ec91cf4cb576c5e11acc504, type: 3}
+    - {fileID: 21300000, guid: aa361936da0a70e408d561d648fa6cfb, type: 3}
+  gender: 0
+  job: 
+  playerName: 
+  nameText: {fileID: 963891597948954120}
+--- !u!114 &4249174628952518039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4012101602302766543}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1715d414dcf79e544a56bf2843994760, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerAssets: {fileID: 2506004478732984678}
+  character: TEXTURE.485 (Normal Mage)
+  search: 0
+--- !u!1 &7697279908096337577
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6557586759631906260}
+  - component: {fileID: 8383819082430979845}
+  - component: {fileID: 8299120720605468109}
+  m_Layer: 0
+  m_Name: Sprite
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6557586759631906260
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7697279908096337577}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.8, y: 1.8, z: 1.8}
+  m_Children: []
+  m_Father: {fileID: 4012101602302766542}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &8383819082430979845
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7697279908096337577}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 368f43350a359ee448d0fb3bc499731b, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: c4e4b921c087c494b80c13d4d53df961, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.35, y: 1.17}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!114 &8299120720605468109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7697279908096337577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6159083ca71e004ab83dc2dfa229cc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 0}
+  frequency: 0.25
+  angle: 0
+  renderer: {fileID: 8383819082430979845}
+  playerAssets: {fileID: 2506004478732984678}
+--- !u!1 &9174025710127394214
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3307395283909108071}
+  - component: {fileID: 4602899375651114591}
+  - component: {fileID: 5955069497931842626}
+  - component: {fileID: 963891597948954120}
+  - component: {fileID: 1573979251132263293}
+  m_Layer: 0
+  m_Name: Name
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &3307395283909108071
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9174025710127394214}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4012101602302766542}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 1.2}
+  m_SizeDelta: {x: 1, y: 1}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!23 &4602899375651114591
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9174025710127394214}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 21330054993342794, guid: e0c717678af87cd4ba55bd60e7334803, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!222 &5955069497931842626
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9174025710127394214}
+  m_CullTransparentMesh: 0
+--- !u!114 &963891597948954120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9174025710127394214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: e0c717678af87cd4ba55bd60e7334803, type: 2}
+  m_sharedMaterial: {fileID: 21330054993342794, guid: e0c717678af87cd4ba55bd60e7334803,
+    type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: 2194
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 1.5
+  m_fontSizeBase: 1.5
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 1
+  m_fontSizeMax: 2
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 0
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_renderer: {fileID: 4602899375651114591}
+  m_maskType: 0
+  _SortingLayer: 0
+  _SortingLayerID: 0
+  _SortingOrder: 0
+--- !u!114 &1573979251132263293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9174025710127394214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b7c9b6a0c69ea64a994caa377de5f22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

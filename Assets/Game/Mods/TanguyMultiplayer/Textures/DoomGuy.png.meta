@@ -1,0 +1,2684 @@
+fileFormatVersion: 2
+guid: 04b1df7247c63fc4b8acbeb58ed3fb8f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 10195860934067391
+    second: DoomGuy_0
+  - first:
+      213: 3426672975009374411
+    second: DoomGuy_1
+  - first:
+      213: 4587551004808890642
+    second: DoomGuy_2
+  - first:
+      213: -5938061871921175678
+    second: DoomGuy_3
+  - first:
+      213: 7201205374927423499
+    second: DoomGuy_4
+  - first:
+      213: -8493728550566788317
+    second: DoomGuy_5
+  - first:
+      213: 9079221981000299794
+    second: DoomGuy_6
+  - first:
+      213: -4746224917401106512
+    second: DoomGuy_7
+  - first:
+      213: 3198553308391341348
+    second: DoomGuy_8
+  - first:
+      213: 8165254784046302123
+    second: DoomGuy_9
+  - first:
+      213: 5186560250637005483
+    second: DoomGuy_10
+  - first:
+      213: -5684141883217775739
+    second: DoomGuy_11
+  - first:
+      213: -3720178711839949200
+    second: DoomGuy_12
+  - first:
+      213: -1650346371146536655
+    second: DoomGuy_13
+  - first:
+      213: -1182777881337686351
+    second: DoomGuy_14
+  - first:
+      213: -572742905691828087
+    second: DoomGuy_15
+  - first:
+      213: 1317536758086884398
+    second: DoomGuy_16
+  - first:
+      213: 3857205614188548985
+    second: DoomGuy_17
+  - first:
+      213: -8053924563633845269
+    second: DoomGuy_18
+  - first:
+      213: -549660566198811571
+    second: DoomGuy_19
+  - first:
+      213: -3666309299037516892
+    second: DoomGuy_20
+  - first:
+      213: 7447198229266903047
+    second: DoomGuy_21
+  - first:
+      213: -2613388927265443168
+    second: DoomGuy_22
+  - first:
+      213: -9063858664757206757
+    second: DoomGuy_23
+  - first:
+      213: 7430502965754547378
+    second: DoomGuy_24
+  - first:
+      213: 5644750874311552365
+    second: DoomGuy_25
+  - first:
+      213: 778107541184675753
+    second: DoomGuy_26
+  - first:
+      213: -9178894642886902335
+    second: DoomGuy_27
+  - first:
+      213: 2280031001153946973
+    second: DoomGuy_28
+  - first:
+      213: 726612605363326708
+    second: DoomGuy_29
+  - first:
+      213: 1722002633448829762
+    second: DoomGuy_30
+  - first:
+      213: -1654173123388485307
+    second: DoomGuy_31
+  - first:
+      213: 7608028799831761818
+    second: DoomGuy_32
+  - first:
+      213: -6275927072797711683
+    second: DoomGuy_33
+  - first:
+      213: 3836082303070652132
+    second: DoomGuy_34
+  - first:
+      213: -7722142538586497301
+    second: DoomGuy_35
+  - first:
+      213: 6792869074849958324
+    second: DoomGuy_36
+  - first:
+      213: 5902952816313950778
+    second: DoomGuy_37
+  - first:
+      213: -5752315299219786011
+    second: DoomGuy_38
+  - first:
+      213: -1113851585063482242
+    second: DoomGuy_39
+  - first:
+      213: 4528812907875205910
+    second: DoomGuy_40
+  - first:
+      213: -6056036984376931957
+    second: DoomGuy_41
+  - first:
+      213: 755046783693234513
+    second: DoomGuy_42
+  - first:
+      213: 1578102877250838151
+    second: DoomGuy_43
+  - first:
+      213: -2975640202480850023
+    second: DoomGuy_44
+  - first:
+      213: -7854669896215036083
+    second: DoomGuy_45
+  - first:
+      213: -7231941884024039459
+    second: DoomGuy_46
+  - first:
+      213: 3187584700019455576
+    second: DoomGuy_47
+  - first:
+      213: -117212738043240409
+    second: DoomGuy_48
+  - first:
+      213: 8289714594761514518
+    second: DoomGuy_49
+  - first:
+      213: -9093231513006325113
+    second: DoomGuy_50
+  - first:
+      213: 891132811914718099
+    second: DoomGuy_51
+  - first:
+      213: 8268641406577283954
+    second: DoomGuy_52
+  - first:
+      213: -693293915517563240
+    second: DoomGuy_53
+  - first:
+      213: 5999854891082887952
+    second: DoomGuy_54
+  - first:
+      213: 3641291959739023453
+    second: DoomGuy_55
+  - first:
+      213: 4306664151617236934
+    second: DoomGuy_56
+  - first:
+      213: -3121841475496168750
+    second: DoomGuy_57
+  - first:
+      213: -2226124223139754340
+    second: DoomGuy_58
+  - first:
+      213: -5020318698140623257
+    second: DoomGuy_59
+  - first:
+      213: -730839554522383191
+    second: DoomGuy_60
+  - first:
+      213: -818772492796902540
+    second: DoomGuy_61
+  - first:
+      213: -4845821688155535888
+    second: DoomGuy_62
+  - first:
+      213: 301056147514985704
+    second: DoomGuy_63
+  - first:
+      213: 6400685350563436934
+    second: DoomGuy_64
+  - first:
+      213: -5740848288983470210
+    second: DoomGuy_65
+  - first:
+      213: -2833666263919644072
+    second: DoomGuy_66
+  - first:
+      213: 5599574889097579006
+    second: DoomGuy_67
+  - first:
+      213: -3669502861448280054
+    second: DoomGuy_68
+  - first:
+      213: 1071005844573805879
+    second: DoomGuy_69
+  - first:
+      213: 2832275804345282778
+    second: DoomGuy_70
+  - first:
+      213: -1717257188995410427
+    second: DoomGuy_71
+  - first:
+      213: -5719786080424672221
+    second: DoomGuy_72
+  - first:
+      213: -8864797512873244072
+    second: DoomGuy_73
+  - first:
+      213: -7381586227535260204
+    second: DoomGuy_74
+  - first:
+      213: -2377493762527355496
+    second: DoomGuy_75
+  - first:
+      213: 5612484058985223661
+    second: DoomGuy_76
+  - first:
+      213: 8921278692617044530
+    second: DoomGuy_77
+  - first:
+      213: 3328426934941514352
+    second: DoomGuy_78
+  - first:
+      213: -2720270082274697425
+    second: DoomGuy_79
+  - first:
+      213: -7065397962439705991
+    second: DoomGuy_80
+  - first:
+      213: 9079126384102834074
+    second: DoomGuy_81
+  - first:
+      213: 1122855301650823287
+    second: DoomGuy_82
+  - first:
+      213: -3290291932648566948
+    second: DoomGuy_83
+  - first:
+      213: -2990224776564307264
+    second: DoomGuy_84
+  - first:
+      213: -1598764197964908862
+    second: DoomGuy_85
+  - first:
+      213: -2333657751822194358
+    second: DoomGuy_86
+  - first:
+      213: 6594668653062205009
+    second: DoomGuy_87
+  - first:
+      213: -7770298520064454704
+    second: DoomGuy_88
+  - first:
+      213: 2513422068692169509
+    second: DoomGuy_89
+  - first:
+      213: -7124625028626916757
+    second: DoomGuy_90
+  - first:
+      213: -6188419398051570250
+    second: DoomGuy_91
+  - first:
+      213: -952900503243055603
+    second: DoomGuy_92
+  - first:
+      213: -6234780662876208750
+    second: DoomGuy_93
+  - first:
+      213: -6888524158882661420
+    second: DoomGuy_94
+  - first:
+      213: -3564955104577155603
+    second: DoomGuy_95
+  - first:
+      213: 7557505380132006305
+    second: DoomGuy_96
+  - first:
+      213: 1317373410448023547
+    second: DoomGuy_97
+  - first:
+      213: -8507646515561553906
+    second: DoomGuy_98
+  - first:
+      213: 3734670784091768015
+    second: DoomGuy_99
+  - first:
+      213: 2250326402469929601
+    second: DoomGuy_100
+  - first:
+      213: -4082171978900916967
+    second: DoomGuy_101
+  - first:
+      213: -4881128786866242393
+    second: DoomGuy_102
+  - first:
+      213: 4625726812926472239
+    second: DoomGuy_103
+  - first:
+      213: -1600166578921541528
+    second: DoomGuy_104
+  - first:
+      213: 4009311600430148864
+    second: DoomGuy_105
+  - first:
+      213: -5902160647657579682
+    second: DoomGuy_106
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: DoomGuy_0
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 523
+        width: 41
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb4872dd419342000800000000000000
+      internalID: 10195860934067391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_1
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 525
+        width: 35
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc06ddc5aecfd8f20800000000000000
+      internalID: 3426672975009374411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_2
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 526
+        width: 42
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 219ce9e35514aaf30800000000000000
+      internalID: 4587551004808890642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_3
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 528
+        width: 45
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 283e8dd4034c79da0800000000000000
+      internalID: -5938061871921175678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_4
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 529
+        width: 36
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b08ce278222dfe360800000000000000
+      internalID: 7201205374927423499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_5
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 523
+        width: 37
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3238fdc82e6302a80800000000000000
+      internalID: -8493728550566788317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_6
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 524
+        width: 35
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 215f076b940effd70800000000000000
+      internalID: 9079221981000299794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_7
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 524
+        width: 36
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b7033e8595022eb0800000000000000
+      internalID: -4746224917401106512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_8
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 525
+        width: 41
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42df0dd894b836c20800000000000000
+      internalID: 3198553308391341348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_9
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 525
+        width: 35
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba383a7f6ffc05170800000000000000
+      internalID: 8165254784046302123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_10
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 548
+        width: 58
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba23161811d5af740800000000000000
+      internalID: 5186560250637005483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_11
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 540
+        width: 55
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58372e5b21fdd11b0800000000000000
+      internalID: -5684141883217775739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_12
+      rect:
+        serializedVersion: 2
+        x: 693
+        y: 562
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07e3fc30c254f5cc0800000000000000
+      internalID: -3720178711839949200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_13
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 459
+        width: 38
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 139a47728bac819e0800000000000000
+      internalID: -1650346371146536655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_14
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 460
+        width: 37
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b69da698cde59fe0800000000000000
+      internalID: -1182777881337686351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_15
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 461
+        width: 38
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9801d9e9c553d08f0800000000000000
+      internalID: -572742905691828087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_16
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 460
+        width: 41
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2cd94c63b4d84210800000000000000
+      internalID: 1317536758086884398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_17
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 461
+        width: 34
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 973d95bd11c878530800000000000000
+      internalID: 3857205614188548985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_18
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 460
+        width: 40
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bebcfc8e746ba3090800000000000000
+      internalID: -8053924563633845269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_19
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 507
+        width: 42
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d440ea490a63f58f0800000000000000
+      internalID: -549660566198811571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_20
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 507
+        width: 25
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ab48221e17ae1dc0800000000000000
+      internalID: -3666309299037516892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_21
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 497
+        width: 57
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7003f532553c95760800000000000000
+      internalID: 7447198229266903047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_22
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 466
+        width: 29
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a27762fd906bbbd0800000000000000
+      internalID: -2613388927265443168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_23
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 465
+        width: 44
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b11ecc81194b63280800000000000000
+      internalID: -9063858664757206757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_24
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 466
+        width: 58
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bc494034137e1760800000000000000
+      internalID: 7430502965754547378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_25
+      rect:
+        serializedVersion: 2
+        x: 598
+        y: 466
+        width: 43
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6d6ae4530f265e40800000000000000
+      internalID: 5644750874311552365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_26
+      rect:
+        serializedVersion: 2
+        x: 651
+        y: 465
+        width: 25
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9af7d55afa46cca00800000000000000
+      internalID: 778107541184675753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_27
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 457
+        width: 57
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cd7df344f30e9080800000000000000
+      internalID: -9178894642886902335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_28
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 395
+        width: 35
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d55c8ac8d1c44af10800000000000000
+      internalID: 2280031001153946973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_29
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 396
+        width: 34
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fe80089052751a00800000000000000
+      internalID: 726612605363326708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_30
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 396
+        width: 40
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24331058548c5e710800000000000000
+      internalID: 1722002633448829762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_31
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 396
+        width: 35
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5415e67fe423b09e0800000000000000
+      internalID: -1654173123388485307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_32
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 394
+        width: 26
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a93e9e662e5259960800000000000000
+      internalID: 7608028799831761818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_33
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 395
+        width: 43
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db2a2ad149d67e8a0800000000000000
+      internalID: -6275927072797711683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_34
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 397
+        width: 51
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e640bbb7808c3530800000000000000
+      internalID: 3836082303070652132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_35
+      rect:
+        serializedVersion: 2
+        x: 505
+        y: 398
+        width: 38
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bee5e9a564075d490800000000000000
+      internalID: -7722142538586497301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_36
+      rect:
+        serializedVersion: 2
+        x: 553
+        y: 399
+        width: 26
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b90b24fe6e154e50800000000000000
+      internalID: 6792869074849958324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_37
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 394
+        width: 26
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a32e84eaf408be150800000000000000
+      internalID: 5902952816313950778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_38
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 424
+        width: 29
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e6b5f166bbab20b0800000000000000
+      internalID: -5752315299219786011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_39
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 424
+        width: 57
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7c09c382edca80f0800000000000000
+      internalID: -1113851585063482242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_40
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 395
+        width: 41
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6130b14585399de30800000000000000
+      internalID: 4528812907875205910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_41
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 382
+        width: 41
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b89c59fe272a4fba0800000000000000
+      internalID: -6056036984376931957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_42
+      rect:
+        serializedVersion: 2
+        x: 676
+        y: 392
+        width: 57
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15126d2ac077a7a00800000000000000
+      internalID: 755046783693234513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_43
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 329
+        width: 45
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78ede89a43c86e510800000000000000
+      internalID: 1578102877250838151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_44
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 331
+        width: 52
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99be1cf500764b6d0800000000000000
+      internalID: -2975640202480850023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_45
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 332
+        width: 41
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4ff520685b9ef290800000000000000
+      internalID: -7854669896215036083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_46
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 333
+        width: 24
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd75a764c2bf2ab90800000000000000
+      internalID: -7231941884024039459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_47
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 329
+        width: 39
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 856312865639c3c20800000000000000
+      internalID: 3187584700019455576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_48
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 328
+        width: 36
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72028c1c2a39f5ef0800000000000000
+      internalID: -117212738043240409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_49
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 329
+        width: 43
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61e912ec08bfa0370800000000000000
+      internalID: 8289714594761514518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_50
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 332
+        width: 43
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 782cedeed1a5ec180800000000000000
+      internalID: -9093231513006325113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_51
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 330
+        width: 34
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39b2fdd2290fd5c00800000000000000
+      internalID: 891132811914718099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_52
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 334
+        width: 44
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2731026dc8d10c270800000000000000
+      internalID: 8268641406577283954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_53
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 341
+        width: 56
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89ec2a86bdce066f0800000000000000
+      internalID: -693293915517563240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_54
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 281
+        width: 35
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 013b2ee1c34c34350800000000000000
+      internalID: 5999854891082887952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_55
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 300
+        width: 38
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d500bb7beb7788230800000000000000
+      internalID: 3641291959739023453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_56
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 225
+        width: 36
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cfed0c6a3854cb30800000000000000
+      internalID: 4306664151617236934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_57
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 233
+        width: 41
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d238ffd7bdfca4d0800000000000000
+      internalID: -3121841475496168750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_58
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 257
+        width: 51
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9eccd540d73b11e0800000000000000
+      internalID: -2226124223139754340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_59
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 257
+        width: 51
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76e931a2ebe345ab0800000000000000
+      internalID: -5020318698140623257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_60
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 257
+        width: 51
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ac73ec1c498bd5f0800000000000000
+      internalID: -730839554522383191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_61
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 215
+        width: 38
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 473cafe71c223a4f0800000000000000
+      internalID: -818772492796902540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_62
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 212
+        width: 44
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f50b9059de20ccb0800000000000000
+      internalID: -4845821688155535888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_63
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 214
+        width: 48
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ec041a98f09d2400800000000000000
+      internalID: 301056147514985704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_64
+      rect:
+        serializedVersion: 2
+        x: 557
+        y: 219
+        width: 53
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 689516ff96dc3d850800000000000000
+      internalID: 6400685350563436934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_65
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 258
+        width: 25
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7f2bb1c5e86450b0800000000000000
+      internalID: -5740848288983470210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_66
+      rect:
+        serializedVersion: 2
+        x: 655
+        y: 258
+        width: 25
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 852bf0fdb8bcca8d0800000000000000
+      internalID: -2833666263919644072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_67
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 217
+        width: 29
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef9cbdd91bfa5bd40800000000000000
+      internalID: 5599574889097579006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_68
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 189
+        width: 26
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a088811e69e431dc0800000000000000
+      internalID: -3669502861448280054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_69
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 192
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73d5036242afcde00800000000000000
+      internalID: 1071005844573805879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_70
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 169
+        width: 57
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad03fe786d34e4720800000000000000
+      internalID: 2832275804345282778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_71
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 194
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50651fd5fa31b28e0800000000000000
+      internalID: -1717257188995410427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_72
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 176
+        width: 57
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32440155ddc3f90b0800000000000000
+      internalID: -5719786080424672221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_73
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 186
+        width: 57
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85a8c6731a9e9f480800000000000000
+      internalID: -8864797512873244072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_74
+      rect:
+        serializedVersion: 2
+        x: 557
+        y: 187
+        width: 57
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d558d47f665f8990800000000000000
+      internalID: -7381586227535260204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_75
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 175
+        width: 46
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89d99dcf402710fd0800000000000000
+      internalID: -2377493762527355496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_76
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 162
+        width: 55
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de55b53f38c83ed40800000000000000
+      internalID: 5612484058985223661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_77
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 183
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23243b734bfbecb70800000000000000
+      internalID: 8921278692617044530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_78
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 149
+        width: 47
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07af70e99a2f03e20800000000000000
+      internalID: 3328426934941514352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_79
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 149
+        width: 47
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2fd4e4d5c8af3ad0800000000000000
+      internalID: -2720270082274697425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_80
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 146
+        width: 29
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97a330cbcf9a2fd90800000000000000
+      internalID: -7065397962439705991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_81
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 145
+        width: 43
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9f7353d7598ffd70800000000000000
+      internalID: 9079126384102834074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_82
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 146
+        width: 58
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 778bf0d92fe259f00800000000000000
+      internalID: 1122855301650823287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_83
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 146
+        width: 41
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5f06238be88652d0800000000000000
+      internalID: -3290291932648566948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_84
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 134
+        width: 62
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ca005a98669086d0800000000000000
+      internalID: -2990224776564307264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_85
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 104
+        width: 25
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c670bcbe6c00d9e0800000000000000
+      internalID: -1598764197964908862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_86
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 105
+        width: 29
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a492d4393ae2d9fd0800000000000000
+      internalID: -2333657751822194358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_87
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 104
+        width: 44
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15e2d2d2338f48b50800000000000000
+      internalID: 6594668653062205009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_88
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 105
+        width: 58
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0df80d03aaa5a2490800000000000000
+      internalID: -7770298520064454704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_89
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 105
+        width: 43
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52336070e0871e220800000000000000
+      internalID: 2513422068692169509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_90
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 104
+        width: 25
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6ad5dac84f302d90800000000000000
+      internalID: -7124625028626916757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_91
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 93
+        width: 44
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bddff958515e1aa0800000000000000
+      internalID: -6188419398051570250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_92
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 105
+        width: 29
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0e18ed7a0e96c2f0800000000000000
+      internalID: -952900503243055603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_93
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 104
+        width: 44
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2910ac8350c9979a0800000000000000
+      internalID: -6234780662876208750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_94
+      rect:
+        serializedVersion: 2
+        x: 568
+        y: 93
+        width: 29
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4db3a1346cb0760a0800000000000000
+      internalID: -6888524158882661420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_95
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 92
+        width: 41
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ded8677683cb68ec0800000000000000
+      internalID: -3564955104577155603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_96
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 93
+        width: 24
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a92fd21a17a1e860800000000000000
+      internalID: 7557505380132006305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_97
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 51
+        width: 56
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bff9c461320484210800000000000000
+      internalID: 1317373410448023547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_98
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 51
+        width: 38
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e002d5dc194cee980800000000000000
+      internalID: -8507646515561553906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_99
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 43
+        width: 36
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc4c1de7a4734d330800000000000000
+      internalID: 3734670784091768015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_100
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 51
+        width: 34
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18227e7b0f3ca3f10800000000000000
+      internalID: 2250326402469929601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_101
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 57
+        width: 33
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 915be85a6363957c0800000000000000
+      internalID: -4082171978900916967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_102
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 67
+        width: 47
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ac77ebca3fb24cb0800000000000000
+      internalID: -4881128786866242393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_103
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 46
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f207b783702e13040800000000000000
+      internalID: 4625726812926472239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_104
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 42
+        width: 42
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 860fde979f01bc9e0800000000000000
+      internalID: -1600166578921541528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_105
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 40
+        width: 46
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00ded7988afe3a730800000000000000
+      internalID: 4009311600430148864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoomGuy_106
+      rect:
+        serializedVersion: 2
+        x: 577
+        y: 42
+        width: 52
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5b94157920571ea0800000000000000
+      internalID: -5902160647657579682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 8467f4b958440d540a86b88e55d1be88
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

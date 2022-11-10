@@ -1,0 +1,9 @@
+- open cmd
+- cd "C..."
+- dir /a-d /b /s > listfiles.txt
+- Notepadd:
+	- ctrl+f remplacer C[...] (jusqu'a avant Assets) par "
+	- ctrl+f remplacer \ par /
+	- selectionner meta -> onglet recherche/marquer -> cocher la case ligne -> marquer tout
+	- onglet recherche -> signet -> supprimer touts les lignes marqués
+	- ctrl+h -> choisir expression régulière -> rechercher: $ -> remplacer: ", -> remplacer tout
