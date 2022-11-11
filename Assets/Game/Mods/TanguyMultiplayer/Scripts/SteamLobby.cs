@@ -4,13 +4,14 @@ using UnityEngine;
 using Mirror;
 using Steamworks;
 
-public class SteamLobby : NetworkBehaviour
+public class SteamLobby : MonoBehaviour
 {
 	NetworkManager manager;
 	protected Callback<LobbyCreated_t> lobbyCreated;
 	protected Callback<GameLobbyJoinRequested_t> gameLobbyJoinRequested;
 	protected Callback<LobbyEnter_t> lobbyEntered;
 	const string hostAdressKey = "HostAdress";
+	public GameObject button;
 	
 	void Start()
 	{
@@ -21,6 +22,11 @@ public class SteamLobby : NetworkBehaviour
 		lobbyCreated = Callback<LobbyCreated_t>.Create(OnLobbyCreated);
 		gameLobbyJoinRequested = Callback<GameLobbyJoinRequested_t>.Create(OnGameLobbyJoinRequested);
 		lobbyEntered = Callback<LobbyEnter_t>.Create(OnLobbyEntered);
+	}
+	
+	public void hostButton()
+	{
+		HostLobby();
 	}
 	
 	
@@ -35,7 +41,7 @@ public class SteamLobby : NetworkBehaviour
 		if (callback.m_eResult != EResult.k_EResultOK){
 			return;
 		}
-		
+		button.SetActive(false);
 		GetComponent<NetworkManager>().StartHost();
 		SteamMatchmaking.SetLobbyData(new CSteamID(callback.m_ulSteamIDLobby), hostAdressKey, SteamUser.GetSteamID().ToString());
 		//GameManager.spawnLobby();
