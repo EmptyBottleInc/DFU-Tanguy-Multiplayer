@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 2506004478732984678}
   - component: {fileID: 4249174628952518039}
   - component: {fileID: 924523179212583444}
+  - component: {fileID: 3341743894258711663}
   m_Layer: 0
   m_Name: PlayerMultiplayer
   m_TagString: Untagged
@@ -138,6 +139,7 @@ MonoBehaviour:
   - {fileID: 9174025710127394214}
   toDisable:
   - {fileID: 4003312997922073087}
+  - {fileID: 3341743894258711663}
   sprite8dir: {fileID: 8299120720605468109}
   playerTransform: {fileID: 0}
 --- !u!114 &4003312997922073087
@@ -158,6 +160,7 @@ MonoBehaviour:
   layer:
     serializedVersion: 2
     m_Bits: 2048
+  enemiesDebug: []
 --- !u!114 &2519029818811409709
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1164,6 +1167,20 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   locations: []
+--- !u!114 &3341743894258711663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4012101602302766543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8161c38f21d60b4ca7c9b9c7d7fb980, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
 --- !u!1 &7697279908096337577
 GameObject:
   m_ObjectHideFlags: 0

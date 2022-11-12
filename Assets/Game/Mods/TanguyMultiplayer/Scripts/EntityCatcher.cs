@@ -12,19 +12,24 @@ public class EntityCatcher : NetworkBehaviour
 		public EnemyDeath ed;
 		public Vector3 pos;
 		public string title;
+		public string referedId;
 		
-		public enemy(EnemyDeath e, Vector3 p, string s)
+		public enemy(EnemyDeath e, Vector3 p, string s, string id)
 		{
 			ed = e;
 			pos = p;
 			title = s;
+			referedId = id;
 		}
+		
+		
 	}
 	
 	
 	public float radius = 500f;
 	public LayerMask layer;
-	public static List<enemy> enemies;
+	public static List<enemy> enemies = new List<enemy>();
+	public List<enemy> enemiesDebug;
 	GameObject[] locations;
 	
 	void Start()
@@ -32,6 +37,7 @@ public class EntityCatcher : NetworkBehaviour
 		if (isLocalPlayer){
 			StartCoroutine(Check());
 			StartCoroutine(Search());
+			StartCoroutine(checkIfMove());
 		}
 	}
 	
@@ -69,7 +75,7 @@ public class EntityCatcher : NetworkBehaviour
 				CheckEntities();
 			}
 				
-			yield return new WaitForSeconds(1.2f);
+			yield return new WaitForSecondsRealtime(1.2f);
 		}
 	}
 	
@@ -79,21 +85,35 @@ public class EntityCatcher : NetworkBehaviour
 			if (locations[i].activeSelf)
 				return i;
 		}
-		return -1;
+		return 0;
 	}
 	
 	void CheckEntities()
 	{
-		enemies = new List<enemy>();
+		print("CHECK ENTITIES");
+		List<enemy> enemiesFounded = new List<enemy>();
 		Collider[] hitColliders = Physics.OverlapSphere(transform.position , radius, layer);
         foreach (var hitCollider in hitColliders)
         {
             EnemyDeath ed = hitCollider.gameObject.GetComponent<EnemyDeath>();
-			if (ed != null){
-				enemies.Add(new enemy(ed, ed.transform.position, ed.gameObject.name));
-			}
+			if (ed != null)
+				enemiesFounded.Add(isRegistered(ed));
+			
         }
+		enemies = enemiesFounded;
+		enemiesDebug = enemiesFounded;
 	}
+	
+	enemy isRegistered(EnemyDeath ed)
+	{
+		foreach (enemy e in enemies)
+		{
+			if (e.ed == ed)
+				return e;
+		}
+		return new enemy(ed, ed.transform.position, ed.gameObject.name, PlayerMultiplayer.id);
+	}
+	
 	
 	void checkForDeaths()
 	{
@@ -101,7 +121,7 @@ public class EntityCatcher : NetworkBehaviour
 		int i = -1;
 		foreach (enemy e in enemies)
 		{
-			if (e.ed.performDeath){
+			if (e.ed != null && e.ed.performDeath){
 				Vector3 pos = e.pos;
 				if (isServer)
 					rpcDeathOn(pos.x, pos.y, pos.z, e.title);
@@ -144,6 +164,56 @@ public class EntityCatcher : NetworkBehaviour
 			
 			/*enemies[x].ed.CompleteDeath();
 			enemies.RemoveAt(x);*/
+		}
+	}
+	
+	IEnumerator checkIfMove()
+	{
+		while (true)
+		{
+			for (int i = 0; i< enemies.Count; i++){
+				if (enemies[i].ed != null){
+					Vector3 newPos = enemies[i].ed.transform.position;
+					if (enemies[i].referedId == PlayerMultiplayer.id && Vector3.Distance(enemies[i].pos, newPos) > 0.5f){ //check if the enemy moved from a player side
+						enemies[i] = new enemy(enemies[i].ed, enemies[i].pos, enemies[i].title, PlayerMultiplayer.id);//Turning canMove off so it is controlled by this player
+						cmdMoveEntityOn(enemies[i].pos.x, enemies[i].pos.y, enemies[i].pos.z, newPos.x, newPos.y, newPos.z, enemies[i].title, PlayerMultiplayer.id);
+						
+					}
+				}
+			}
+			
+			yield return new WaitForSeconds(0.12f);
+		}
+		
+	}
+	
+	[Command]
+	public void cmdMoveEntityOn(float x, float y, float z, float newX, float newY, float newZ, string s, string id){
+		moveEntityOn(x, y, z, newX, newY, newZ, s, id);
+	}
+	
+	[ClientRpc]
+	public void moveEntityOn(float x, float y, float z, float newX, float newY, float newZ, string s, string id){
+		if (!isLocalPlayer){
+			
+			for (int i = 0; i < enemies.Count; i++){
+				if (enemies[i].title == s && enemies[i].ed != null){
+					if (Vector3.Distance(enemies[i].pos, new Vector3(x, y, z)) < 8f){
+						enemies[i].ed.transform.position = new Vector3(newX, newY, newZ);
+						//enemies[i].ed.GetComponent<EnemyMotor>().enabled = false;
+						enemies[i] = new enemy(enemies[i].ed, enemies[i].pos, enemies[i].title, id);
+					}
+				}
+				
+			}/*
+			foreach (enemy e in enemies){
+				if (e.title == s){
+					if (Vector3.Distance(e.pos, new Vector3(x, y, z)) < 8f){
+						e.ed.transform.position = new Vector3(newX, newY, newZ);
+						e.ed.GetComponent<EnemyMotor>().enabled = false;
+					}
+				}
+			}*/
 		}
 	}
 	
