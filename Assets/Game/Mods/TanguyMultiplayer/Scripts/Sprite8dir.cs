@@ -10,7 +10,8 @@ public class Sprite8dir : MonoBehaviour
 	public SpriteRenderer renderer;
 	public PlayerAssets playerAssets;
 	Vector3 lastPos;
-	int walkIndex = 0;
+	int walkIndex = 0, attackIndex = 0;
+	bool isAttacking = false;
 	
 	void Start()
 	{
@@ -26,17 +27,30 @@ public class Sprite8dir : MonoBehaviour
 			if (cam != null){
 				angle = getAngleToTarget();
 				yield return new WaitForSeconds(0.1f);
-				if (Vector3.Distance(lastPos, transform.position) < 0.05f)
-					renderer.sprite = playerAssets.getIdleSprite(getIndex(angle));
-				else{
-					renderer.sprite = playerAssets.getWalkSprite(getIndex(angle), walkIndex);
-					walkIndex++;
-					if (walkIndex >= playerAssets.getWalkCount())
-						walkIndex = 0;
+				if (!isAttacking){
+					if (Vector3.Distance(lastPos, transform.position) < 0.05f)
+						renderer.sprite = playerAssets.getIdleSprite(getIndex(angle));
+					else{
+						renderer.sprite = playerAssets.getWalkSprite(getIndex(angle), walkIndex);
+						walkIndex++;
+						if (walkIndex >= playerAssets.getWalkCount())
+							walkIndex = 0;
+					}
+					lastPos = transform.position;
+					yield return new WaitForSeconds(frequency);
+				}else{
+					renderer.sprite = playerAssets.getAttackSprite(getIndex(angle), attackIndex);
+					attackIndex++;
+					if (attackIndex >= playerAssets.getAttackCount()){
+						attackIndex = 0;
+						isAttacking = false;
+					}
+					
+					yield return new WaitForSeconds(0.07f);
 				}
-				lastPos = transform.position;
+				
 			}
-			yield return new WaitForSeconds(frequency);
+			
 		}
 	}
 	
@@ -70,7 +84,11 @@ public class Sprite8dir : MonoBehaviour
 		
 	}
 	
-	
+	public void playAttack()
+	{
+		isAttacking = true;
+
+	}
 	
 
 }

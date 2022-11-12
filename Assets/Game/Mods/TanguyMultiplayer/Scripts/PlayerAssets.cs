@@ -108,6 +108,10 @@ public class PlayerAssets : NetworkBehaviour
 	{
 		return actualAsset.walkCount;
 	}
+	public int getAttackCount()
+	{
+		return actualAsset.attackCount;
+	}
 	
 
 }

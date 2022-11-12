@@ -96,6 +96,7 @@ GameObject:
   - component: {fileID: 4249174628952518039}
   - component: {fileID: 924523179212583444}
   - component: {fileID: 3341743894258711663}
+  - component: {fileID: 2881908305128725156}
   m_Layer: 0
   m_Name: PlayerMultiplayer
   m_TagString: Untagged
@@ -140,6 +141,7 @@ MonoBehaviour:
   toDisable:
   - {fileID: 4003312997922073087}
   - {fileID: 3341743894258711663}
+  - {fileID: 2881908305128725156}
   sprite8dir: {fileID: 8299120720605468109}
   playerTransform: {fileID: 0}
 --- !u!114 &4003312997922073087
@@ -1181,6 +1183,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+--- !u!114 &2881908305128725156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4012101602302766543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d4e02007c94e5f4dab09f46e9ae2e22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  sprite8dir: {fileID: 8299120720605468109}
 --- !u!1 &7697279908096337577
 GameObject:
   m_ObjectHideFlags: 0
