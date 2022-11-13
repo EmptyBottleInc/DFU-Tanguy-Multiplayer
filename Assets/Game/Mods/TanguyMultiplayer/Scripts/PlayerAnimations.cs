@@ -18,10 +18,12 @@ public class PlayerAnimations : NetworkBehaviour
 		FPSWeapon weapon = PlayerMultiplayer.playerObject.GetComponent<WeaponManager>().ScreenWeapon;
 		
 		while (true){
-			if (weapon.IsAttacking())
+			if (weapon.IsAttacking()){
 				cmdPlayAttack();
+				yield return new WaitForSeconds(1f);
+			}
 			
-			yield return new WaitForSeconds(1.45f);
+			yield return new WaitForSeconds(0.12f);
 		}
 	}
 	

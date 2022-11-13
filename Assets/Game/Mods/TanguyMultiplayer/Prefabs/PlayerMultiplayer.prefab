@@ -142,6 +142,7 @@ MonoBehaviour:
   - {fileID: 4003312997922073087}
   - {fileID: 3341743894258711663}
   - {fileID: 2881908305128725156}
+  - {fileID: 924523179212583444}
   sprite8dir: {fileID: 8299120720605468109}
   playerTransform: {fileID: 0}
 --- !u!114 &4003312997922073087
@@ -1161,13 +1162,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4012101602302766543}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 83fa838f600805b47bb99b198a33287d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  lootPrefab: {fileID: 5213481227838652406, guid: 6a0216c21524c49469e8ae8d371c98d9,
+    type: 3}
   locations: []
 --- !u!114 &3341743894258711663
 MonoBehaviour:
@@ -1293,7 +1296,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 0}
-  frequency: 0.25
+  frequency: 0.18
   angle: 0
   renderer: {fileID: 8383819082430979845}
   playerAssets: {fileID: 2506004478732984678}

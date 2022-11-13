@@ -26,6 +26,7 @@ public class DoorsCatcher : NetworkBehaviour
 		}
 	}
 	
+	
 	[Command]
 	void cmdToggleDoorOn(float x, float y, float z, bool isOpen)
 	{
