@@ -44,7 +44,7 @@ public class PlayerAssets : NetworkBehaviour
         if (isLocalPlayer)
 			init();
 		else
-			Invoke("initProperAsset", 0.5f); //Delaying the finding of the asset because sometimes the SyncVar aren't already set on start
+			Invoke("initProperAsset", 0.5f); //Delaying assets finding because sometimes the SyncVar aren't already set on start
 	}
 	
 	void init()

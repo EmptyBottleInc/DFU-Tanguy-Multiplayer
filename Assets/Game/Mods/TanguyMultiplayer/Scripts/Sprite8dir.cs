@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DaggerfallWorkshop;
 
 public class Sprite8dir : MonoBehaviour
 {
@@ -12,6 +13,10 @@ public class Sprite8dir : MonoBehaviour
 	Vector3 lastPos;
 	int walkIndex = 0, attackIndex = 0;
 	bool isAttacking = false;
+	public LayerMask groundLayer;
+	DaggerfallAudioSource aud;
+	public SoundClips attackSound;
+	public SoundClips[] walkSounds;
 	
 	void Start()
 	{
@@ -22,10 +27,12 @@ public class Sprite8dir : MonoBehaviour
 	{
 		yield return new WaitForSeconds(1f);
 		cam = PlayerMultiplayer.localPlayer.transform;
+		aud = GetComponent<DaggerfallAudioSource>();
 		while (true)
 		{
 			if (cam != null){
 				angle = getAngleToTarget();
+				placeBase();
 				yield return new WaitForSeconds(0.1f);
 				if (!isAttacking){
 					if (Vector3.Distance(lastPos, transform.position) < 0.05f)
@@ -35,19 +42,25 @@ public class Sprite8dir : MonoBehaviour
 						walkIndex++;
 						if (walkIndex >= playerAssets.getWalkCount())
 							walkIndex = 0;
+						if (walkIndex % 2 == 0)
+							aud.PlayOneShot(walkSounds[Random.Range(0, walkSounds.Length)]);
 					}
 					lastPos = transform.position;
 					yield return new WaitForSeconds(frequency);
 				}else{
+					
 					renderer.sprite = playerAssets.getAttackSprite(getIndex(angle), attackIndex);
 					attackIndex++;
 					if (attackIndex >= playerAssets.getAttackCount()){
 						attackIndex = 0;
 						isAttacking = false;
 					}
+					if (attackIndex == 2)
+						aud.PlayOneShot(attackSound);
 					
 					yield return new WaitForSeconds(0.07f);
 				}
+				
 				
 			}
 			
@@ -90,5 +103,14 @@ public class Sprite8dir : MonoBehaviour
 
 	}
 	
+	void placeBase()
+	{
+		RaycastHit hit;
+		Vector3 size = renderer.size * 2.1f;
+		if (Physics.Raycast(transform.position, -transform.up, out hit, size.y/2f, groundLayer)){
+			transform.position = hit.point +(transform.up* size.y * 0.45f);
+		}else
+			transform.localPosition = Vector3.zero;
+	}
 
 }

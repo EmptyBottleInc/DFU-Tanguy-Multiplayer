@@ -8,6 +8,7 @@ public class PlayerAnimations : NetworkBehaviour
 {
 	public Sprite8dir sprite8dir;
 	
+	
     void Start()
 	{
 		StartCoroutine(Check());

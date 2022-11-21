@@ -173,7 +173,7 @@ namespace DaggerfallWorkshop
 
             if (IsPlaying())
                 return;
-
+			
             // Special handling for magically locked foyer doors in Castle Daggerfall
             // Allows player to just open doors after teleporting inside and finding themselves locked in
             // Not entirely happy with check here, but there's no really satisfying way to intercept and change action behavior directly on these doors

@@ -73,6 +73,11 @@ public class EntityCatcher : NetworkBehaviour
 			if (locationEnabled != i){
 				locationEnabled = i;
 				CheckEntities();
+				
+				if (enemies.Count == 0){//Relaunch the checking later, in certain areas such as castles, it sometimes needs
+					yield return new WaitForSecondsRealtime(1f);
+					CheckEntities();
+				}
 			}
 				
 			yield return new WaitForSecondsRealtime(1.2f);
@@ -95,6 +100,7 @@ public class EntityCatcher : NetworkBehaviour
 		Collider[] hitColliders = Physics.OverlapSphere(transform.position , radius, layer);
         foreach (var hitCollider in hitColliders)
         {
+			
             EnemyDeath ed = hitCollider.gameObject.GetComponent<EnemyDeath>();
 			if (ed != null)
 				enemiesFounded.Add(isRegistered(ed));

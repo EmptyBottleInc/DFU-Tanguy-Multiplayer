@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using DaggerfallWorkshop;
 using Mirror;
+using DaggerfallConnect;
 
 public class DoorsCatcher : NetworkBehaviour
 {
-	
 	Transform cam;
+	public List<MonoBehaviour> doorsOpened = new List<MonoBehaviour>();
+	public LayerMask layerMask;
 	
 	void Start()
 	{
@@ -16,103 +18,94 @@ public class DoorsCatcher : NetworkBehaviour
 	
 	void Update()
 	{
-		if (Input.GetMouseButtonDown(0)){
-			RaycastHit hit;
-			if (Physics.Raycast(cam.position, cam.forward, out hit, 3.3f)){
-				DaggerfallActionDoor door = hit.transform.gameObject.GetComponent<DaggerfallActionDoor>();
-				if (door != null)
-					cmdToggleDoorOn(hit.point.x, hit.point.y, hit.point.z, !door.IsOpen);
+		RaycastHit hit;
+		if (Physics.Raycast(cam.position, cam.forward, out hit, 3.5f, layerMask)){
+			DaggerfallActionDoor door = hit.transform.gameObject.GetComponent<DaggerfallActionDoor>();
+			if (door != null){
+				if (door.IsMoving)
+					activateDoor(door, hit.point, true);
+				else
+					removeDoor(door);
+			}else{
+				DaggerfallAction action = hit.transform.gameObject.GetComponent<DaggerfallAction>();
+				
+				if (action != null){
+					if (action.IsMoving && action.TriggerFlag == DFBlock.RdbTriggerFlags.Direct)
+						activateThing(action, hit.point, false);
+					else
+						removeDoor(action);
+				}
 			}
 		}
+		
 	}
+	
+	void activateDoor(DaggerfallActionDoor door, Vector3 point, bool isDoor)
+	{
+		if (!doorsOpened.Contains(door)){
+			doorsOpened.Add(door);
+			if (doorsOpened.Count > 5)
+				doorsOpened.RemoveAt(0);
+			
+			
+			cmdToggleDoorOn(point.x, point.y, point.z, getStateBool(door.CurrentState), isDoor);
+		}
+	}
+	
+	void activateThing(DaggerfallAction door, Vector3 point, bool isDoor)
+	{
+		if (!doorsOpened.Contains(door)){
+			doorsOpened.Add(door);
+			if (doorsOpened.Count > 5)
+				doorsOpened.RemoveAt(0);
+			
+			
+			cmdToggleDoorOn(point.x, point.y, point.z, getStateBool(door.CurrentState), isDoor);
+		}
+			
+	}
+	
+	void removeDoor(MonoBehaviour door)
+	{
+		if (doorsOpened.Contains(door))
+			doorsOpened.Remove(door);
+	}
+	
+
 	
 	
 	[Command]
-	void cmdToggleDoorOn(float x, float y, float z, bool isOpen)
+	void cmdToggleDoorOn(float x, float y, float z, bool isOpen, bool isDoor)
 	{
-		
-		rpcToggleDoorOn(x, y, z, isOpen);
+		rpcToggleDoorOn(x, y, z, isOpen, isDoor);
 	}
 	
 	[ClientRpc]
-	void rpcToggleDoorOn(float x, float y, float z, bool isOpen)
+	void rpcToggleDoorOn(float x, float y, float z, bool isOpen, bool isDoor)
 	{
 		if (!isLocalPlayer){
-			Collider[] hitColliders = Physics.OverlapSphere(new Vector3(x, y, z) , 0.1f);
+			Collider[] hitColliders = Physics.OverlapSphere(new Vector3(x, y, z) , 0.5f, layerMask);
 			foreach (var hitCollider in hitColliders)
 			{
-				
-				DaggerfallActionDoor door = hitCollider.gameObject.GetComponent<DaggerfallActionDoor>();
-				if (door != null){
-					print("OPEN DOOR " + isOpen );
-					door.SetOpen(isOpen);
+				if (isDoor){
+					DaggerfallActionDoor door = hitCollider.gameObject.GetComponent<DaggerfallActionDoor>();
+					if (door != null){
+						door.SetOpen(isOpen);
+					}
+				}else{
+					DaggerfallAction action = hitCollider.gameObject.GetComponent<DaggerfallAction>();
+					if (action != null){
+						action.Receive(PlayerMultiplayer.playerObject, DaggerfallAction.TriggerTypes.Direct);
+					}
 				}
 			}
 		}
 		
 	}
 	
-	
-	/*public Transform[] locations;
-	public static List<DaggerfallActionDoor> doors;
-	
-	void Start()
+	bool getStateBool(ActionState a)
 	{
-		if (isLocalPlayer)
-			init();
+		return a == ActionState.PlayingForward;
 	}
 	
-	void init()
-	{
-		PlayerEnterExit pEnterExit = PlayerMultiplayer.playerObject.GetComponent<PlayerEnterExit>();
-		locations = new Transform[3];
-		locations[0] = pEnterExit.ExteriorParent.transform;
-		locations[1] = pEnterExit.InteriorParent.transform;
-		locations[2] = pEnterExit.DungeonParent.transform;
-		
-		StartCoroutine(Check());
-	}
-	
-	int getLocationEnabled()
-	{
-		for (int i = 0; i < locations.Length; i++){
-			if (locations[i].gameObject.activeSelf)
-				return i;
-		}
-		return 0;
-	}
-	
-	
-	IEnumerator Check()
-	{
-		int locationEnabled = getLocationEnabled();
-		while (true)
-		{
-			int i = getLocationEnabled();
-			if (locationEnabled != i)
-				setDoors();
-			
-			
-			CheckDoorsStates();
-			yield return new WaitForSeconds(5.6f);
-		}
-	}
-	
-	
-	void checkDoorsStates()
-	{
-		foreach(GameObject door in GameObject.FindGameObjectsWithTag("Untagged")){
-			if (door.name !== "Action Doors"){
-				foreach (Transform t in door.transform){
-					
-				}
-			}
-		}
-	}
-	
-	void setDoors()
-	{
-		doors = new List<DaggerfallActionDoor>();
-		foreach (GameObject door in GameObject.Finds
-	}*/
 }
