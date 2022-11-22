@@ -13,13 +13,14 @@ GameObject:
   - component: {fileID: 9219638976092485272}
   - component: {fileID: 9219638976092485218}
   - component: {fileID: 659669327}
+  - component: {fileID: 5844783352905566263}
   m_Layer: 0
   m_Name: NetworkManagerSteam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &9219638976092485275
 Transform:
   m_ObjectHideFlags: 0
@@ -105,4 +106,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 014f771608efa324685780fee551d4a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  button: {fileID: 0}
+--- !u!114 &5844783352905566263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9219638976092485223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4aa96a083d29c5449aa4ebcb7ffcc842, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hud: {fileID: 1009478619650426019, guid: 6c75cce58d728eb4395220f7f55be520, type: 3}

@@ -74,7 +74,10 @@ public class PlayerAssets : NetworkBehaviour
 	
 	void initProperAsset()
 	{
-		nameText.SetText(playerName);
+		if (OptionsMultiplayer.displayName)
+			nameText.SetText(playerName);
+		else
+			nameText.gameObject.SetActive(false);
 		
 		foreach (Asset a in assets){
 			if (a.Jobs.Contains(job) && gender == a.Gender){

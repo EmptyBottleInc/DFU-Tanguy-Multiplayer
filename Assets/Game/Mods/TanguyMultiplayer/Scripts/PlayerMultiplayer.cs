@@ -20,6 +20,9 @@ public class PlayerMultiplayer : NetworkBehaviour
 	public static PlayerMultiplayer localPlayer;
 	
 	public static string id;
+	public static int state = 0;
+	
+	List<GameObject> refered = new List<GameObject>();
 	
 	void Start()
 	{
@@ -33,6 +36,9 @@ public class PlayerMultiplayer : NetworkBehaviour
 		transform.position = playerTransform.position;
 		localPlayer = this;
 		id = "" + GetComponent<NetworkIdentity>().netId;
+		state = isServer ? 1 : 2;
+		if (!isServer)
+			importOptions();
 	}
 	
 	void setupLocal()
@@ -44,6 +50,26 @@ public class PlayerMultiplayer : NetworkBehaviour
 			enableAll(true);
 			this.enabled = false;
 			
+		}
+	}
+	
+	
+	public void importOptions()
+	{
+		cmdImportOptions();
+	}
+	
+	[Command]
+	public void cmdImportOptions()
+	{
+		rpcImportOptions(OptionsMultiplayer.Export());
+	}
+	
+	[ClientRpc]
+	public void rpcImportOptions(string s)
+	{
+		if (!isServer && localPlayer){
+			OptionsMultiplayer.Import(s);
 		}
 	}
 	
@@ -66,5 +92,17 @@ public class PlayerMultiplayer : NetworkBehaviour
 			transform.position = playerTransform.position;
 			transform.rotation = playerTransform.rotation;
 		}
+	}
+	
+	void OnDestroy()
+	{
+		for (int i = 0; i < refered.Count; i++){
+			Destroy(refered[i]);
+		}
+		
+		if (isLocalPlayer){
+			state = 0;
+		}
+			
 	}
 }
