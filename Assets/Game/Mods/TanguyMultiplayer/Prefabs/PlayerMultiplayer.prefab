@@ -28,7 +28,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0.6000001, z: 0.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4012101602302766542}
+  m_Father: {fileID: 7570200450879662324}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &7400176848832929485
@@ -212,7 +212,6 @@ Transform:
   m_Children:
   - {fileID: 4012101600637348420}
   - {fileID: 6557586759631906260}
-  - {fileID: 6940261271727334546}
   - {fileID: 7570200450879662324}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -254,6 +253,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  syncRange: 1.5
   radius: 500
   layer:
     serializedVersion: 2
@@ -1344,8 +1344,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  hideDistance: 1000
-  sendDistance: 50
+  hideDistance: 2000
+  sendDistance: 25
   visual: {fileID: 7570200450879346066}
   x: 0
   z: 0
@@ -1806,7 +1806,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 481572, guid: 81f9cc3450e0e0d4b8f609fa31938b81, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 481572, guid: 81f9cc3450e0e0d4b8f609fa31938b81, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1949,12 +1949,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 81f9cc3450e0e0d4b8f609fa31938b81, type: 3}
---- !u!1 &7570200450879346066 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 140354, guid: 81f9cc3450e0e0d4b8f609fa31938b81,
-    type: 3}
-  m_PrefabInstance: {fileID: 7570200450879222224}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7570200450879662324 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 481572, guid: 81f9cc3450e0e0d4b8f609fa31938b81,
@@ -2009,3 +2003,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb336c0057e71e543a721c68b611a95c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &7570200450879346066 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 140354, guid: 81f9cc3450e0e0d4b8f609fa31938b81,
+    type: 3}
+  m_PrefabInstance: {fileID: 7570200450879222224}
+  m_PrefabAsset: {fileID: 0}

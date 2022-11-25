@@ -6,6 +6,7 @@ using DaggerfallWorkshop.Game;
 using DaggerfallWorkshop.Utility;
 using DaggerfallWorkshop;
 using System;
+using DaggerfallWorkshop.Game.Entity;
 
 public class EntityCatcher : NetworkBehaviour
 {
@@ -88,17 +89,6 @@ public class EntityCatcher : NetworkBehaviour
 		}
 	}
 	
-	IEnumerator SearchEncounter()
-	{
-		while (true)
-		{
-			yield return new WaitForSecondsRealtime(0.95f);
-			int i = getLocationEnabled();
-			if (i == 0){
-				CheckEncounters();
-			}
-		}
-	}
 	
 	void CheckEncounters()
 	{
@@ -110,31 +100,30 @@ public class EntityCatcher : NetworkBehaviour
 			GameObject g = hitCollider.gameObject;
             EnemyDeath ed = g.GetComponent<EnemyDeath>();
 			if (ed != null && !g.name.Contains("*synced*")){
-				enemy e = isRegistered(ed);
-				if (!enemies.Contains(e)){
-					SetupDemoEnemy setupEnemy = g.GetComponent<SetupDemoEnemy>();
-					g.name += "*synced*";
-					Vector3 pos = g.transform.localPosition;
-					request += g.name + "@"
-						+ (int)setupEnemy.EnemyType + "@"
-						+ (int)setupEnemy.EnemyGender + "@"
-						+ setupEnemy.AlliedToPlayer + "@"
-						+ pos.x + "@"
-						+ pos.y + "@"
-						+ pos.z + "@"
-						+ g.transform.parent.name
-						+ '#';
-					enemies.Add(isRegistered(g.GetComponent<EnemyDeath>(), g.transform.localPosition));
-					enemiesDebug = enemies;
-				}
+				
+				SetupDemoEnemy setupEnemy = g.GetComponent<SetupDemoEnemy>();
+				Vector3 pos = g.transform.localPosition;
+				request += g.name + "@"
+					+ (int)setupEnemy.EnemyType + "@"
+					+ (int)setupEnemy.EnemyGender + "@"
+					+ setupEnemy.AlliedToPlayer + "@"
+					+ pos.x + "@"
+					+ pos.y + "@"
+					+ pos.z + "@"
+					+ g.transform.parent.name
+					+ '#';
+				enemies.Add(isRegistered(g.GetComponent<EnemyDeath>(), g.transform.localPosition));
+				enemiesDebug = enemies;
+				
 			}
         }
-		print("REQUEST " + request);
+		
 		if (request != ""){
 			if (isServer)
 				rpcSendEncounters(request);
 			else
 				cmdSendEncounters(request);
+			
 		}
 	}
 	
@@ -147,6 +136,7 @@ public class EntityCatcher : NetworkBehaviour
 	[ClientRpc]
 	void rpcSendEncounters(string s)
 	{
+		print("REQUEST " + s);
 		if (!isLocalPlayer){
 			string[] lines = s.Split('#');
 			foreach (string line in lines){
@@ -154,9 +144,17 @@ public class EntityCatcher : NetworkBehaviour
 					
 					string[] values = line.Split('@');//0: name, 1: type, 2: gender, 3: allied, 4: posX, 5: posY, 6: posZ, 7: parent
 					GameObject parent = GameObject.Find(values[7]);
+					
 					if (parent != null){
 						int type = int.Parse(values[1]);
 						int gender = int.Parse(values[2]);
+						
+						//If player hasn't commit any crime, the guards will be destroyed, turning them into Knight so
+						if ((MobileTypes) type == MobileTypes.Knight_CityWatch && GameManager.Instance.PlayerEntity.CrimeCommitted == PlayerEntity.Crimes.None){
+							type = (int)MobileTypes.Knight;
+							gender = (int)MobileGender.Male;
+						}
+						
 						Vector3 pos = new Vector3(float.Parse(values[4]), float.Parse(values[5]), float.Parse(values[6]));
 						GameObject g = GameObjectHelper.CreateEnemy(values[0], (MobileTypes) type, pos, (MobileGender)gender, parent.transform, (values[3] == "True" ? MobileReactions.Passive : MobileReactions.Hostile));
 						g.transform.localPosition = pos;
@@ -199,21 +197,32 @@ public class EntityCatcher : NetworkBehaviour
 	
 	enemy isRegistered(EnemyDeath ed)
 	{
-		foreach (enemy e in enemies)
+		/*foreach (enemy e in enemies)
 		{
 			if (e.ed == ed)
 				return e;
-		}
+		}*/
+		if (ed.gameObject.name.Contains("*synced*")){
+			foreach (enemy e in enemies)
+			{
+				if (e.ed == ed)
+					return e;
+			}
+		}else
+			ed.gameObject.name += "*synced*";
 		return new enemy(ed, ed.transform.position, ed.gameObject.name, PlayerMultiplayer.id);
 	}
 	
 	enemy isRegistered(EnemyDeath ed, Vector3 pos)
 	{
-		foreach (enemy e in enemies)
-		{
-			if (e.ed == ed)
-				return e;
-		}
+		if (ed.gameObject.name.Contains("*synced*")){
+			foreach (enemy e in enemies)
+			{
+				if (e.ed == ed)
+					return e;
+			}
+		}else
+			ed.gameObject.name += "*synced*";
 		return new enemy(ed, pos, ed.gameObject.name, PlayerMultiplayer.id);
 	}
 	
@@ -301,7 +310,7 @@ public class EntityCatcher : NetworkBehaviour
 			
 			for (int i = 0; i < enemies.Count; i++){
 				if (enemies[i].title == s && enemies[i].ed != null){
-					if (Vector3.Distance(enemies[i].pos, new Vector3(x, y, z)) < syncRange){
+					if (Vector3.Distance(enemies[i].pos, new Vector3(x, y, z)) < syncRange*2f){
 						enemies[i].ed.transform.position = new Vector3(newX, newY, newZ);
 						//enemies[i].ed.GetComponent<EnemyMotor>().enabled = false;
 						enemies[i] = new enemy(enemies[i].ed, enemies[i].pos, enemies[i].title, id);

@@ -391,7 +391,7 @@ namespace DaggerfallWorkshop.Utility
                 go.transform.position = position;
             }
 #endif
-
+			
             return go;
         }
 
@@ -1203,7 +1203,7 @@ namespace DaggerfallWorkshop.Utility
             {
                 gender = mobileGender;
             }
-
+			
             // Configure enemy
             setupEnemy.ApplyEnemySettings(mobileType, mobileReaction, gender);
 
