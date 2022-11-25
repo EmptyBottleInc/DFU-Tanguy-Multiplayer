@@ -1344,7 +1344,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  hideDistance: 2000
+  hideDistance: 3000
   sendDistance: 25
   visual: {fileID: 7570200450879346066}
   x: 0
