@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
 using DaggerfallWorkshop.Game;
+using DaggerfallWorkshop.Utility;
+using DaggerfallWorkshop;
 using System;
 
 public class EntityCatcher : NetworkBehaviour
@@ -25,7 +27,7 @@ public class EntityCatcher : NetworkBehaviour
 		
 	}
 	
-	
+	public float syncRange = 1.5f;
 	public float radius = 500f;
 	public LayerMask layer;
 	public static List<enemy> enemies = new List<enemy>();
@@ -72,6 +74,7 @@ public class EntityCatcher : NetworkBehaviour
 			int i = getLocationEnabled();
 			if (locationEnabled != i){
 				locationEnabled = i;
+				yield return new WaitForSecondsRealtime(1.1f);
 				CheckEntities();
 				
 				if (enemies.Count == 0){//Relaunch the checking later, in certain areas such as castles, it sometimes needs
@@ -79,10 +82,94 @@ public class EntityCatcher : NetworkBehaviour
 					CheckEntities();
 				}
 			}
-				
 			yield return new WaitForSecondsRealtime(1.2f);
+			CheckEncounters();
+			yield return new WaitForSecondsRealtime(0.8f);
 		}
 	}
+	
+	IEnumerator SearchEncounter()
+	{
+		while (true)
+		{
+			yield return new WaitForSecondsRealtime(0.95f);
+			int i = getLocationEnabled();
+			if (i == 0){
+				CheckEncounters();
+			}
+		}
+	}
+	
+	void CheckEncounters()
+	{
+		print("CHECK RANDOM ENCOUNTERS");
+		string request = "";
+		Collider[] hitColliders = Physics.OverlapSphere(transform.position , 50, layer);
+        foreach (var hitCollider in hitColliders)
+        {
+			GameObject g = hitCollider.gameObject;
+            EnemyDeath ed = g.GetComponent<EnemyDeath>();
+			if (ed != null && !g.name.Contains("*synced*")){
+				enemy e = isRegistered(ed);
+				if (!enemies.Contains(e)){
+					SetupDemoEnemy setupEnemy = g.GetComponent<SetupDemoEnemy>();
+					g.name += "*synced*";
+					Vector3 pos = g.transform.localPosition;
+					request += g.name + "@"
+						+ (int)setupEnemy.EnemyType + "@"
+						+ (int)setupEnemy.EnemyGender + "@"
+						+ setupEnemy.AlliedToPlayer + "@"
+						+ pos.x + "@"
+						+ pos.y + "@"
+						+ pos.z + "@"
+						+ g.transform.parent.name
+						+ '#';
+					enemies.Add(isRegistered(g.GetComponent<EnemyDeath>(), g.transform.localPosition));
+					enemiesDebug = enemies;
+				}
+			}
+        }
+		print("REQUEST " + request);
+		if (request != ""){
+			if (isServer)
+				rpcSendEncounters(request);
+			else
+				cmdSendEncounters(request);
+		}
+	}
+	
+	[Command]
+	void cmdSendEncounters(string s)
+	{
+		rpcSendEncounters(s);
+	}
+	
+	[ClientRpc]
+	void rpcSendEncounters(string s)
+	{
+		if (!isLocalPlayer){
+			string[] lines = s.Split('#');
+			foreach (string line in lines){
+				if (line.Length > 1){
+					
+					string[] values = line.Split('@');//0: name, 1: type, 2: gender, 3: allied, 4: posX, 5: posY, 6: posZ, 7: parent
+					GameObject parent = GameObject.Find(values[7]);
+					if (parent != null){
+						int type = int.Parse(values[1]);
+						int gender = int.Parse(values[2]);
+						Vector3 pos = new Vector3(float.Parse(values[4]), float.Parse(values[5]), float.Parse(values[6]));
+						GameObject g = GameObjectHelper.CreateEnemy(values[0], (MobileTypes) type, pos, (MobileGender)gender, parent.transform, (values[3] == "True" ? MobileReactions.Passive : MobileReactions.Hostile));
+						g.transform.localPosition = pos;
+						g.name = values[0];
+						enemies.Add(isRegistered(g.GetComponent<EnemyDeath>(), pos));
+						enemiesDebug = enemies;
+					}
+				}
+			}
+		}
+	}
+	
+	
 	
 	int getLocationEnabled()
 	{
@@ -118,6 +205,16 @@ public class EntityCatcher : NetworkBehaviour
 				return e;
 		}
 		return new enemy(ed, ed.transform.position, ed.gameObject.name, PlayerMultiplayer.id);
+	}
+	
+	enemy isRegistered(EnemyDeath ed, Vector3 pos)
+	{
+		foreach (enemy e in enemies)
+		{
+			if (e.ed == ed)
+				return e;
+		}
+		return new enemy(ed, pos, ed.gameObject.name, PlayerMultiplayer.id);
 	}
 	
 	
@@ -157,7 +254,7 @@ public class EntityCatcher : NetworkBehaviour
 			foreach (enemy e in enemies){
 				if (e.title == s){
 					
-					if (Vector3.Distance(e.pos, new Vector3(x, y, z)) < 8f){
+					if (Vector3.Distance(e.pos, new Vector3(x, y, z)) < syncRange){
 						if (e.ed != null)
 							e.ed.performDeath = true;
 						j = enemies.IndexOf(e);
@@ -204,7 +301,7 @@ public class EntityCatcher : NetworkBehaviour
 			
 			for (int i = 0; i < enemies.Count; i++){
 				if (enemies[i].title == s && enemies[i].ed != null){
-					if (Vector3.Distance(enemies[i].pos, new Vector3(x, y, z)) < 8f){
+					if (Vector3.Distance(enemies[i].pos, new Vector3(x, y, z)) < syncRange){
 						enemies[i].ed.transform.position = new Vector3(newX, newY, newZ);
 						//enemies[i].ed.GetComponent<EnemyMotor>().enabled = false;
 						enemies[i] = new enemy(enemies[i].ed, enemies[i].pos, enemies[i].title, id);
@@ -222,6 +319,7 @@ public class EntityCatcher : NetworkBehaviour
 			}*/
 		}
 	}
+	
 	
 	
 }

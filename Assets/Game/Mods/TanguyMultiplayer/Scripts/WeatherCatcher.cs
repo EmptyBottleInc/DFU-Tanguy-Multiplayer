@@ -14,7 +14,7 @@ public class WeatherCatcher : NetworkBehaviour
 	
 	void Start()
 	{
-		init();
+		Invoke("init", 0.1f);
 	}
 	
 	void init()

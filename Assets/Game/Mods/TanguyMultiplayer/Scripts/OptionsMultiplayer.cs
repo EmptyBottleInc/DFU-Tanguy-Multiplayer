@@ -7,6 +7,7 @@ public class OptionsMultiplayer : MonoBehaviour
 
 	public static bool timeHost = true;
 	public static bool displayName = true;
+	public static bool useHighestLevel = false;
 	
 	
 	public static void Import(string s)
@@ -14,10 +15,11 @@ public class OptionsMultiplayer : MonoBehaviour
 		string[] list = s.Split('#');
 		timeHost = list[0] == "True";
 		displayName = list[1] == "True";
+		useHighestLevel = list[2] == "True";
 	}
 	
 	public static string Export()
 	{
-		return timeHost + "#" + displayName;
+		return timeHost + "#" + displayName + "#" + useHighestLevel;
 	}
 }

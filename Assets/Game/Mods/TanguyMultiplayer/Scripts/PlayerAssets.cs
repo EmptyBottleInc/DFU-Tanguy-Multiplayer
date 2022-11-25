@@ -4,6 +4,7 @@ using UnityEngine;
 using Mirror;
 using DaggerfallWorkshop.Game.Entity;
 using DaggerfallConnect;
+using DaggerfallWorkshop.Game;
 using System;
 using TMPro;
 
@@ -32,10 +33,14 @@ public class PlayerAssets : NetworkBehaviour
 	[SyncVar]
 	public string playerName;
 	
+	public static int hostLevel = 0;
+	
 	Asset actualAsset;
 	
 	public TextMeshPro nameText;
-	
+	public GameObject torch;
+	public SpriteMultiplayer spriteMultiplayer;
+	DaggerfallEntity pEntity;
 	
 	
 	
@@ -49,7 +54,7 @@ public class PlayerAssets : NetworkBehaviour
 	
 	void init()
 	{
-		DaggerfallEntity pEntity = PlayerMultiplayer.playerObject.GetComponent<DaggerfallEntityBehaviour>().Entity;
+		pEntity = PlayerMultiplayer.playerObject.GetComponent<DaggerfallEntityBehaviour>().Entity;
 		Genders genders = pEntity.Gender;
 		DFCareer career = pEntity.Career;
 		
@@ -57,7 +62,23 @@ public class PlayerAssets : NetworkBehaviour
 			(genders == Genders.Male ? 0 : 1),
 			career.Name, 
 			pEntity.Name
+			
 		);
+		
+		if (isServer){
+			rpcSendHostLevel(pEntity.Level);
+			StartCoroutine(TrackLevel());
+		}else
+			cmdApplyHostLevel();
+		
+		if (isLocalPlayer)
+			StartCoroutine(trackTorch());
+		/*if (!OptionsMultiplayer.useHighestLevel){
+			
+		}else{
+			if (isLocalPlayer)
+				rpcSendHostLevel(pEntity.Level);
+		}*/
 	}
 	
 	[Command]
@@ -68,8 +89,68 @@ public class PlayerAssets : NetworkBehaviour
 		playerName = n;
 	}
 	
+	[Command]
+	public void cmdApplyHostLevel()
+	{
+		rpcSendHostLevel(hostLevel);
+	}
+	
+	[ClientRpc]
+	public void rpcSendHostLevel(int l)
+	{
+		hostLevel = l;
+	}
+	
+	[Command]
+	public void cmdSendHighLevel(int l)
+	{
+		rpcSendHighLevel(l);
+	}
+	
+	[ClientRpc]
+	public void rpcSendHighLevel(int l)
+	{
+		if (hostLevel < l)
+			hostLevel = l;
+	}
+	
+	IEnumerator TrackLevel()
+	{
+		while (true){
+			yield return new WaitForSeconds(1.1f);
+			if (hostLevel != pEntity.Level)
+				rpcSendHostLevel(pEntity.Level);
+		}
+	}
+	
+	IEnumerator trackTorch()
+	{
+		GameObject playerTorch = PlayerMultiplayer.playerObject.GetComponent<EnablePlayerTorch>().PlayerTorch;
+		bool lastState = false;
+		while (true)
+		{
+			bool torchEnable = playerTorch.activeSelf;
+			if (torchEnable != lastState){
+				cmdEnableTorch(torchEnable);
+				lastState = torchEnable;
+			}
+			yield return new WaitForSeconds(0.1f);
+		}
+	}
 	
 	
+	[Command]
+	void cmdEnableTorch(bool b)
+	{
+		rpcEnableTorch(b);
+	}
+	
+	[ClientRpc]
+	void rpcEnableTorch(bool b)
+	{
+		if (!isLocalPlayer)
+			torch.SetActive(b);
+	}
 	
 	
 	void initProperAsset()
@@ -79,7 +160,7 @@ public class PlayerAssets : NetworkBehaviour
 		else
 			nameText.gameObject.SetActive(false);
 		
-		foreach (Asset a in assets){
+		/*foreach (Asset a in assets){
 			if (a.Jobs.Contains(job) && gender == a.Gender){
 				actualAsset = a;
 				return;
@@ -90,10 +171,17 @@ public class PlayerAssets : NetworkBehaviour
 				actualAsset = a;
 				return;
 			}
-		}
+		}*/
 		actualAsset = assets[0];
-		
+		spriteMultiplayer.gender = gender;
+		spriteMultiplayer.job = job;
+		spriteMultiplayer.gameObject.SetActive(true);
 	}
+	
+	
+	
+	
+	
 	
 	public Sprite getIdleSprite(int i){
 		return actualAsset.idleSprites[i];
@@ -116,5 +204,10 @@ public class PlayerAssets : NetworkBehaviour
 		return actualAsset.attackCount;
 	}
 	
+	void OnDestroy()
+	{
+		if (isServer)
+			hostLevel = 0;
+	}
 
 }

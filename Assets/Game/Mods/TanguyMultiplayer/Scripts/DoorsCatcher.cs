@@ -16,6 +16,8 @@ public class DoorsCatcher : NetworkBehaviour
 		cam = Camera.main.transform;
 	}
 	
+	
+	
 	void Update()
 	{
 		RaycastHit hit;
@@ -90,7 +92,7 @@ public class DoorsCatcher : NetworkBehaviour
 				if (isDoor){
 					DaggerfallActionDoor door = hitCollider.gameObject.GetComponent<DaggerfallActionDoor>();
 					if (door != null){
-						door.SetOpen(isOpen);
+						door.SetOpen(isOpen, false, true);
 					}
 				}else{
 					DaggerfallAction action = hitCollider.gameObject.GetComponent<DaggerfallAction>();

@@ -110,8 +110,9 @@ Shader "UnityCoder/DoomSpriteAnimated2"
 			{
 				return tex2D(_MainTex,i.uv);
 			}
-
+			
 	        ENDCG
 	    }
 	}
+	Fallback "Sprites-Diffuse"
 }

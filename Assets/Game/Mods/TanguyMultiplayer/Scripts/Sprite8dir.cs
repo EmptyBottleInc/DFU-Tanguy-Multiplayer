@@ -18,8 +18,9 @@ public class Sprite8dir : MonoBehaviour
 	public SoundClips attackSound;
 	public SoundClips[] walkSounds;
 	
-	void Start()
+	void OnEnable()
 	{
+		StopAllCoroutines();
 		StartCoroutine(checkAngles());
 	}
 	

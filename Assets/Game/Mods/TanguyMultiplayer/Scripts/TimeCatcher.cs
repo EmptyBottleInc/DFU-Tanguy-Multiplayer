@@ -65,7 +65,7 @@ public class TimeCatcher : NetworkBehaviour
 	void receiveTime(int year, int month, int day, int hour, int minute, float second)
 	{
 		if (isLocalPlayer){
-			worldTime.DaggerfallDateTime = new DaggerfallDateTime(year, month, day, hour, minute, second);
+			worldTime.DaggerfallDateTime = new DaggerfallDateTime(year, month, day, hour, minute, Mathf.Clamp(second, 0, 590917));
 			lastTime = worldTime.Now.ToSeconds();
 		}
 	}
@@ -73,7 +73,7 @@ public class TimeCatcher : NetworkBehaviour
 	[ClientRpc]
 	public void rpcSendTime(int year, int month, int day, int hour, int minute, float second){
 		if (!isLocalPlayer){
-			worldTime.DaggerfallDateTime = new DaggerfallDateTime(year, month, day, hour, minute, second);
+			worldTime.DaggerfallDateTime = new DaggerfallDateTime(year, month, day, hour, minute, Mathf.Clamp(second, 0, 590917));
 			lastTime = worldTime.Now.ToSeconds();
 		}
 	}

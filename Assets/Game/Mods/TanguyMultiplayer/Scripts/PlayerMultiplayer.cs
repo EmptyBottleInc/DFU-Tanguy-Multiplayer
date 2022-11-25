@@ -11,9 +11,6 @@ public class PlayerMultiplayer : NetworkBehaviour
 	public Sprite8dir sprite8dir;
 	
 	
-	[Header("Runtime")]
-	public Transform playerTransform;
-	
 	
 	public static GameObject playerObject;
 	
@@ -21,6 +18,8 @@ public class PlayerMultiplayer : NetworkBehaviour
 	
 	public static string id;
 	public static int state = 0;
+	public static int random = 0;
+	static float randomTime = 0;
 	
 	List<GameObject> refered = new List<GameObject>();
 	
@@ -32,8 +31,6 @@ public class PlayerMultiplayer : NetworkBehaviour
 	void init()
 	{
 		playerObject = GameObject.FindGameObjectsWithTag("Player")[0];
-		playerTransform = playerObject.transform;
-		transform.position = playerTransform.position;
 		localPlayer = this;
 		id = "" + GetComponent<NetworkIdentity>().netId;
 		state = isServer ? 1 : 2;
@@ -86,13 +83,6 @@ public class PlayerMultiplayer : NetworkBehaviour
 		}
 	}
 	
-	void FixedUpdate()
-	{
-		if (isLocalPlayer){
-			transform.position = playerTransform.position;
-			transform.rotation = playerTransform.rotation;
-		}
-	}
 	
 	void OnDestroy()
 	{
@@ -104,5 +94,16 @@ public class PlayerMultiplayer : NetworkBehaviour
 			state = 0;
 		}
 			
+	}
+	
+	
+	public static int getRandom(float min, float max)
+	{
+		if (randomTime + 1 < Time.time){
+			randomTime = Time.time;
+			random = 0;
+		}
+		random++;
+		return (int)(min + (max-min) * Mathf.Pow(Mathf.Sin(random*4.132f), 2)-1);
 	}
 }

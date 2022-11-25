@@ -32,7 +32,7 @@ public class HudMultiplayer : MonoBehaviour
 			raycaster.enabled = canvas.enabled;
 			setStatus();
 			options.SetActive(!(PlayerMultiplayer.state == 2));
-			yield return new WaitForSecondsRealtime(0.42f);
+			yield return new WaitForSecondsRealtime(0.32f);
 		}
 	}
 	
@@ -77,10 +77,17 @@ public class HudMultiplayer : MonoBehaviour
 		checks[1].SetActive(OptionsMultiplayer.displayName);
 	}
 	
+	public void toggleHighestLevel()
+	{
+		OptionsMultiplayer.useHighestLevel = !OptionsMultiplayer.useHighestLevel;
+		checks[2].SetActive(OptionsMultiplayer.useHighestLevel);
+	}
+	
 	public void refreshAllChecks()
 	{
 		checks[0].SetActive(OptionsMultiplayer.timeHost);
 		checks[1].SetActive(OptionsMultiplayer.displayName);
+		checks[2].SetActive(OptionsMultiplayer.useHighestLevel);
 	}
 	
 	public void hostButton()

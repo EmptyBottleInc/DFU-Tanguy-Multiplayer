@@ -291,11 +291,12 @@ namespace DaggerfallWorkshop
             // Get player level - use level 1 if game not running (e.g. importing in editor mode)
             float playerLevel = 1;
             if (Application.isPlaying)
-                playerLevel = GameManager.Instance.PlayerEntity.Level;
-
+				playerLevel = GameManager.Instance.PlayerEntity.Level;
+			
+			
             // Calculate monster power - this is a clamped 0-1 value based on player's level from 1-20
             float monsterPower = Mathf.Clamp01(playerLevel / 20f);
-
+			
             // Create dungeon layout
             for (int i = 0; i < summary.LocationData.Dungeon.Blocks.Length; i++)
             {

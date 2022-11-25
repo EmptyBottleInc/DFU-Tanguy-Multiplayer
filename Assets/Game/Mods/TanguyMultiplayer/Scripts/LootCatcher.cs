@@ -90,7 +90,7 @@ public class LootCatcher : NetworkBehaviour
 	{
 		string items = "";
 		foreach (DaggerfallUnityItem item in loot.Items.CloneAll()){
-			items+=item.ItemGroup + "@" + item.TemplateIndex + '@' + item.NativeMaterialValue + "#";
+			items+=item.ItemGroup + "@" + item.TemplateIndex + '@' + item.NativeMaterialValue + '@' + item.stackCount + "#";
 		}
 		print("LOOT ITEMS " + items);
 		Vector3 pos = loot.transform.position;
@@ -124,9 +124,11 @@ public class LootCatcher : NetworkBehaviour
 				if (infos.Length > 1){
 					int templateIndex = int.Parse(infos[1]);
 					int material = int.Parse(infos[2]);
+					int stackCount = int.Parse(infos[3]);
 					ItemGroups itemGroup = getItemGroup(infos[0]);
 					if (itemGroup != ItemGroups.None){
 						DaggerfallUnityItem item = ItemBuilder.CreateItem(getItemGroup(infos[0]), templateIndex);
+						item.stackCount = stackCount;
 						switch (infos[0]){
 							case "Weapons":
 								ItemBuilder.ApplyWeaponMaterial(item, (WeaponMaterialTypes)material);
@@ -188,6 +190,18 @@ public class LootCatcher : NetworkBehaviour
 				break;
 			case "MetalIngredients":
 				return ItemGroups.MetalIngredients;
+				break;
+			case "ReligiousItems":
+				return ItemGroups.ReligiousItems;
+				break;
+			case "Gems":
+				return ItemGroups.Gems;
+				break;
+			case "Jewellery":
+				return ItemGroups.Jewellery;
+				break;
+			case "Currency":
+				return ItemGroups.Currency;
 				break;
 		}
 		return ItemGroups.None;

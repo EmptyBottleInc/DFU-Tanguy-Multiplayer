@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using DaggerfallWorkshop.Game;
+using DaggerfallWorkshop;
 using Mirror;
 
 public class PlayerAnimations : NetworkBehaviour
 {
-	public Sprite8dir sprite8dir;
-	
+	//public Sprite8dir sprite8dir;
+	public SpriteMultiplayer sprite;
 	
     void Start()
 	{
@@ -20,7 +21,7 @@ public class PlayerAnimations : NetworkBehaviour
 		
 		while (true){
 			if (weapon.IsAttacking()){
-				cmdPlayAttack();
+				cmdPlayAttack(weapon.WeaponType != WeaponTypes.Bow);
 				yield return new WaitForSeconds(1f);
 			}
 			
@@ -29,15 +30,20 @@ public class PlayerAnimations : NetworkBehaviour
 	}
 	
 	[Command]
-	void cmdPlayAttack()
+	void cmdPlayAttack(bool melee)
 	{
-		rpcPlayAttack();
+		rpcPlayAttack(melee);
 	}
 	
 	[ClientRpc]
-	void rpcPlayAttack()
+	void rpcPlayAttack(bool melee)
 	{
-		if (!isLocalPlayer)
-			sprite8dir.playAttack();
+		if (!isLocalPlayer){
+			if (melee)
+				sprite.playAttack();
+			else
+				sprite.playBow();
+			
+		}
 	}
 }
