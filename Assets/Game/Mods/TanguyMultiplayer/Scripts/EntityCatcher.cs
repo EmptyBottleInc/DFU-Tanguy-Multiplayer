@@ -12,12 +12,12 @@ public class EntityCatcher : NetworkBehaviour
 {
 	[Serializable]
 	public struct enemy{
-		public EnemyDeath ed;
+		public DaggerfallEntityBehaviour ed;
 		public Vector3 pos;
 		public string title;
 		public string referedId;
 		
-		public enemy(EnemyDeath e, Vector3 p, string s, string id)
+		public enemy(DaggerfallEntityBehaviour e, Vector3 p, string s, string id)
 		{
 			ed = e;
 			pos = p;
@@ -73,7 +73,7 @@ public class EntityCatcher : NetworkBehaviour
 		while (true)
 		{
 			int i = getLocationEnabled();
-			if (locationEnabled != i){
+			if (locationEnabled != i && i != 1){
 				locationEnabled = i;
 				yield return new WaitForSecondsRealtime(1.1f);
 				CheckEntities();
@@ -82,10 +82,10 @@ public class EntityCatcher : NetworkBehaviour
 					yield return new WaitForSecondsRealtime(1f);
 					CheckEntities();
 				}
-			}
+			}else
+				CheckEncounters();
 			yield return new WaitForSecondsRealtime(1.2f);
-			CheckEncounters();
-			yield return new WaitForSecondsRealtime(0.8f);
+			
 		}
 	}
 	
@@ -98,7 +98,7 @@ public class EntityCatcher : NetworkBehaviour
         foreach (var hitCollider in hitColliders)
         {
 			GameObject g = hitCollider.gameObject;
-            EnemyDeath ed = g.GetComponent<EnemyDeath>();
+            DaggerfallEntityBehaviour ed = g.GetComponent<DaggerfallEntityBehaviour>();
 			if (ed != null && !g.name.Contains("*synced*")){
 				
 				SetupDemoEnemy setupEnemy = g.GetComponent<SetupDemoEnemy>();
@@ -112,18 +112,14 @@ public class EntityCatcher : NetworkBehaviour
 					+ pos.z + "@"
 					+ g.transform.parent.name
 					+ '#';
-				enemies.Add(isRegistered(g.GetComponent<EnemyDeath>(), g.transform.localPosition));
+				enemies.Add(isRegistered(g.GetComponent<DaggerfallEntityBehaviour>(), g.transform.localPosition));
 				enemiesDebug = enemies;
 				
 			}
         }
-		
+		print("REQUEST SEND " + request);
 		if (request != ""){
-			if (isServer)
-				rpcSendEncounters(request);
-			else
-				cmdSendEncounters(request);
-			
+			cmdSendEncounters(request);
 		}
 	}
 	
@@ -136,37 +132,55 @@ public class EntityCatcher : NetworkBehaviour
 	[ClientRpc]
 	void rpcSendEncounters(string s)
 	{
-		print("REQUEST " + s);
+		print("REQUEST RECEIVED " + s);
 		if (!isLocalPlayer){
-			string[] lines = s.Split('#');
-			foreach (string line in lines){
-				if (line.Length > 1){
+			this.enabled = true;
+			StartCoroutine(tryEncounters(s, 5));
+		}
+	}
+	
+	//If the other player isn't in same location, retry later multiple times
+	IEnumerator tryEncounters(string s, int tries)
+	{
+		List<string> lines = new List<string>(s.Split('#'));
+		for (int i = 0; i < tries; i++){
+			List<string> toRemove = new List<string>();
+			for (int j = 0; j < lines.Count; j++){
+				if (lines[j].Length > 1){
 					
-					string[] values = line.Split('@');//0: name, 1: type, 2: gender, 3: allied, 4: posX, 5: posY, 6: posZ, 7: parent
+					string[] values = lines[j].Split('@');//0: name, 1: type, 2: gender, 3: allied, 4: posX, 5: posY, 6: posZ, 7: parent
 					GameObject parent = GameObject.Find(values[7]);
-					
+						
 					if (parent != null){
+						toRemove.Add(lines[j]);
 						int type = int.Parse(values[1]);
 						int gender = int.Parse(values[2]);
-						
+							
 						//If player hasn't commit any crime, the guards will be destroyed, turning them into Knight so
 						if ((MobileTypes) type == MobileTypes.Knight_CityWatch && GameManager.Instance.PlayerEntity.CrimeCommitted == PlayerEntity.Crimes.None){
 							type = (int)MobileTypes.Knight;
 							gender = (int)MobileGender.Male;
 						}
-						
+							
 						Vector3 pos = new Vector3(float.Parse(values[4]), float.Parse(values[5]), float.Parse(values[6]));
 						GameObject g = GameObjectHelper.CreateEnemy(values[0], (MobileTypes) type, pos, (MobileGender)gender, parent.transform, (values[3] == "True" ? MobileReactions.Passive : MobileReactions.Hostile));
 						g.transform.localPosition = pos;
 						g.name = values[0];
-						enemies.Add(isRegistered(g.GetComponent<EnemyDeath>(), pos));
+						enemies.Add(isRegistered(g.GetComponent<DaggerfallEntityBehaviour>(), pos));
 						enemiesDebug = enemies;
 					}
 				}
+				yield return new WaitForSecondsRealtime(0.13f);
 			}
+			yield return new WaitForSecondsRealtime(0.1f);
+			
+			foreach (string r in toRemove){
+				lines.Remove(r);
+			}
+			yield return new WaitForSeconds(4.25f);
 		}
+		this.enabled = false;
 	}
-	
 	
 	
 	int getLocationEnabled()
@@ -185,17 +199,16 @@ public class EntityCatcher : NetworkBehaviour
 		Collider[] hitColliders = Physics.OverlapSphere(transform.position , radius, layer);
         foreach (var hitCollider in hitColliders)
         {
-			
-            EnemyDeath ed = hitCollider.gameObject.GetComponent<EnemyDeath>();
-			if (ed != null)
-				enemiesFounded.Add(isRegistered(ed));
+			GameObject g = hitCollider.gameObject;
+			if (g.GetComponent<DaggerfallEnemy>() != null)
+				enemiesFounded.Add(isRegistered(g.GetComponent<DaggerfallEntityBehaviour>()));
 			
         }
 		enemies = enemiesFounded;
 		enemiesDebug = enemiesFounded;
 	}
 	
-	enemy isRegistered(EnemyDeath ed)
+	enemy isRegistered(DaggerfallEntityBehaviour ed)
 	{
 		/*foreach (enemy e in enemies)
 		{
@@ -213,7 +226,7 @@ public class EntityCatcher : NetworkBehaviour
 		return new enemy(ed, ed.transform.position, ed.gameObject.name, PlayerMultiplayer.id);
 	}
 	
-	enemy isRegistered(EnemyDeath ed, Vector3 pos)
+	enemy isRegistered(DaggerfallEntityBehaviour ed, Vector3 pos)
 	{
 		if (ed.gameObject.name.Contains("*synced*")){
 			foreach (enemy e in enemies)
@@ -233,7 +246,7 @@ public class EntityCatcher : NetworkBehaviour
 		int i = -1;
 		foreach (enemy e in enemies)
 		{
-			if (e.ed != null && e.ed.performDeath){
+			if (e.ed != null && e.ed.Entity.CurrentHealth <= 0f){
 				Vector3 pos = e.pos;
 				if (isServer)
 					rpcDeathOn(pos.x, pos.y, pos.z, e.title);
@@ -265,7 +278,7 @@ public class EntityCatcher : NetworkBehaviour
 					
 					if (Vector3.Distance(e.pos, new Vector3(x, y, z)) < syncRange){
 						if (e.ed != null)
-							e.ed.performDeath = true;
+							e.ed.Entity.SetHealth(-1);
 						j = enemies.IndexOf(e);
 					}
 				}
@@ -310,7 +323,7 @@ public class EntityCatcher : NetworkBehaviour
 			
 			for (int i = 0; i < enemies.Count; i++){
 				if (enemies[i].title == s && enemies[i].ed != null){
-					if (Vector3.Distance(enemies[i].pos, new Vector3(x, y, z)) < syncRange*2f){
+					if (Vector3.Distance(enemies[i].pos, new Vector3(x, y, z)) < syncRange){
 						enemies[i].ed.transform.position = new Vector3(newX, newY, newZ);
 						//enemies[i].ed.GetComponent<EnemyMotor>().enabled = false;
 						enemies[i] = new enemy(enemies[i].ed, enemies[i].pos, enemies[i].title, id);

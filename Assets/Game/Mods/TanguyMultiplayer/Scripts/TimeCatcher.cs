@@ -28,53 +28,53 @@ public class TimeCatcher : NetworkBehaviour
 	
 	IEnumerator Check()
 	{
-		lastTime = worldTime.Now.ToSeconds();
+		lastTime = worldTime.Now.ToClassicDaggerfallTime();
 		
 		while (true)
 		{
 			
-			if (worldTime.Now.ToSeconds() - lastTime > 40){
+			if (worldTime.Now.ToClassicDaggerfallTime() - lastTime > 40){
 				
 				if (OptionsMultiplayer.timeHost && !isServer){
 					cmdReceiveTime();
 				}else{
 					DaggerfallDateTime now = worldTime.Now;
-					cmdSendTime(now.Year, now.Month, now.Day, now.Hour, now.Minute, now.Second);
+					cmdSendTime(now.ToClassicDaggerfallTime());//(now.Year, now.Month, now.Day, now.Hour, now.Minute, now.Second);
 				}
 				
 				
 			}
-			lastTime = worldTime.Now.ToSeconds();
+			lastTime = worldTime.Now.ToClassicDaggerfallTime();
 			yield return new WaitForSeconds(2.25f);
 		}
 	}
 	
 	[Command]
-	public void cmdSendTime(int year, int month, int day, int hour, int minute, float second){
-		rpcSendTime(year, month, day, hour, minute, second);
+	public void cmdSendTime(uint i/*int year, int month, int day, int hour, int minute, float second*/){
+		rpcSendTime(i/*year, month, day, hour, minute, second*/);
 	}
 	
 	[Command]
 	public void cmdReceiveTime()
 	{
 		DaggerfallDateTime now = worldTime.Now;
-		receiveTime(now.Year, now.Month, now.Day, now.Hour, now.Minute, now.Second);
+		receiveTime(now.ToClassicDaggerfallTime()/*now.Year, now.Month, now.Day, now.Hour, now.Minute, now.Second*/);
 	}
 	
 	[ClientRpc]
-	void receiveTime(int year, int month, int day, int hour, int minute, float second)
+	void receiveTime(uint i/*int year, int month, int day, int hour, int minute, float second*/)
 	{
 		if (isLocalPlayer){
-			worldTime.DaggerfallDateTime = new DaggerfallDateTime(year, month, day, hour, minute, Mathf.Clamp(second, 0, 590917));
-			lastTime = worldTime.Now.ToSeconds();
+			worldTime.Now.FromClassicDaggerfallTime(i);//new DaggerfallDateTime(/*year, month, day, hour, minute, Mathf.Clamp(second, 0, 590917)*/);
+			lastTime = worldTime.Now.ToClassicDaggerfallTime();
 		}
 	}
 	
 	[ClientRpc]
-	public void rpcSendTime(int year, int month, int day, int hour, int minute, float second){
+	public void rpcSendTime(uint i/*int year, int month, int day, int hour, int minute, float second*/){
 		if (!isLocalPlayer){
-			worldTime.DaggerfallDateTime = new DaggerfallDateTime(year, month, day, hour, minute, Mathf.Clamp(second, 0, 590917));
-			lastTime = worldTime.Now.ToSeconds();
+			worldTime.Now.FromClassicDaggerfallTime(i);//(/*year, month, day, hour, minute, Mathf.Clamp(second, 0, 590917)*/);
+			lastTime = worldTime.Now.ToClassicDaggerfallTime();
 		}
 	}
 	

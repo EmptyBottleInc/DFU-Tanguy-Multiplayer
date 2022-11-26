@@ -32,7 +32,7 @@ namespace DaggerfallWorkshop.Game
         DaggerfallEntityBehaviour entityBehaviour;
         EnemyEntity enemyEntity;
 
-        public bool performDeath = false;
+        bool performDeath = false;
 
         #endregion
 
