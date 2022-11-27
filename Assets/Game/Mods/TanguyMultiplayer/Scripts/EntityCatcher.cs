@@ -16,13 +16,15 @@ public class EntityCatcher : NetworkBehaviour
 		public Vector3 pos;
 		public string title;
 		public string referedId;
+		public int state;//0 idle, 1 controlled by local, 2 controlled by network
 		
-		public enemy(DaggerfallEntityBehaviour e, Vector3 p, string s, string id)
+		public enemy(DaggerfallEntityBehaviour e, Vector3 p, string s, string id, int b)
 		{
 			ed = e;
 			pos = p;
 			title = s;
 			referedId = id;
+			state = b;
 		}
 		
 		
@@ -166,7 +168,7 @@ public class EntityCatcher : NetworkBehaviour
 						GameObject g = GameObjectHelper.CreateEnemy(values[0], (MobileTypes) type, pos, (MobileGender)gender, parent.transform, (values[3] == "True" ? MobileReactions.Passive : MobileReactions.Hostile));
 						g.transform.localPosition = pos;
 						g.name = values[0];
-						enemies.Add(isRegistered(g.GetComponent<DaggerfallEntityBehaviour>(), pos));
+						enemies.Add(isRegistered(g.GetComponent<DaggerfallEntityBehaviour>(), pos, 2));
 						enemiesDebug = enemies;
 					}
 				}
@@ -223,10 +225,10 @@ public class EntityCatcher : NetworkBehaviour
 			}
 		}else
 			ed.gameObject.name += "*synced*";
-		return new enemy(ed, ed.transform.position, ed.gameObject.name, PlayerMultiplayer.id);
+		return new enemy(ed, ed.transform.position, ed.gameObject.name, PlayerMultiplayer.id, 0);
 	}
 	
-	enemy isRegistered(DaggerfallEntityBehaviour ed, Vector3 pos)
+	enemy isRegistered(DaggerfallEntityBehaviour ed, Vector3 pos, int state = 0)
 	{
 		if (ed.gameObject.name.Contains("*synced*")){
 			foreach (enemy e in enemies)
@@ -236,7 +238,7 @@ public class EntityCatcher : NetworkBehaviour
 			}
 		}else
 			ed.gameObject.name += "*synced*";
-		return new enemy(ed, pos, ed.gameObject.name, PlayerMultiplayer.id);
+		return new enemy(ed, pos, ed.gameObject.name, PlayerMultiplayer.id, state);
 	}
 	
 	
@@ -299,10 +301,12 @@ public class EntityCatcher : NetworkBehaviour
 			for (int i = 0; i< enemies.Count; i++){
 				if (enemies[i].ed != null){
 					Vector3 newPos = enemies[i].ed.transform.position;
-					if (enemies[i].referedId == PlayerMultiplayer.id && Vector3.Distance(enemies[i].pos, newPos) > 0.5f){ //check if the enemy moved from a player side
-						enemies[i] = new enemy(enemies[i].ed, enemies[i].pos, enemies[i].title, PlayerMultiplayer.id);//Turning canMove off so it is controlled by this player
-						cmdMoveEntityOn(enemies[i].pos.x, enemies[i].pos.y, enemies[i].pos.z, newPos.x, newPos.y, newPos.z, enemies[i].title, PlayerMultiplayer.id);
-						
+					if (enemies[i].state == 0 || enemies[i].state == 1){
+						if (Vector3.Distance(enemies[i].pos, newPos) > 0.5f){ //check if the enemy moved from a player side
+							enemies[i] = new enemy(enemies[i].ed, enemies[i].pos, enemies[i].title, PlayerMultiplayer.id, 1);
+							cmdMoveEntityOn(enemies[i].pos.x, enemies[i].pos.y, enemies[i].pos.z, newPos.x, newPos.y, newPos.z, enemies[i].title, PlayerMultiplayer.id);
+							
+						}
 					}
 				}
 			}
@@ -322,11 +326,11 @@ public class EntityCatcher : NetworkBehaviour
 		if (!isLocalPlayer){
 			
 			for (int i = 0; i < enemies.Count; i++){
-				if (enemies[i].title == s && enemies[i].ed != null){
+				if (enemies[i].title == s && enemies[i].ed != null && (enemies[i].state == 0 || enemies[i].state == 2)){
 					if (Vector3.Distance(enemies[i].pos, new Vector3(x, y, z)) < syncRange){
 						enemies[i].ed.transform.position = new Vector3(newX, newY, newZ);
 						//enemies[i].ed.GetComponent<EnemyMotor>().enabled = false;
-						enemies[i] = new enemy(enemies[i].ed, enemies[i].pos, enemies[i].title, id);
+						enemies[i] = new enemy(enemies[i].ed, enemies[i].pos, enemies[i].title, id, 2);
 					}
 				}
 				
