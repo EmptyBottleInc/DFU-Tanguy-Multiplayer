@@ -54,7 +54,7 @@ public class PlayerAssets : NetworkBehaviour
 	
 	void init()
 	{
-		pEntity = PlayerMultiplayer.playerObject.GetComponent<DaggerfallEntityBehaviour>().Entity;
+		pEntity = GameManager.Instance.PlayerEntity as DaggerfallEntity;
 		Genders genders = pEntity.Gender;
 		DFCareer career = pEntity.Career;
 		
@@ -125,6 +125,7 @@ public class PlayerAssets : NetworkBehaviour
 	
 	IEnumerator trackTorch()
 	{
+		yield return new WaitForSeconds(1.653f);
 		GameObject playerTorch = PlayerMultiplayer.playerObject.GetComponent<EnablePlayerTorch>().PlayerTorch;
 		bool lastState = false;
 		while (true)

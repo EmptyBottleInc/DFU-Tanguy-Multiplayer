@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using DaggerfallWorkshop.Game;
 using UnityEngine.UI;
+using Mirror;
 
 public class HudMultiplayer : MonoBehaviour
 {
@@ -11,7 +12,7 @@ public class HudMultiplayer : MonoBehaviour
 	public GameObject[] checks;
 	public static SteamLobby steamLobby;
 	public Text status;
-	public GameObject options;
+	public GameObject options, stop, host;
 	
 	DaggerfallUI gameUI;
 	
@@ -30,8 +31,12 @@ public class HudMultiplayer : MonoBehaviour
 		{
 			canvas.enabled = (inputManager != null && inputManager.IsPaused);
 			raycaster.enabled = canvas.enabled;
-			setStatus();
-			options.SetActive(!(PlayerMultiplayer.state == 2));
+			if (canvas.enabled){
+				setStatus();
+				options.SetActive(!(PlayerMultiplayer.state == 2));
+				host.SetActive(PlayerMultiplayer.state == 0);
+				stop.SetActive(!(PlayerMultiplayer.state == 0));
+			}
 			yield return new WaitForSecondsRealtime(0.32f);
 		}
 	}
@@ -83,15 +88,31 @@ public class HudMultiplayer : MonoBehaviour
 		checks[2].SetActive(OptionsMultiplayer.useHighestLevel);
 	}
 	
+	public void toggleSendLocation()
+	{
+		OptionsMultiplayer.sendLocation = !OptionsMultiplayer.sendLocation;
+		checks[3].SetActive(OptionsMultiplayer.sendLocation);
+	}
+	
 	public void refreshAllChecks()
 	{
 		checks[0].SetActive(OptionsMultiplayer.timeHost);
 		checks[1].SetActive(OptionsMultiplayer.displayName);
 		checks[2].SetActive(OptionsMultiplayer.useHighestLevel);
+		checks[3].SetActive(OptionsMultiplayer.sendLocation);
 	}
 	
 	public void hostButton()
 	{
 		steamLobby.HostLobby();
+	}
+	
+	public void stopButton()
+	{
+		//steamLobby.StopNetwork();
+		NetworkManager manager = NetworkManager.singleton;
+		
+		manager.StopClient();
+		manager.StopServer();
 	}
 }

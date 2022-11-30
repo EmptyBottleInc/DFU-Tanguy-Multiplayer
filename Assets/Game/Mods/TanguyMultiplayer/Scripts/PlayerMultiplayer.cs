@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
+using DaggerfallWorkshop.Game;
 
 public class PlayerMultiplayer : NetworkBehaviour
 {
@@ -30,7 +31,7 @@ public class PlayerMultiplayer : NetworkBehaviour
 	
 	void init()
 	{
-		playerObject = GameObject.FindGameObjectsWithTag("Player")[0];
+		playerObject = GameManager.Instance.PlayerObject;
 		localPlayer = this;
 		id = "" + GetComponent<NetworkIdentity>().netId;
 		state = isServer ? 1 : 2;

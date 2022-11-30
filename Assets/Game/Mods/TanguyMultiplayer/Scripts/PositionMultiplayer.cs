@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
 using DaggerfallWorkshop;
+using DaggerfallWorkshop.Utility;
+using DaggerfallWorkshop.Game.Questing;
+using DaggerfallConnect;
+using DaggerfallWorkshop.Game;
 
 public class PositionMultiplayer : NetworkBehaviour
 {
@@ -11,17 +15,19 @@ public class PositionMultiplayer : NetworkBehaviour
 	public GameObject visual;
 	StreamingWorld world;
 	Transform playerTransform;
+	PlayerGPS gps;
 	
 	[SyncVar]
-	public int x, z;
+	public int x = 0, z = 0;
 	
     void Start()
     {
-		
         if (isLocalPlayer){
 			world = GameObject.Find("StreamingWorld").GetComponent<StreamingWorld>();
-			playerTransform = PlayerMultiplayer.playerObject.transform;
+			playerTransform = GameManager.Instance.PlayerObject.transform;
 			StartCoroutine(SetCoordinates());
+			
+			StartCoroutine(SendLocation());
 		}else
 			StartCoroutine(Check());
     }
@@ -38,7 +44,8 @@ public class PositionMultiplayer : NetworkBehaviour
 	
 	IEnumerator Check()
 	{
-		PlayerGPS gps = PlayerMultiplayer.playerObject.GetComponent<PlayerGPS>();
+		yield return new WaitForSeconds(2f);
+		gps = GameManager.Instance.PlayerGPS;
 		while (true){
 			visual.SetActive(Vector2.Distance(new Vector2(x, z), new Vector2(gps.WorldX, gps.WorldZ)) < hideDistance);
 			yield return new WaitForSeconds(3.15f);
@@ -48,13 +55,41 @@ public class PositionMultiplayer : NetworkBehaviour
 	
 	IEnumerator SetCoordinates()
 	{
-		PlayerGPS gps = PlayerMultiplayer.playerObject.GetComponent<PlayerGPS>();
+		yield return new WaitForSeconds(1f);
+		gps = GameManager.Instance.PlayerGPS;
 		while (true){
 			int gpsX = gps.WorldX, gpsZ = gps.WorldZ;
 			if (Vector2.Distance(new Vector2(x, z), new Vector2(gpsX, gpsZ)) > sendDistance){
 				cmdSendCoordinates(gpsX, gpsZ);
 			}
+			
+			
 			yield return new WaitForSeconds(3.12f);
+		}
+	}
+	
+	IEnumerator SendLocation()
+	{
+		yield return new WaitForSeconds(1.5f);
+		DFLocation location = gps.CurrentLocation;
+		while (true){
+			if (OptionsMultiplayer.sendLocation && location.Name != gps.CurrentLocation.Name){
+				location = gps.CurrentLocation;
+				cmdSendLocation(location.RegionName, location.Name);
+			}
+			yield return new WaitForSeconds(5.56f);
+		}
+	}
+	
+	[Command]
+	void cmdSendLocation(string region, string location){
+		rpcSendLocation(region, location);
+	}
+	
+	[ClientRpc]
+	void rpcSendLocation(string region, string location){
+		if (!isLocalPlayer){
+			gps.DiscoverLocation(region, location);
 		}
 	}
 	

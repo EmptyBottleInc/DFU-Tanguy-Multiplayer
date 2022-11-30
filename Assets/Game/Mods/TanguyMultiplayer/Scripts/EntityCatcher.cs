@@ -36,6 +36,9 @@ public class EntityCatcher : NetworkBehaviour
 	public static List<enemy> enemies = new List<enemy>();
 	public List<enemy> enemiesDebug;
 	GameObject[] locations;
+	GameObject[] locationsChilds = new GameObject[3];
+	public int[] childIndex = new int[] {0, 0, 2};
+	
 	
 	void Start()
 	{
@@ -59,6 +62,7 @@ public class EntityCatcher : NetworkBehaviour
 	
 	IEnumerator Search()
 	{
+		yield return new WaitForSeconds(1f);
 		CheckEntities();
 		
 		PlayerEnterExit pEnterExit = PlayerMultiplayer.playerObject.GetComponent<PlayerEnterExit>();
@@ -70,13 +74,10 @@ public class EntityCatcher : NetworkBehaviour
 		int locationEnabled = getLocationEnabled();
 		
 		
-		
-		
 		while (true)
 		{
-			int i = getLocationEnabled();
-			if (locationEnabled != i && i != 1){
-				locationEnabled = i;
+			if (hasLocationChanged(locationEnabled)){
+				locationEnabled = getLocationEnabled();
 				yield return new WaitForSecondsRealtime(1.1f);
 				CheckEntities();
 				
@@ -89,6 +90,33 @@ public class EntityCatcher : NetworkBehaviour
 			yield return new WaitForSecondsRealtime(1.2f);
 			
 		}
+	}
+	
+	int getLocationEnabled()
+	{
+		for (int i = 0; i < locations.Length; i++){
+			if (locations[i].activeSelf)
+				return i;
+		}
+		return 0;
+	}
+	
+	bool hasLocationChanged(int last)
+	{
+		bool res = false;
+		int actual = getLocationEnabled();
+		if (actual != last || actual == 1)
+			res = true;
+		if (locations[last].transform.childCount >= childIndex[last]+1){
+			if (locationsChilds[last] != locations[last].transform.GetChild(childIndex[last]).gameObject){
+				res = true;
+				locationsChilds[0] = (locations[0].transform.childCount >= childIndex[0]+1 ? locations[0].transform.GetChild(childIndex[0]).gameObject : null);
+				locationsChilds[1] = (locations[1].transform.childCount >= childIndex[1]+1 ? locations[1].transform.GetChild(childIndex[1]).gameObject : null);
+				locationsChilds[2] = (locations[2].transform.childCount >= childIndex[2]+1 ? locations[2].transform.GetChild(childIndex[2]).gameObject : null);
+			}
+		}
+		
+		return res;
 	}
 	
 	
@@ -137,7 +165,7 @@ public class EntityCatcher : NetworkBehaviour
 		print("REQUEST RECEIVED " + s);
 		if (!isLocalPlayer){
 			this.enabled = true;
-			StartCoroutine(tryEncounters(s, 5));
+			StartCoroutine(tryEncounters(s, 8));
 		}
 	}
 	
@@ -185,14 +213,7 @@ public class EntityCatcher : NetworkBehaviour
 	}
 	
 	
-	int getLocationEnabled()
-	{
-		for (int i = 0; i < locations.Length; i++){
-			if (locations[i].activeSelf)
-				return i;
-		}
-		return 0;
-	}
+	
 	
 	void CheckEntities()
 	{
@@ -296,6 +317,7 @@ public class EntityCatcher : NetworkBehaviour
 	
 	IEnumerator checkIfMove()
 	{
+		yield return new WaitForSeconds(1.5f);
 		while (true)
 		{
 			for (int i = 0; i< enemies.Count; i++){

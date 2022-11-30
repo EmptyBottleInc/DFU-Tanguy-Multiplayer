@@ -20,7 +20,7 @@ public class LootCatcher : NetworkBehaviour
 	
 	void init()
 	{
-		PlayerEnterExit pEnterExit = PlayerMultiplayer.playerObject.GetComponent<PlayerEnterExit>();
+		PlayerEnterExit pEnterExit = GameManager.Instance.PlayerEnterExit;
 		locations = new Transform[3];
 		locations[0] = pEnterExit.ExteriorParent.transform;
 		locations[1] = pEnterExit.InteriorParent.transform;
@@ -90,7 +90,7 @@ public class LootCatcher : NetworkBehaviour
 	{
 		string items = "";
 		foreach (DaggerfallUnityItem item in loot.Items.CloneAll()){
-			items+=item.ItemGroup + "@" + item.TemplateIndex + '@' + item.NativeMaterialValue + '@' + item.stackCount + "#";
+			items+=(int)item.ItemGroup + "@" + item.TemplateIndex + '@' + item.NativeMaterialValue + '@' + item.stackCount + "#";
 		}
 		print("LOOT ITEMS " + items);
 		Vector3 pos = loot.transform.position;
@@ -125,16 +125,16 @@ public class LootCatcher : NetworkBehaviour
 					int templateIndex = int.Parse(infos[1]);
 					int material = int.Parse(infos[2]);
 					int stackCount = int.Parse(infos[3]);
-					ItemGroups itemGroup = getItemGroup(infos[0]);
+					ItemGroups itemGroup = getItemGroup(int.Parse(infos[0]));
 					if (itemGroup != ItemGroups.None){
-						DaggerfallUnityItem item = ItemBuilder.CreateItem(getItemGroup(infos[0]), templateIndex);
+						DaggerfallUnityItem item = ItemBuilder.CreateItem(itemGroup, templateIndex);
 						item.stackCount = stackCount;
 						switch (infos[0]){
 							case "Weapons":
 								ItemBuilder.ApplyWeaponMaterial(item, (WeaponMaterialTypes)material);
 								break;
 							case "Armor":
-								PlayerEntity pEntity = PlayerMultiplayer.playerObject.GetComponent<DaggerfallEntityBehaviour>().Entity as PlayerEntity;
+								PlayerEntity pEntity = GameManager.Instance.PlayerEntity;
 								ItemBuilder.ApplyArmorSettings(item, pEntity.Gender, pEntity.Race, (ArmorMaterialTypes)material);
 								break;
 						}
@@ -146,8 +146,15 @@ public class LootCatcher : NetworkBehaviour
 		}
 	}
 	
-	ItemGroups getItemGroup(string s)
+	ItemGroups getItemGroup(int i)
 	{
+		switch ((ItemGroups)i){
+			case ItemGroups.QuestItems:
+				return ItemGroups.None; 
+			
+			
+		}
+		/*
 		switch (s){
 			case "Armor":
 				return ItemGroups.Armor;
@@ -203,8 +210,8 @@ public class LootCatcher : NetworkBehaviour
 			case "Currency":
 				return ItemGroups.Currency;
 				break;
-		}
-		return ItemGroups.None;
+		}*/
+		return (ItemGroups)i;
 	}
 	
 	public void DisableLootOn(Vector3 pos)

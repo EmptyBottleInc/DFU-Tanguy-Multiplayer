@@ -14,15 +14,16 @@ public class WeatherCatcher : NetworkBehaviour
 	
 	void Start()
 	{
-		Invoke("init", 0.1f);
+		init();
 	}
 	
 	void init()
 	{
-		weatherManager = GameObject.Find("WeatherManager").GetComponent<WeatherManager>();
-		playerWeather = PlayerMultiplayer.playerObject.GetComponent<PlayerWeather>();
-		if (isServer)//Weather is controlled by the host to avoid apocalyptic weather change from every clients
+		weatherManager = GameManager.Instance.WeatherManager;
+		playerWeather = weatherManager.PlayerWeather;
+		if (isLocalPlayer)
 			StartCoroutine(Check());
+	
 	}
 	
 	
@@ -34,14 +35,25 @@ public class WeatherCatcher : NetworkBehaviour
 		{
 			
 			if (lastWeather != playerWeather.WeatherType){
-				print("WEATHER SEND " + playerWeather.WeatherType.ToString());
-				rpcSendWeather(playerWeather.WeatherType.ToString());
-				lastWeather = playerWeather.WeatherType;
+				if (isServer){//Weather is controlled by the host to avoid apocalyptic weather change from every clients
+					print("WEATHER SEND " + playerWeather.WeatherType.ToString());
+					rpcSendWeather(playerWeather.WeatherType.ToString());
+					lastWeather = playerWeather.WeatherType;
+				}else{
+					cmdReceiveWeather();
+				}
 			}
 			
 			yield return new WaitForSeconds(2.56f);
 		}
 	}
+	
+	[Command]
+	void cmdReceiveWeather()
+	{
+		rpcSendWeather(playerWeather.WeatherType.ToString());
+	}
+	
 	
 	
 	[ClientRpc]

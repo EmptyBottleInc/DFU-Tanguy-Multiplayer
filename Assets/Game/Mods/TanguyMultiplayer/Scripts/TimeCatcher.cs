@@ -39,7 +39,7 @@ public class TimeCatcher : NetworkBehaviour
 					cmdReceiveTime();
 				}else{
 					DaggerfallDateTime now = worldTime.Now;
-					cmdSendTime(now.ToClassicDaggerfallTime());//(now.Year, now.Month, now.Day, now.Hour, now.Minute, now.Second);
+					cmdSendTime(now.ToSeconds());//(now.Year, now.Month, now.Day, now.Hour, now.Minute, now.Second);
 				}
 				
 				
@@ -50,7 +50,7 @@ public class TimeCatcher : NetworkBehaviour
 	}
 	
 	[Command]
-	public void cmdSendTime(uint i/*int year, int month, int day, int hour, int minute, float second*/){
+	public void cmdSendTime(ulong i/*int year, int month, int day, int hour, int minute, float second*/){
 		rpcSendTime(i/*year, month, day, hour, minute, second*/);
 	}
 	
@@ -58,23 +58,23 @@ public class TimeCatcher : NetworkBehaviour
 	public void cmdReceiveTime()
 	{
 		DaggerfallDateTime now = worldTime.Now;
-		receiveTime(now.ToClassicDaggerfallTime()/*now.Year, now.Month, now.Day, now.Hour, now.Minute, now.Second*/);
+		receiveTime(now.ToSeconds()/*now.Year, now.Month, now.Day, now.Hour, now.Minute, now.Second*/);
 	}
 	
 	[ClientRpc]
-	void receiveTime(uint i/*int year, int month, int day, int hour, int minute, float second*/)
+	void receiveTime(ulong i/*int year, int month, int day, int hour, int minute, float second*/)
 	{
 		if (isLocalPlayer){
-			worldTime.Now.FromClassicDaggerfallTime(i);//new DaggerfallDateTime(/*year, month, day, hour, minute, Mathf.Clamp(second, 0, 590917)*/);
-			lastTime = worldTime.Now.ToClassicDaggerfallTime();
+			worldTime.Now.FromSeconds(i);//new DaggerfallDateTime(/*year, month, day, hour, minute, Mathf.Clamp(second, 0, 590917)*/);
+			lastTime = worldTime.Now.ToSeconds();
 		}
 	}
 	
 	[ClientRpc]
-	public void rpcSendTime(uint i/*int year, int month, int day, int hour, int minute, float second*/){
+	public void rpcSendTime(ulong i/*int year, int month, int day, int hour, int minute, float second*/){
 		if (!isLocalPlayer){
-			worldTime.Now.FromClassicDaggerfallTime(i);//(/*year, month, day, hour, minute, Mathf.Clamp(second, 0, 590917)*/);
-			lastTime = worldTime.Now.ToClassicDaggerfallTime();
+			worldTime.Now.FromSeconds(i);//(/*year, month, day, hour, minute, Mathf.Clamp(second, 0, 590917)*/);
+			lastTime = worldTime.Now.ToSeconds();
 		}
 	}
 	
