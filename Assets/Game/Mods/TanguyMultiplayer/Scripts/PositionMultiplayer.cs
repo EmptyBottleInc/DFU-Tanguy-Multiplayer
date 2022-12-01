@@ -63,7 +63,6 @@ public class PositionMultiplayer : NetworkBehaviour
 				cmdSendCoordinates(gpsX, gpsZ);
 			}
 			
-			
 			yield return new WaitForSeconds(3.12f);
 		}
 	}

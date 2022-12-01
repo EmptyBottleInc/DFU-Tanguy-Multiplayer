@@ -33,6 +33,7 @@ public class PlayerAssets : NetworkBehaviour
 	[SyncVar]
 	public string playerName;
 	
+	
 	public static int hostLevel = 0;
 	
 	Asset actualAsset;
@@ -178,6 +179,8 @@ public class PlayerAssets : NetworkBehaviour
 		spriteMultiplayer.job = job;
 		spriteMultiplayer.gameObject.SetActive(true);
 	}
+	
+	
 	
 	
 	

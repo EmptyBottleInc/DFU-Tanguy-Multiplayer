@@ -59,12 +59,10 @@ public class SteamLobby : MonoBehaviour
 	
 	public void StopNetwork()
 	{
-		if (GetComponent<NetworkManager>() != null){
-			manager = GetComponent<NetworkManager>();
+		NetworkManager manager = NetworkManager.singleton;
+		manager.StopClient();
+		manager.StopServer();
 		
-			manager.StopClient();
-			manager.StopServer();
-		}
 	}
 	
 	

@@ -238,6 +238,15 @@ MonoBehaviour:
   - {fileID: 2881908305128725156}
   - {fileID: 924523179212583444}
   sprite8dir: {fileID: 8299120720605468109}
+  messages:
+  - You heard a sound, close to you, it must be {0}, you agreed to meet together
+    here.
+  - Last rumors said that {0} must be in the surroundings.
+  - You remember that {0}, was suppose to arrive at a village not far away.
+  - You felt alone, when suddenly you remember {0}, the friend you had during your
+    childhood.
+  - Remembering the time you spent with {0}, you feel the need to fight again by
+    his side.
 --- !u!114 &4003312997922073087
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1652,7 +1661,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 21330054993342794, guid: e0c717678af87cd4ba55bd60e7334803, type: 2}
+  - {fileID: 2100000, guid: ca2b648b25eb2564eb7fe873e68fd9b2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1703,8 +1712,7 @@ MonoBehaviour:
   m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e0c717678af87cd4ba55bd60e7334803, type: 2}
-  m_sharedMaterial: {fileID: 21330054993342794, guid: e0c717678af87cd4ba55bd60e7334803,
-    type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: ca2b648b25eb2564eb7fe873e68fd9b2, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1850,7 +1858,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 488118, guid: 81f9cc3450e0e0d4b8f609fa31938b81, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.3000001
+      value: 0.875
       objectReference: {fileID: 0}
     - target: {fileID: 488118, guid: 81f9cc3450e0e0d4b8f609fa31938b81, type: 3}
       propertyPath: m_LocalScale.y
@@ -1862,7 +1870,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 488118, guid: 81f9cc3450e0e0d4b8f609fa31938b81, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.71971947
+      value: -0.19022967
       objectReference: {fileID: 0}
     - target: {fileID: 488118, guid: 81f9cc3450e0e0d4b8f609fa31938b81, type: 3}
       propertyPath: m_LocalRotation.x
@@ -1870,7 +1878,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 488118, guid: 81f9cc3450e0e0d4b8f609fa31938b81, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.694265
+      value: 0.98173964
       objectReference: {fileID: 0}
     - target: {fileID: 488118, guid: 81f9cc3450e0e0d4b8f609fa31938b81, type: 3}
       propertyPath: m_LocalRotation.z
@@ -1962,7 +1970,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11478892, guid: 81f9cc3450e0e0d4b8f609fa31938b81, type: 3}
       propertyPath: summary.AnimStateRecord
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 11478892, guid: 81f9cc3450e0e0d4b8f609fa31938b81, type: 3}
       propertyPath: summary.Enemy.BarkSound

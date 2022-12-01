@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
 using DaggerfallWorkshop.Game;
+using DaggerfallWorkshop;
 
 public class PlayerMultiplayer : NetworkBehaviour
 {
@@ -10,8 +11,7 @@ public class PlayerMultiplayer : NetworkBehaviour
 	public GameObject[] toEnable;
 	public NetworkBehaviour[] toDisable;
 	public Sprite8dir sprite8dir;
-	
-	
+	public string[] messages;
 	
 	public static GameObject playerObject;
 	
@@ -47,7 +47,27 @@ public class PlayerMultiplayer : NetworkBehaviour
 		}else{
 			enableAll(true);
 			this.enabled = false;
+			Invoke("sendMessage", 1.5f);
+		}
+	}
+	
+	void sendMessage()
+	{
+		if (OptionsMultiplayer.sendMessage){
+			PositionMultiplayer pos = GetComponent<PositionMultiplayer>();
+			PlayerGPS gps = GameManager.Instance.PlayerGPS;
+			PlayerAssets assets = GetComponent<PlayerAssets>();
 			
+			float distance = Vector2.Distance(new Vector2(pos.x, pos.z), new Vector2(gps.WorldX, gps.WorldZ));
+			string message = string.Format(messages[UnityEngine.Random.Range(3, 5)], assets.playerName);
+			if (distance < 7500){
+				message = string.Format(messages[0], assets.playerName);
+			}else if (distance < 25000){
+				message = string.Format(messages[1], assets.playerName);
+			}else if (distance < 80000){
+				message = string.Format(messages[2], assets.playerName);
+			}
+			DaggerfallUI.MessageBox(message);
 		}
 	}
 	

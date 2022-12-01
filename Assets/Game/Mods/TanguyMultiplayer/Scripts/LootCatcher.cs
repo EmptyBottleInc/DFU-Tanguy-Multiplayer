@@ -129,11 +129,11 @@ public class LootCatcher : NetworkBehaviour
 					if (itemGroup != ItemGroups.None){
 						DaggerfallUnityItem item = ItemBuilder.CreateItem(itemGroup, templateIndex);
 						item.stackCount = stackCount;
-						switch (infos[0]){
-							case "Weapons":
+						switch (itemGroup){
+							case ItemGroups.Weapons:
 								ItemBuilder.ApplyWeaponMaterial(item, (WeaponMaterialTypes)material);
 								break;
-							case "Armor":
+							case ItemGroups.Armor:
 								PlayerEntity pEntity = GameManager.Instance.PlayerEntity;
 								ItemBuilder.ApplyArmorSettings(item, pEntity.Gender, pEntity.Race, (ArmorMaterialTypes)material);
 								break;

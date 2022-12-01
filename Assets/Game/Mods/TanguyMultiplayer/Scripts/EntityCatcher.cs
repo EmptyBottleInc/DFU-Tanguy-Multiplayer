@@ -105,7 +105,7 @@ public class EntityCatcher : NetworkBehaviour
 	{
 		bool res = false;
 		int actual = getLocationEnabled();
-		if (actual != last || actual == 1)
+		if (actual != last)
 			res = true;
 		if (locations[last].transform.childCount >= childIndex[last]+1){
 			if (locationsChilds[last] != locations[last].transform.GetChild(childIndex[last]).gameObject){
@@ -115,7 +115,8 @@ public class EntityCatcher : NetworkBehaviour
 				locationsChilds[2] = (locations[2].transform.childCount >= childIndex[2]+1 ? locations[2].transform.GetChild(childIndex[2]).gameObject : null);
 			}
 		}
-		
+		if (actual == 1)
+			res = false;
 		return res;
 	}
 	
@@ -223,7 +224,7 @@ public class EntityCatcher : NetworkBehaviour
         foreach (var hitCollider in hitColliders)
         {
 			GameObject g = hitCollider.gameObject;
-			if (g.GetComponent<DaggerfallEnemy>() != null)
+			if (g.GetComponent<DaggerfallEnemy>() != null && !g.name.Contains("Quest"))
 				enemiesFounded.Add(isRegistered(g.GetComponent<DaggerfallEntityBehaviour>()));
 			
         }
@@ -260,6 +261,16 @@ public class EntityCatcher : NetworkBehaviour
 		}else
 			ed.gameObject.name += "*synced*";
 		return new enemy(ed, pos, ed.gameObject.name, PlayerMultiplayer.id, state);
+	}
+	
+	bool hasEnemy(DaggerfallEntityBehaviour ed)
+	{
+		foreach (enemy e in enemies)
+		{
+			if (e.ed == ed)
+				return true;
+		}
+		return false;
 	}
 	
 	

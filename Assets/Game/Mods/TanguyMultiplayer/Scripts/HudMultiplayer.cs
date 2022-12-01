@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using DaggerfallWorkshop.Game;
+using DaggerfallWorkshop.Game.UserInterface;
 using UnityEngine.UI;
 using Mirror;
 
@@ -27,18 +28,26 @@ public class HudMultiplayer : MonoBehaviour
 	{
 		InputManager inputManager = GameObject.Find("InputManager").GetComponent<InputManager>();
 		gameUI = GameObject.Find("DaggerfallUI").GetComponent<DaggerfallUI>();
+		UserInterfaceManager uiManager = gameUI.UserInterfaceManager;
 		while (true)
 		{
-			canvas.enabled = (inputManager != null && inputManager.IsPaused);
+			
+			canvas.enabled = isPauseMenu(uiManager);
 			raycaster.enabled = canvas.enabled;
 			if (canvas.enabled){
 				setStatus();
-				options.SetActive(!(PlayerMultiplayer.state == 2));
+				options.SetActive(PlayerMultiplayer.state == 0);
 				host.SetActive(PlayerMultiplayer.state == 0);
 				stop.SetActive(!(PlayerMultiplayer.state == 0));
 			}
+			
 			yield return new WaitForSecondsRealtime(0.32f);
 		}
+	}
+	
+	bool isPauseMenu(UserInterfaceManager uiManager)
+	{
+		return (uiManager.TopWindow != null ? uiManager.TopWindow.ToString() == "DaggerfallWorkshop.Game.UserInterfaceWindows.DaggerfallPauseOptionsWindow" : false);
 	}
 	
 	void setStatus()
@@ -93,6 +102,11 @@ public class HudMultiplayer : MonoBehaviour
 		OptionsMultiplayer.sendLocation = !OptionsMultiplayer.sendLocation;
 		checks[3].SetActive(OptionsMultiplayer.sendLocation);
 	}
+	public void toggleSendMessage()
+	{
+		OptionsMultiplayer.sendMessage = !OptionsMultiplayer.sendMessage;
+		checks[4].SetActive(OptionsMultiplayer.sendMessage);
+	}
 	
 	public void refreshAllChecks()
 	{
@@ -100,6 +114,7 @@ public class HudMultiplayer : MonoBehaviour
 		checks[1].SetActive(OptionsMultiplayer.displayName);
 		checks[2].SetActive(OptionsMultiplayer.useHighestLevel);
 		checks[3].SetActive(OptionsMultiplayer.sendLocation);
+		checks[4].SetActive(OptionsMultiplayer.sendMessage);
 	}
 	
 	public void hostButton()
@@ -109,10 +124,6 @@ public class HudMultiplayer : MonoBehaviour
 	
 	public void stopButton()
 	{
-		//steamLobby.StopNetwork();
-		NetworkManager manager = NetworkManager.singleton;
-		
-		manager.StopClient();
-		manager.StopServer();
+		steamLobby.StopNetwork();
 	}
 }
